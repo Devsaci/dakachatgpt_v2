@@ -1,3 +1,4 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -22,6 +23,17 @@ class _HomeScreenState extends State<HomeScreen> {
               color: themeStatus.themeType ? Colors.white : Colors.black,
             ),
           ),
+          actions: [
+            IconButton(
+              onPressed: () {if (kDebugMode) {
+                print("ThemeMode Action");
+              }},
+              icon: Icon(
+                Icons.light_mode_outlined,
+                color: themeStatus.themeType ? Colors.white : Colors.black,
+              ),
+            )
+          ],
         ),
         body: const Center(child: Text("ChatGpt")));
   }

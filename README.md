@@ -6,3 +6,4 @@
 2. Install Package: provider:  shared_preferences:
 3. Creating a theme
 4. Selecting a theme
+5. Saving the theme
