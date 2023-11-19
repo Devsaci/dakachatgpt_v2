@@ -9,4 +9,6 @@ class MyThemeProvider extends ChangeNotifier {
     _darkTheme = value;
     notifyListeners();
   }
+
+  void saveThemeToSharedPreferences({required bool value}) async {}
 }
