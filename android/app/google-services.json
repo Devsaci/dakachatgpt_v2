@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "206910421921",
+    "project_id": "dakachatgptv2",
+    "storage_bucket": "dakachatgptv2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:206910421921:android:9adf356d1a1b6c0fd869e0",
+        "android_client_info": {
+          "package_name": "com.devsaci.dakachatgpt_v2"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBVJqYWwS4H9vcBotmTf9IM_DriGD39ccA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
