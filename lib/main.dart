@@ -1,4 +1,5 @@
 import 'package:dakachatgpt_v2/providers/my_theme_provider.dart';
+import 'package:dakachatgpt_v2/themes/my_theme.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -32,11 +33,8 @@ class MyApp extends StatelessWidget {
     return Consumer<MyThemeProvider>(
       builder: (BuildContext context, value, Widget? child) {
         return MaterialApp(
-          title: 'Flutter Demo',
-          theme: ThemeData(
-            colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-            useMaterial3: false,
-          ),
+          title: 'Flutter ChatGpt',
+          theme: MyTheme.themeData(isDarkTheme: false, context: context),
           home: const HomeScreen(),
         );
       },
