@@ -19,4 +19,9 @@ class MyThemeProvider extends ChangeNotifier {
         await SharedPreferences.getInstance();
     sharedPreferences.setBool(Constants.themeStatus, value);
   }
+  getThemeStatus() async {
+    final SharedPreferences sharedPreferences = await SharedPreferences.getInstance();
+    _darkTheme = sharedPreferences.getBool(Constants.themeStatus) ?? false;
+    notifyListeners();
+  }
 }
