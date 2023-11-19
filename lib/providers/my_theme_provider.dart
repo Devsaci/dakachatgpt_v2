@@ -10,6 +10,7 @@ class MyThemeProvider extends ChangeNotifier {
 
   set setTheme(bool value) {
     _darkTheme = value;
+    saveThemeToSharedPreferences(value: value);
     notifyListeners();
   }
 
