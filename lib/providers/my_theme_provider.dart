@@ -1,4 +1,7 @@
 import 'package:flutter/cupertino.dart';
+import 'package:shared_preferences/shared_preferences.dart';
+
+import '../constants/constants.dart';
 
 class MyThemeProvider extends ChangeNotifier {
   bool _darkTheme = false;
@@ -10,5 +13,9 @@ class MyThemeProvider extends ChangeNotifier {
     notifyListeners();
   }
 
-  void saveThemeToSharedPreferences({required bool value}) async {}
+  void saveThemeToSharedPreferences({required bool value}) async {
+    final SharedPreferences sharedPreferences =
+        await SharedPreferences.getInstance();
+    sharedPreferences.setBool(Constants.themeStatus, value);
+  }
 }
