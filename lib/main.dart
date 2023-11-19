@@ -33,6 +33,7 @@ class MyApp extends StatelessWidget {
     return Consumer<MyThemeProvider>(
       builder: (BuildContext context, value, Widget? child) {
         return MaterialApp(
+          debugShowCheckedModeBanner: false,
           title: 'Flutter ChatGpt',
           theme: MyTheme.themeData(isDarkTheme: value.themeType, context: context),
           home: const HomeScreen(),

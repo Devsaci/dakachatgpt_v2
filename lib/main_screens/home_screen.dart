@@ -25,11 +25,15 @@ class _HomeScreenState extends State<HomeScreen> {
           ),
           actions: [
             IconButton(
-              onPressed: () {if (kDebugMode) {
-                print("ThemeMode Action");
-              }},
+              onPressed: () {
+                if (kDebugMode) {
+                  print("ThemeMode Action");
+                }
+              },
               icon: Icon(
-                Icons.light_mode_outlined,
+                themeStatus.themeType
+                    ? Icons.dark_mode_outlined
+                    : Icons.light_mode_outlined,
                 color: themeStatus.themeType ? Colors.white : Colors.black,
               ),
             )
