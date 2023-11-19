@@ -26,8 +26,16 @@ class _HomeScreenState extends State<HomeScreen> {
           actions: [
             IconButton(
               onPressed: () {
-                if (kDebugMode) {
-                  print("ThemeMode Action");
+                if (themeStatus.themeType) {
+                  themeStatus.setTheme = false;
+                  if (kDebugMode) {
+                    print("ThemeMode Light");
+                  }
+                } else {
+                  themeStatus.setTheme = true;
+                  if (kDebugMode) {
+                    print("ThemeMode Dark");
+                  }
                 }
               },
               icon: Icon(
