@@ -30,7 +30,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Consumer<MyThemeProvider>(
-      builder: (BuildContext context, value, child) {
+      builder: (BuildContext context, value, Widget? child) {
         return MaterialApp(
           title: 'Flutter Demo',
           theme: ThemeData(
