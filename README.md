@@ -7,3 +7,7 @@
 3. Creating a theme
 4. Selecting a theme
 5. Saving the theme
+## Section 2. Building the login and registration screens
+6. Adding Bottom navigation bar
+
+
