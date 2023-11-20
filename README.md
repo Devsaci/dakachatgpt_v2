@@ -9,5 +9,6 @@
 5. Saving the theme
 ## Section 2. Building the login and registration screens
 6. Adding Bottom navigation bar
+7. Login Packages and assets
 
 
