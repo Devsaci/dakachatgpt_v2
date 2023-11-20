@@ -17,37 +17,39 @@ class _HomeScreenState extends State<HomeScreen> {
     final themeStatus = Provider.of<MyThemeProvider>(context);
     Color color = themeStatus.themeType ? Colors.white : Colors.black;
     return Scaffold(
-        appBar: AppBar(
-          title: Text(
-            'ChatGPT',
-            style: TextStyle(
+      appBar: AppBar(
+        title: Text(
+          'ChatGPT',
+          style: TextStyle(
+            color: color,
+          ),
+        ),
+        actions: [
+          IconButton(
+            onPressed: () {
+              if (themeStatus.themeType) {
+                themeStatus.setTheme = false;
+                if (kDebugMode) {
+                  print("ThemeMode Light");
+                }
+              } else {
+                themeStatus.setTheme = true;
+                if (kDebugMode) {
+                  print("ThemeMode Dark");
+                }
+              }
+            },
+            icon: Icon(
+              themeStatus.themeType
+                  ? Icons.dark_mode_outlined
+                  : Icons.light_mode_outlined,
               color: color,
             ),
-          ),
-          actions: [
-            IconButton(
-              onPressed: () {
-                if (themeStatus.themeType) {
-                  themeStatus.setTheme = false;
-                  if (kDebugMode) {
-                    print("ThemeMode Light");
-                  }
-                } else {
-                  themeStatus.setTheme = true;
-                  if (kDebugMode) {
-                    print("ThemeMode Dark");
-                  }
-                }
-              },
-              icon: Icon(
-                themeStatus.themeType
-                    ? Icons.dark_mode_outlined
-                    : Icons.light_mode_outlined,
-                color: color,
-              ),
-            )
-          ],
-        ),
-        body: const Center(child: Text("ChatGpt")));
+          )
+        ],
+      ),
+      body: const Center(child: Text("ChatGpt")),
+      bottomNavigationBar: BottomNavigationBar(items: []),
+    );
   }
 }
