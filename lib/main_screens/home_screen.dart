@@ -15,12 +15,13 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     final themeStatus = Provider.of<MyThemeProvider>(context);
+    Color color = themeStatus.themeType ? Colors.white : Colors.black;
     return Scaffold(
         appBar: AppBar(
           title: Text(
             'ChatGPT',
             style: TextStyle(
-              color: themeStatus.themeType ? Colors.white : Colors.black,
+              color: color,
             ),
           ),
           actions: [
@@ -42,7 +43,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 themeStatus.themeType
                     ? Icons.dark_mode_outlined
                     : Icons.light_mode_outlined,
-                color: themeStatus.themeType ? Colors.white : Colors.black,
+                color: color,
               ),
             )
           ],
