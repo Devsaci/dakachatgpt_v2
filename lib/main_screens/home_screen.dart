@@ -3,6 +3,9 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
 import '../providers/my_theme_provider.dart';
+import 'ai_chat_screen.dart';
+import 'posts_screen.dart';
+import 'profile_screen.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -12,6 +15,13 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
+  int selectedIndex = 0;
+  final List<Widget> tabs = [
+    const AIChatScreen(),
+    const PostsScreen(),
+    const ProfileScreen(),
+  ];
+
   @override
   Widget build(BuildContext context) {
     final themeStatus = Provider.of<MyThemeProvider>(context);
@@ -48,11 +58,12 @@ class _HomeScreenState extends State<HomeScreen> {
           )
         ],
       ),
-      body: const Center(child: Text("ChatGpt")),
+      body: tabs[selectedIndex],
       bottomNavigationBar: BottomNavigationBar(
         type: BottomNavigationBarType.fixed,
         selectedItemColor: color,
         selectedLabelStyle: const TextStyle(fontWeight: FontWeight.w600),
+        currentIndex: selectedIndex,
         items: const [
           BottomNavigationBarItem(
             icon: Icon(Icons.chat),
@@ -67,6 +78,12 @@ class _HomeScreenState extends State<HomeScreen> {
             label: 'Profile',
           ),
         ],
+        onTap: (index) {
+          setState(() {
+            selectedIndex = index;
+          });
+          print('Index $index');
+        },
       ),
     );
   }
