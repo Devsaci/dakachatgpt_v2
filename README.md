@@ -10,5 +10,6 @@
 ## Section 2. Building the login and registration screens
 6. Adding Bottom navigation bar
 7. Login Packages and assets
+8. Registration screen part 1
 
 
