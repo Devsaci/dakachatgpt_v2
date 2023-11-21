@@ -53,6 +53,7 @@ class _MyAppState extends State<MyApp> {
           theme:
               MyTheme.themeData(isDarkTheme: value.themeType, context: context),
           home: const RegistrationScreen(),
+          // home: const HomeScreen(),
         );
       },
     );
