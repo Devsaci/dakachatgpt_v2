@@ -15,7 +15,10 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
         child: Center(
           child: Column(
             children: [
-              CircleAvatar(),
+              CircleAvatar(
+                radius: 80,
+                backgroundImage: AssetImage("assets/images/user_icon.png"),
+              ),
             ],
           ),
         ),
