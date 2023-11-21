@@ -4,6 +4,7 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
+import 'authentication/registration_screen.dart';
 import 'firebase_options.dart';
 import 'main_screens/home_screen.dart';
 
@@ -51,7 +52,7 @@ class _MyAppState extends State<MyApp> {
           title: 'Flutter ChatGpt',
           theme:
               MyTheme.themeData(isDarkTheme: value.themeType, context: context),
-          home: const HomeScreen(),
+          home: const RegistrationScreen(),
         );
       },
     );
