@@ -15,18 +15,21 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
     return Scaffold(
       body: SafeArea(
         child: Center(
-          child: Column(
-            children: [
-              Container(
-                decoration: BoxDecoration(
-                    border: Border.all(color: Colors.black, width: 2),
-                    borderRadius: BorderRadius.circular(90)),
-                child: CircleAvatar(
-                  radius: 80,
-                  backgroundImage: AssetImage(AssetsManager.userIcon),
+          child: Padding(
+            padding: const EdgeInsets.symmetric(vertical: 25.0, horizontal: 35),
+            child: Column(
+              children: [
+                Container(
+                  decoration: BoxDecoration(
+                      border: Border.all(color: Colors.black, width: 2),
+                      borderRadius: BorderRadius.circular(90)),
+                  child: CircleAvatar(
+                    radius: 80,
+                    backgroundImage: AssetImage(AssetsManager.userIcon),
+                  ),
                 ),
-              ),
-            ],
+              ],
+            ),
           ),
         ),
       ),
