@@ -10,6 +10,16 @@ class RegistrationScreen extends StatefulWidget {
 class _RegistrationScreenState extends State<RegistrationScreen> {
   @override
   Widget build(BuildContext context) {
-    return const Scaffold();
+    return const Scaffold(
+      body: SafeArea(
+        child: Center(
+          child: Column(
+            children: [
+              CircleAvatar(),
+            ],
+          ),
+        ),
+      ),
+    );
   }
 }
