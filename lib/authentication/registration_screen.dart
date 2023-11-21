@@ -47,10 +47,14 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                   ),
                   const SizedBox(height: 20),
                   TextFormField(
-                    decoration: const InputDecoration(
-                        hintText: 'Enter phone number',
-                        hintStyle: TextStyle(fontSize: 18),
-                        enabledBorder: OutlineInputBorder()),
+                    decoration: InputDecoration(
+                      hintText: 'Enter phone number',
+                      hintStyle: const TextStyle(fontSize: 18),
+                      enabledBorder: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(10),
+                        borderSide: const BorderSide(color: Colors.black),
+                      ),
+                    ),
                   ),
                 ],
               ),
