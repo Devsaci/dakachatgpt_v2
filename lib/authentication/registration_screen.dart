@@ -23,8 +23,9 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                 children: [
                   Container(
                     decoration: BoxDecoration(
-                        border: Border.all(color: Colors.black, width: 2),
-                        borderRadius: BorderRadius.circular(90)),
+                      border: Border.all(color: Colors.black, width: 3),
+                      borderRadius: BorderRadius.circular(90),
+                    ),
                     child: CircleAvatar(
                       radius: 80,
                       backgroundImage: AssetImage(AssetsManager.userIcon),
