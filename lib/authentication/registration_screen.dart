@@ -96,12 +96,19 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                           child: Text(
                             '${selectedCountry.flagEmoji} +${selectedCountry.phoneCode}',
                             style: const TextStyle(
-                                fontSize: 12, fontWeight: FontWeight.bold),
+                                fontSize: 15, fontWeight: FontWeight.bold),
                           ),
                         ),
                       ),
                     ),
                   ),
+                  const SizedBox(
+                    height: 30,
+                  ),
+                  SizedBox(
+                    width: double.infinity,
+                    height: 50,
+                  )
                 ],
               ),
             ),
