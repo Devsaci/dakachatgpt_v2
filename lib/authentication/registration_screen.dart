@@ -65,10 +65,12 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                             const BorderSide(color: Colors.orangeAccent),
                       ),
                       prefixIcon: Container(
-                        child: const Icon(
-                          Icons.phone_android,
-                          size: 20,
-                          color: Colors.black,
+                        child: const InkWell(
+                          child: Icon(
+                            Icons.phone_android,
+                            size: 20,
+                            color: Colors.black,
+                          ),
                         ),
                       ),
                     ),
