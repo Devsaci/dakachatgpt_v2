@@ -91,10 +91,10 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                               },
                             );
                           },
-                          child: const Icon(
-                            Icons.phone_android,
-                            size: 20,
-                            color: Colors.black,
+                          child: Text(
+                            '${selectedCountry.flagEmoji} +${selectedCountry.phoneCode}',
+                            style: const TextStyle(
+                                fontSize: 12, fontWeight: FontWeight.bold),
                           ),
                         ),
                       ),
