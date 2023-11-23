@@ -85,7 +85,9 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                               countryListTheme: const CountryListThemeData(
                                   bottomSheetHeight: 500),
                               onSelect: (value) {
-                                setState(() {});
+                                setState(() {
+                                  selectedCountry = value;
+                                });
                               },
                             );
                           },
