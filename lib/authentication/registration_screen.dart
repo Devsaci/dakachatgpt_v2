@@ -50,6 +50,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                   TextFormField(
                     controller: phoneController,
                     maxLength: 10,
+                    textInputAction: TextInputAction.done,
                     decoration: InputDecoration(
                       hintText: 'Enter phone number',
                       hintStyle: const TextStyle(fontSize: 18),
