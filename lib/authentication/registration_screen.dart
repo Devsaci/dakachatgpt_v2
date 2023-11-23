@@ -1,3 +1,4 @@
+import 'package:country_picker/country_picker.dart';
 import 'package:flutter/material.dart';
 
 import '../service/image_cache_manager.dart';
@@ -65,8 +66,16 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                             const BorderSide(color: Colors.orangeAccent),
                       ),
                       prefixIcon: Container(
-                        child: const InkWell(
-                          child: Icon(
+                        child: InkWell(
+                          onTap: () {
+                            showCountryPicker(
+                              context: context,
+                              countryListTheme: const CountryListThemeData(
+                                  bottomSheetHeight: 500),
+                              onSelect: (value) {},
+                            );
+                          },
+                          child: const Icon(
                             Icons.phone_android,
                             size: 20,
                             color: Colors.black,
