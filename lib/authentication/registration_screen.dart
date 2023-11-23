@@ -49,6 +49,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                   const SizedBox(height: 20),
                   TextFormField(
                     controller: phoneController,
+                    maxLength: 10,
                     decoration: InputDecoration(
                       hintText: 'Enter phone number',
                       hintStyle: const TextStyle(fontSize: 18),
