@@ -78,6 +78,8 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                             const BorderSide(color: Colors.orangeAccent),
                       ),
                       prefixIcon: Container(
+                        padding:
+                            const EdgeInsets.fromLTRB(8.0, 12.0, 8.0, 12.0),
                         child: InkWell(
                           onTap: () {
                             showCountryPicker(
