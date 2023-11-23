@@ -12,6 +12,18 @@ class RegistrationScreen extends StatefulWidget {
 
 class _RegistrationScreenState extends State<RegistrationScreen> {
   final TextEditingController phoneController = TextEditingController();
+  Country selectedCountry = Country(
+    phoneCode: '33',
+    countryCode: 'FR',
+    e164Sc: 0,
+    geographic: true,
+    level: 1,
+    name: 'France',
+    example: 'France',
+    displayName: 'France',
+    displayNameNoCountryCode: 'FR',
+    e164Key: '',
+  );
   @override
   Widget build(BuildContext context) {
     return Scaffold(
