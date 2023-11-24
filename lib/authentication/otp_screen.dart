@@ -10,6 +10,12 @@ class OTPScreen extends StatefulWidget {
 class _OTPScreenState extends State<OTPScreen> {
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return const Scaffold(
+      body: SafeArea(
+          child: Center(
+              child: Column(
+        children: [],
+      ))),
+    );
   }
 }
