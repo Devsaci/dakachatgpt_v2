@@ -12,5 +12,6 @@
 7. Login Packages and assets
 8. Registration screen part 1
 10. OTP screen UI
+11. User information screen
 
 
