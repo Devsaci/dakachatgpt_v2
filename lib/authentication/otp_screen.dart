@@ -60,8 +60,13 @@ class _OTPScreenState extends State<OTPScreen> {
                     const TextStyle(fontSize: 20, fontWeight: FontWeight.w600),
               ),
               onCompleted: (value) {
-                print("object");
+                print("value");
               },
+            ),
+            const SizedBox(height: 25),
+            const Text(
+              'Didn\'t receive any code?',
+              style: TextStyle(fontSize: 14, fontWeight: FontWeight.bold),
             ),
           ],
         )),
