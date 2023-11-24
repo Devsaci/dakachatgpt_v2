@@ -29,6 +29,14 @@ class _OTPScreenState extends State<OTPScreen> {
                 backgroundImage: AssetImage(AssetsManager.openAILogo),
               ),
             ),
+            const SizedBox(height: 20),
+            const Text(
+              'Verification',
+              style: TextStyle(
+                fontSize: 22,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
           ],
         )),
       )),
