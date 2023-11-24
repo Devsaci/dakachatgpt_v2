@@ -28,6 +28,13 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
 
   final RoundedLoadingButtonController btnController =
       RoundedLoadingButtonController();
+
+  @override
+  void dispose() {
+    phoneController.dispose();
+    super.dispose();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
