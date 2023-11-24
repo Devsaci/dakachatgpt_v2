@@ -19,6 +19,7 @@ class _OTPScreenState extends State<OTPScreen> {
           children: [
             const SizedBox(height: 50),
             Container(
+              decoration: BoxDecoration(),
               child: CircleAvatar(
                 radius: 80,
                 backgroundColor: Colors.amber,
