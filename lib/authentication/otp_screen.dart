@@ -10,13 +10,14 @@ class OTPScreen extends StatefulWidget {
 class _OTPScreenState extends State<OTPScreen> {
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
+    return Scaffold(
       body: SafeArea(
           child: SingleChildScrollView(
         child: Center(
             child: Column(
           children: [
-            SizedBox(height: 50),
+            const SizedBox(height: 50),
+            Container(),
           ],
         )),
       )),
