@@ -1,3 +1,4 @@
+import 'package:dakachatgpt_v2/service/image_cache_manager.dart';
 import 'package:flutter/material.dart';
 
 class OTPScreen extends StatefulWidget {
@@ -17,7 +18,13 @@ class _OTPScreenState extends State<OTPScreen> {
             child: Column(
           children: [
             const SizedBox(height: 50),
-            Container(),
+            Container(
+              child: CircleAvatar(
+                radius: 80,
+                backgroundColor: Colors.amber,
+                backgroundImage: AssetImage(AssetsManager.openAILogo),
+              ),
+            ),
           ],
         )),
       )),
