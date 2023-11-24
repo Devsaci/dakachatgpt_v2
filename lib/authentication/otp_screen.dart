@@ -48,7 +48,10 @@ class _OTPScreenState extends State<OTPScreen> {
             Pinput(
               length: 6,
               showCursor: true,
-              defaultPinTheme: PinTheme(),
+              defaultPinTheme: PinTheme(
+                width: 60,
+                height: 60,
+              ),
             ),
           ],
         )),
