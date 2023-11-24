@@ -68,6 +68,14 @@ class _OTPScreenState extends State<OTPScreen> {
               'Didn\'t receive any code?',
               style: TextStyle(fontSize: 14, fontWeight: FontWeight.bold),
             ),
+            const SizedBox(height: 16),
+            const Text(
+              'Resend new code',
+              style: TextStyle(
+                  fontSize: 16,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.blue),
+            ),
           ],
         )),
       )),
