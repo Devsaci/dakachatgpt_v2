@@ -1,5 +1,6 @@
 import 'package:country_picker/country_picker.dart';
 import 'package:flutter/material.dart';
+import 'package:rounded_loading_button/rounded_loading_button.dart';
 
 import '../service/image_cache_manager.dart';
 
@@ -24,6 +25,9 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
     displayNameNoCountryCode: 'FR',
     e164Key: '',
   );
+
+  final RoundedLoadingButtonController btnController =
+      RoundedLoadingButtonController();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -106,6 +110,18 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                   SizedBox(
                     width: double.infinity,
                     height: 50,
+                    child: RoundedLoadingButton(
+                      controller: btnController,
+                      onPressed: () {},
+                      child: const Text(
+                        'Login',
+                        style: TextStyle(
+                          fontSize: 24,
+                          fontWeight: FontWeight.bold,
+                          letterSpacing: 1.5,
+                        ),
+                      ),
+                    ),
                   )
                 ],
               ),
