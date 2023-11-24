@@ -49,8 +49,15 @@ class _OTPScreenState extends State<OTPScreen> {
               length: 6,
               showCursor: true,
               defaultPinTheme: PinTheme(
-                width: 60,
+                width: 40,
                 height: 60,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(10),
+                  color: Colors.yellow,
+                  border: Border.all(color: Colors.deepPurple),
+                ),
+                textStyle:
+                    const TextStyle(fontSize: 20, fontWeight: FontWeight.w600),
               ),
             ),
           ],
