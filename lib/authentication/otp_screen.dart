@@ -15,7 +15,9 @@ class _OTPScreenState extends State<OTPScreen> {
           child: SingleChildScrollView(
         child: Center(
             child: Column(
-          children: [],
+          children: [
+            SizedBox(height: 50),
+          ],
         )),
       )),
     );
