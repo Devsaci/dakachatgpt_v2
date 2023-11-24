@@ -113,6 +113,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                     child: RoundedLoadingButton(
                       controller: btnController,
                       onPressed: () {},
+                      successIcon: Icons.check,
                       child: const Text(
                         'Login',
                         style: TextStyle(
