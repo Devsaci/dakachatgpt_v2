@@ -1,5 +1,6 @@
 import 'package:dakachatgpt_v2/service/image_cache_manager.dart';
 import 'package:flutter/material.dart';
+import 'package:pinput/pinput.dart';
 
 class OTPScreen extends StatefulWidget {
   const OTPScreen({super.key});
@@ -41,11 +42,10 @@ class _OTPScreenState extends State<OTPScreen> {
             const Text(
               'Enter the OPT code sent to your phone number',
               textAlign: TextAlign.center,
-              style: TextStyle(
-                fontSize: 14,
-                fontWeight: FontWeight.bold,
-              ),
+              style: TextStyle(fontSize: 14, fontWeight: FontWeight.bold),
             ),
+            const SizedBox(height: 20),
+            Pinput(),
           ],
         )),
       )),
