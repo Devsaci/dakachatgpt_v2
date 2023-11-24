@@ -59,6 +59,9 @@ class _OTPScreenState extends State<OTPScreen> {
                 textStyle:
                     const TextStyle(fontSize: 20, fontWeight: FontWeight.w600),
               ),
+              onCompleted: (value) {
+                print("object");
+              },
             ),
           ],
         )),
