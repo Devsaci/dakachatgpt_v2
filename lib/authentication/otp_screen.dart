@@ -12,10 +12,12 @@ class _OTPScreenState extends State<OTPScreen> {
   Widget build(BuildContext context) {
     return const Scaffold(
       body: SafeArea(
-          child: Center(
-              child: Column(
-        children: [],
-      ))),
+          child: SingleChildScrollView(
+        child: Center(
+            child: Column(
+          children: [],
+        )),
+      )),
     );
   }
 }
