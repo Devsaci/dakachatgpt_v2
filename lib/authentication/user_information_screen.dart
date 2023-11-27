@@ -32,6 +32,8 @@ class _UserInformationScreenState extends State<UserInformationScreen> {
                         child: Container(
                           decoration: BoxDecoration(
                             color: Colors.deepPurple,
+                            borderRadius:
+                                const BorderRadius.all(Radius.circular(35)),
                           ),
                           child: ClipRRect(
                             borderRadius: BorderRadius.circular(16),
