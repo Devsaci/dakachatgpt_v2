@@ -29,9 +29,11 @@ class _UserInformationScreenState extends State<UserInformationScreen> {
                       Positioned(
                         bottom: 0,
                         right: 0,
-                        child: IconButton(
-                            onPressed: () {},
-                            icon: const Icon(Icons.camera_alt)),
+                        child: ClipRRect(
+                          child: IconButton(
+                              onPressed: () {},
+                              icon: const Icon(Icons.camera_alt)),
+                        ),
                       )
                     ],
                   ),
