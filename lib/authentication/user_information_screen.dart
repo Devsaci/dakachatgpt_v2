@@ -19,35 +19,37 @@ class _UserInformationScreenState extends State<UserInformationScreen> {
               padding: EdgeInsets.all(8.0),
               child: Column(
                 children: [
-                  Stack(
-                    children: [
-                      CircleAvatar(
-                        radius: 60,
-                        backgroundColor: Colors.yellowAccent,
-                        backgroundImage: AssetImage(AssetsManager.userIcon),
-                      ),
-                      Positioned(
-                        bottom: 0,
-                        right: 0,
-                        child: Container(
-                          decoration: BoxDecoration(
-                            color: Colors.deepPurple,
-                            border: Border.all(width: 2, color: Colors.white),
-                            borderRadius:
-                                const BorderRadius.all(Radius.circular(35)),
-                          ),
-                          child: ClipRRect(
-                            borderRadius: BorderRadius.circular(16),
-                            child: IconButton(
-                                onPressed: () {},
-                                icon: const Icon(
-                                  Icons.camera_alt,
-                                  color: Colors.white,
-                                )),
-                          ),
+                  Center(
+                    child: Stack(
+                      children: [
+                        CircleAvatar(
+                          radius: 60,
+                          backgroundColor: Colors.yellowAccent,
+                          backgroundImage: AssetImage(AssetsManager.userIcon),
                         ),
-                      )
-                    ],
+                        Positioned(
+                          bottom: 0,
+                          right: 0,
+                          child: Container(
+                            decoration: BoxDecoration(
+                              color: Colors.deepPurple,
+                              border: Border.all(width: 2, color: Colors.white),
+                              borderRadius:
+                                  const BorderRadius.all(Radius.circular(35)),
+                            ),
+                            child: ClipRRect(
+                              borderRadius: BorderRadius.circular(16),
+                              child: IconButton(
+                                  onPressed: () {},
+                                  icon: const Icon(
+                                    Icons.camera_alt,
+                                    color: Colors.white,
+                                  )),
+                            ),
+                          ),
+                        )
+                      ],
+                    ),
                   ),
                 ],
               ),
