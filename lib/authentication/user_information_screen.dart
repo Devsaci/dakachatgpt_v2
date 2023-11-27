@@ -105,8 +105,9 @@ class _UserInformationScreenState extends State<UserInformationScreen> {
         prefixIcon: Container(
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(8.0),
+            color: Colors.deepPurple,
           ),
-          child: Icon(icon, size: 20, color: Colors.black),
+          child: Icon(icon, size: 20, color: Colors.white),
         ),
       ),
     );
