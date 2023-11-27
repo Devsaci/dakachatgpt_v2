@@ -30,6 +30,7 @@ class _UserInformationScreenState extends State<UserInformationScreen> {
                         bottom: 0,
                         right: 0,
                         child: ClipRRect(
+                          borderRadius: BorderRadius.circular(16),
                           child: IconButton(
                               onPressed: () {},
                               icon: const Icon(Icons.camera_alt)),
