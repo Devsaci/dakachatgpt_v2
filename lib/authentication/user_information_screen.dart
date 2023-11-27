@@ -40,7 +40,10 @@ class _UserInformationScreenState extends State<UserInformationScreen> {
                             borderRadius: BorderRadius.circular(16),
                             child: IconButton(
                                 onPressed: () {},
-                                icon: const Icon(Icons.camera_alt)),
+                                icon: const Icon(
+                                  Icons.camera_alt,
+                                  color: Colors.white,
+                                )),
                           ),
                         ),
                       )
