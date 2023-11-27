@@ -18,7 +18,11 @@ class _UserInformationScreenState extends State<UserInformationScreen> {
               padding: EdgeInsets.all(8.0),
               child: Column(
                 children: [
-                  Stack(),
+                  Stack(
+                    children: [
+                      CircleAvatar(),
+                    ],
+                  ),
                 ],
               ),
             ),
