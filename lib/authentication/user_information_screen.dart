@@ -65,6 +65,7 @@ class _UserInformationScreenState extends State<UserInformationScreen> {
                       myTextFormFiled(
                         enabled: true,
                         textEditingController: nameController,
+                        textInputType: TextInputType.name,
                       ),
                       const SizedBox(height: 20),
                       //Enter your phone number
@@ -83,6 +84,7 @@ class _UserInformationScreenState extends State<UserInformationScreen> {
   TextFormField myTextFormFiled({
     required bool enabled,
     required TextEditingController textEditingController,
+    required TextInputType textInputType,
   }) {
     return TextFormField(
       enabled: enabled,
