@@ -51,6 +51,16 @@ class _UserInformationScreenState extends State<UserInformationScreen> {
                       ],
                     ),
                   ),
+                  const SizedBox(height: 20),
+                  Column(
+                    children: [
+                      // Enter your name
+                      TextFormField(),
+                      const SizedBox(height: 20),
+                      //Enter your phone number
+                      TextFormField(),
+                    ],
+                  ),
                 ],
               ),
             ),
