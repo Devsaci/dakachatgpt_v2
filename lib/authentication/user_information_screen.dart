@@ -95,7 +95,9 @@ class _UserInformationScreenState extends State<UserInformationScreen> {
       controller: textEditingController,
       maxLines: maxLines,
       maxLength: maxLength,
-      decoration: InputDecoration(),
+      decoration: const InputDecoration(
+        counterText: '',
+      ),
     );
   }
 }
