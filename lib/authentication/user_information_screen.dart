@@ -118,6 +118,7 @@ class _UserInformationScreenState extends State<UserInformationScreen> {
           borderSide: const BorderSide(color: Colors.redAccent),
         ),
         alignLabelWithHint: true,
+        border: InputBorder.none,
       ),
     );
   }
