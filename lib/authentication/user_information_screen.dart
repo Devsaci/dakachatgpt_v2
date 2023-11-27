@@ -1,3 +1,4 @@
+import 'package:dakachatgpt_v2/service/image_cache_manager.dart';
 import 'package:flutter/material.dart';
 
 class UserInformationScreen extends StatefulWidget {
@@ -10,7 +11,7 @@ class UserInformationScreen extends StatefulWidget {
 class _UserInformationScreenState extends State<UserInformationScreen> {
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
+    return Scaffold(
       body: SafeArea(
         child: SingleChildScrollView(
           child: Center(
@@ -20,7 +21,11 @@ class _UserInformationScreenState extends State<UserInformationScreen> {
                 children: [
                   Stack(
                     children: [
-                      CircleAvatar(),
+                      CircleAvatar(
+                        radius: 60,
+                        backgroundColor: Colors.yellowAccent,
+                        backgroundImage: AssetImage(AssetsManager.userIcon),
+                      ),
                     ],
                   ),
                 ],
