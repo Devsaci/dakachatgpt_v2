@@ -26,6 +26,8 @@ class _UserInformationScreenState extends State<UserInformationScreen> {
                         backgroundColor: Colors.yellowAccent,
                         backgroundImage: AssetImage(AssetsManager.userIcon),
                       ),
+                      IconButton(
+                          onPressed: () {}, icon: const Icon(Icons.camera_alt))
                     ],
                   ),
                 ],
