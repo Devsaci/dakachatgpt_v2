@@ -94,6 +94,7 @@ class _UserInformationScreenState extends State<UserInformationScreen> {
       enabled: enabled,
       controller: textEditingController,
       maxLines: maxLines,
+      maxLength: maxLength,
     );
   }
 }
