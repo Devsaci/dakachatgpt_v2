@@ -12,7 +12,7 @@ class _UserInformationScreenState extends State<UserInformationScreen> {
   final TextEditingController nameController = TextEditingController();
   @override
   void dispose() {
-    // TODO: implement dispose
+    nameController.dispose();
     super.dispose();
   }
 
