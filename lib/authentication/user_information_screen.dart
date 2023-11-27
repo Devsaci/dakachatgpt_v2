@@ -69,6 +69,7 @@ class _UserInformationScreenState extends State<UserInformationScreen> {
                         maxLines: 1,
                         maxLength: 25,
                         icon: Icons.account_circle,
+                        hintText: 'Enter your name',
                       ),
                       const SizedBox(height: 20),
                       //Enter your phone number
@@ -91,6 +92,7 @@ class _UserInformationScreenState extends State<UserInformationScreen> {
     required int maxLines,
     required int maxLength,
     required IconData icon,
+    required String hintText,
   }) {
     return TextFormField(
       enabled: enabled,
@@ -98,6 +100,7 @@ class _UserInformationScreenState extends State<UserInformationScreen> {
       maxLines: maxLines,
       maxLength: maxLength,
       decoration: InputDecoration(
+        hintText: hintText,
         counterText: '',
         prefixIcon: Icon(icon, size: 20, color: Colors.black),
       ),
