@@ -10,6 +10,19 @@ class UserInformationScreen extends StatefulWidget {
 class _UserInformationScreenState extends State<UserInformationScreen> {
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return const Scaffold(
+      body: SafeArea(
+        child: SingleChildScrollView(
+          child: Center(
+            child: Padding(
+              padding: EdgeInsets.all(8.0),
+              child: Column(
+                children: [],
+              ),
+            ),
+          ),
+        ),
+      ),
+    );
   }
 }
