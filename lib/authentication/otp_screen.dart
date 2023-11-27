@@ -1,4 +1,5 @@
 import 'package:dakachatgpt_v2/service/image_cache_manager.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:pinput/pinput.dart';
 
@@ -60,7 +61,9 @@ class _OTPScreenState extends State<OTPScreen> {
                     const TextStyle(fontSize: 20, fontWeight: FontWeight.w600),
               ),
               onCompleted: (value) {
-                print("value");
+                if (kDebugMode) {
+                  print("value");
+                }
               },
             ),
             const SizedBox(height: 25),

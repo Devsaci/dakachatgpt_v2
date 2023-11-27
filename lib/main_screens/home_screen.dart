@@ -82,7 +82,9 @@ class _HomeScreenState extends State<HomeScreen> {
           setState(() {
             selectedIndex = index;
           });
-          print('Index $index');
+          if (kDebugMode) {
+            print('Index $index');
+          }
         },
       ),
     );
