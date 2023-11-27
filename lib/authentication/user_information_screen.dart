@@ -102,7 +102,10 @@ class _UserInformationScreenState extends State<UserInformationScreen> {
       decoration: InputDecoration(
         hintText: hintText,
         counterText: '',
-        prefixIcon: Icon(icon, size: 20, color: Colors.black),
+        prefixIcon: Container(
+          decoration: BoxDecoration(),
+          child: Icon(icon, size: 20, color: Colors.black),
+        ),
       ),
     );
   }
