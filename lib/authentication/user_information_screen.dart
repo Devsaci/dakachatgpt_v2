@@ -66,6 +66,7 @@ class _UserInformationScreenState extends State<UserInformationScreen> {
                         enabled: true,
                         textEditingController: nameController,
                         textInputType: TextInputType.name,
+                        maxLines: 1,
                       ),
                       const SizedBox(height: 20),
                       //Enter your phone number
@@ -85,10 +86,12 @@ class _UserInformationScreenState extends State<UserInformationScreen> {
     required bool enabled,
     required TextEditingController textEditingController,
     required TextInputType textInputType,
+    required int maxLines,
   }) {
     return TextFormField(
       enabled: enabled,
       controller: textEditingController,
+      maxLines: maxLines,
     );
   }
 }
