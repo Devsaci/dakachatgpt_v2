@@ -55,7 +55,7 @@ class _UserInformationScreenState extends State<UserInformationScreen> {
                   Column(
                     children: [
                       // Enter your name
-                      TextFormField(),
+                      myTextFormFiled(),
                       const SizedBox(height: 20),
                       //Enter your phone number
                       TextFormField(),
@@ -69,4 +69,6 @@ class _UserInformationScreenState extends State<UserInformationScreen> {
       ),
     );
   }
+
+  TextFormField myTextFormFiled() => TextFormField();
 }
