@@ -103,7 +103,9 @@ class _UserInformationScreenState extends State<UserInformationScreen> {
         hintText: hintText,
         counterText: '',
         prefixIcon: Container(
-          decoration: BoxDecoration(),
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(8.0),
+          ),
           child: Icon(icon, size: 20, color: Colors.black),
         ),
       ),
