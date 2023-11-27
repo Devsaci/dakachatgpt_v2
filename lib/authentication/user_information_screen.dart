@@ -23,7 +23,8 @@ class _UserInformationScreenState extends State<UserInformationScreen> {
         child: SingleChildScrollView(
           child: Center(
             child: Padding(
-              padding: EdgeInsets.all(8.0),
+              padding:
+                  const EdgeInsets.symmetric(vertical: 25.0, horizontal: 35),
               child: Column(
                 children: [
                   Center(
