@@ -9,6 +9,7 @@ class UserInformationScreen extends StatefulWidget {
 }
 
 class _UserInformationScreenState extends State<UserInformationScreen> {
+  final TextEditingController nameController = TextEditingController();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -55,7 +56,10 @@ class _UserInformationScreenState extends State<UserInformationScreen> {
                   Column(
                     children: [
                       // Enter your name
-                      myTextFormFiled(enabled: true),
+                      myTextFormFiled(
+                        enabled: true,
+                        textEditingController: nameController,
+                      ),
                       const SizedBox(height: 20),
                       //Enter your phone number
                       TextFormField(),
@@ -72,9 +76,11 @@ class _UserInformationScreenState extends State<UserInformationScreen> {
 
   TextFormField myTextFormFiled({
     required bool enabled,
+    required TextEditingController textEditingController,
   }) {
     return TextFormField(
       enabled: enabled,
+      controller: textEditingController,
     );
   }
 }
