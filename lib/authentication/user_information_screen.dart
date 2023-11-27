@@ -119,6 +119,7 @@ class _UserInformationScreenState extends State<UserInformationScreen> {
         ),
         alignLabelWithHint: true,
         border: InputBorder.none,
+        fillColor: Colors.purple.shade50,
       ),
     );
   }
