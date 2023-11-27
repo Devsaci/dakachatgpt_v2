@@ -113,6 +113,10 @@ class _UserInformationScreenState extends State<UserInformationScreen> {
           borderRadius: BorderRadius.circular(10),
           borderSide: const BorderSide(color: Colors.black),
         ),
+        focusedBorder: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(10),
+          borderSide: const BorderSide(color: Colors.redAccent),
+        ),
       ),
     );
   }
