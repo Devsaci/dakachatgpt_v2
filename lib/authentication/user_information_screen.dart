@@ -109,7 +109,9 @@ class _UserInformationScreenState extends State<UserInformationScreen> {
           ),
           child: Icon(icon, size: 20, color: Colors.white),
         ),
-        enabledBorder: OutlineInputBorder(),
+        enabledBorder: OutlineInputBorder(
+          borderSide: const BorderSide(color: Color.fromARGB(0, 16, 5, 5)),
+        ),
       ),
     );
   }
