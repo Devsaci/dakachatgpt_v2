@@ -60,22 +60,25 @@ class _UserInformationScreenState extends State<UserInformationScreen> {
                     ),
                   ),
                   const SizedBox(height: 20),
-                  Column(
-                    children: [
-                      // Enter your name
-                      myTextFormFiled(
-                        enabled: true,
-                        textEditingController: nameController,
-                        textInputType: TextInputType.name,
-                        maxLines: 1,
-                        maxLength: 25,
-                        icon: Icons.account_circle,
-                        hintText: 'Enter your name',
-                      ),
-                      const SizedBox(height: 20),
-                      //Enter your phone number
-                      TextFormField(),
-                    ],
+                  Container(
+                    margin: const EdgeInsets.only(top: 20),
+                    child: Column(
+                      children: [
+                        // Enter your name
+                        myTextFormFiled(
+                          enabled: true,
+                          textEditingController: nameController,
+                          textInputType: TextInputType.name,
+                          maxLines: 1,
+                          maxLength: 25,
+                          icon: Icons.account_circle,
+                          hintText: 'Enter your name',
+                        ),
+                        const SizedBox(height: 20),
+                        //Enter your phone number
+                        TextFormField(),
+                      ],
+                    ),
                   ),
                 ],
               ),
