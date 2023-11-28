@@ -101,6 +101,7 @@ class _UserInformationScreenState extends State<UserInformationScreen> {
                             controller: btnController,
                             onPressed: () {},
                             successIcon: Icons.check,
+                            successColor: Colors.green,
                             child: const Text(
                               'Continue',
                               style: TextStyle(
