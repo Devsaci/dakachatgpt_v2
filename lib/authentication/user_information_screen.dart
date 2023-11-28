@@ -10,6 +10,8 @@ class UserInformationScreen extends StatefulWidget {
 
 class _UserInformationScreenState extends State<UserInformationScreen> {
   final TextEditingController nameController = TextEditingController();
+  final TextEditingController phoneController = TextEditingController();
+
   @override
   void dispose() {
     nameController.dispose();
@@ -77,7 +79,15 @@ class _UserInformationScreenState extends State<UserInformationScreen> {
                         ),
                         const SizedBox(height: 20),
                         //Enter your phone number
-                        TextFormField(),
+                        myTextFormFiled(
+                          enabled: true,
+                          textEditingController: phoneController,
+                          textInputType: TextInputType.number,
+                          maxLines: 1,
+                          maxLength: 25,
+                          icon: Icons.phone,
+                          hintText: 'Enter your phone number',
+                        ),
                       ],
                     ),
                   ),
