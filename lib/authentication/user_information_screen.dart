@@ -1,5 +1,6 @@
 import 'package:dakachatgpt_v2/service/image_cache_manager.dart';
 import 'package:flutter/material.dart';
+import 'package:rounded_loading_button/rounded_loading_button.dart';
 
 class UserInformationScreen extends StatefulWidget {
   const UserInformationScreen({super.key});
@@ -11,6 +12,9 @@ class UserInformationScreen extends StatefulWidget {
 class _UserInformationScreenState extends State<UserInformationScreen> {
   final TextEditingController nameController = TextEditingController();
   final TextEditingController phoneController = TextEditingController();
+
+  final RoundedLoadingButtonController btnController =
+      RoundedLoadingButtonController();
 
   @override
   void dispose() {
@@ -90,6 +94,17 @@ class _UserInformationScreenState extends State<UserInformationScreen> {
                           hintText: 'Enter your phone number',
                         ),
                         const SizedBox(height: 20),
+                        RoundedLoadingButton(
+                          controller: btnController,
+                          onPressed: () {},
+                          child: const Text(
+                            'Continue',
+                            style: TextStyle(
+                                fontSize: 24,
+                                fontWeight: FontWeight.bold,
+                                letterSpacing: 1.5),
+                          ),
+                        )
                       ],
                     ),
                   ),
