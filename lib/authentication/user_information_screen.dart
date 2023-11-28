@@ -102,6 +102,7 @@ class _UserInformationScreenState extends State<UserInformationScreen> {
                             onPressed: () {},
                             successIcon: Icons.check,
                             successColor: Colors.green,
+                            errorColor: Colors.red,
                             child: const Text(
                               'Continue',
                               style: TextStyle(
