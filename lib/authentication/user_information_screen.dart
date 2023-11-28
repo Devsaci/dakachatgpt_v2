@@ -95,6 +95,7 @@ class _UserInformationScreenState extends State<UserInformationScreen> {
                         ),
                         const SizedBox(height: 20),
                         SizedBox(
+                          width: double.infinity,
                           child: RoundedLoadingButton(
                             controller: btnController,
                             onPressed: () {},
