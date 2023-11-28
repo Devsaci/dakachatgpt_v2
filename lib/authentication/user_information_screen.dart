@@ -15,6 +15,7 @@ class _UserInformationScreenState extends State<UserInformationScreen> {
   @override
   void dispose() {
     nameController.dispose();
+    phoneController.dispose();
     super.dispose();
   }
 
@@ -88,6 +89,7 @@ class _UserInformationScreenState extends State<UserInformationScreen> {
                           icon: Icons.phone,
                           hintText: 'Enter your phone number',
                         ),
+                        const SizedBox(height: 20),
                       ],
                     ),
                   ),
