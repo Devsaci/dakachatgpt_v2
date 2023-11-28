@@ -94,15 +94,17 @@ class _UserInformationScreenState extends State<UserInformationScreen> {
                           hintText: 'Enter your phone number',
                         ),
                         const SizedBox(height: 20),
-                        RoundedLoadingButton(
-                          controller: btnController,
-                          onPressed: () {},
-                          child: const Text(
-                            'Continue',
-                            style: TextStyle(
-                                fontSize: 24,
-                                fontWeight: FontWeight.bold,
-                                letterSpacing: 1.5),
+                        SizedBox(
+                          child: RoundedLoadingButton(
+                            controller: btnController,
+                            onPressed: () {},
+                            child: const Text(
+                              'Continue',
+                              style: TextStyle(
+                                  fontSize: 24,
+                                  fontWeight: FontWeight.bold,
+                                  letterSpacing: 1.5),
+                            ),
                           ),
                         )
                       ],
