@@ -107,6 +107,7 @@ class _UserInformationScreenState extends State<UserInformationScreen> {
         hintText: hintText,
         counterText: '',
         prefixIcon: Container(
+          margin: const EdgeInsets.all(8.0),
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(8.0),
             color: Colors.deepPurple,
