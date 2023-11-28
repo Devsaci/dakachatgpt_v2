@@ -61,6 +61,7 @@ class _UserInformationScreenState extends State<UserInformationScreen> {
                   ),
                   const SizedBox(height: 20),
                   Container(
+                    width: MediaQuery.of(context).size.width,
                     margin: const EdgeInsets.only(top: 20),
                     child: Column(
                       children: [
