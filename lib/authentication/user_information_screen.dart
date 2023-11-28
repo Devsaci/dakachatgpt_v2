@@ -103,6 +103,7 @@ class _UserInformationScreenState extends State<UserInformationScreen> {
                             successIcon: Icons.check,
                             successColor: Colors.green,
                             errorColor: Colors.red,
+                            color: Colors.deepPurple,
                             child: const Text(
                               'Continue',
                               style: TextStyle(
