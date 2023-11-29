@@ -17,4 +17,7 @@ class AuthenticationProvider extends ChangeNotifier {
   set isSignedIn(bool value) => this._isSignedIn = value;
 
   String? _uid;
+  String? get uid => this._uid;
+
+  set uid(String? value) => this._uid = value;
 }
