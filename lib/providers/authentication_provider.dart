@@ -28,5 +28,7 @@ class AuthenticationProvider extends ChangeNotifier {
   final FirebaseFirestore firebaseFirestore = FirebaseFirestore.instance;
   final FirebaseStorage firebaseStorage = FirebaseStorage.instance;
 
-  void signInWithPhone() {}
+  void signInWithPhone({
+    required BuildContext context,
+  }) {}
 }
