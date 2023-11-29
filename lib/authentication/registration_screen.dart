@@ -129,6 +129,8 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                           listen: false,
                         );
                         String phoneNumber = phoneController.text.trim();
+                        String fullPhoneNumber =
+                            '+${selectedCountry.phoneCode}$phoneNumber';
                       },
                       successIcon: Icons.check,
                       errorColor: Colors.red,
