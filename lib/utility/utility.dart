@@ -6,7 +6,11 @@ void showSnackBar({
 }) {
   ScaffoldMessenger.of(context).showSnackBar(
     SnackBar(
-      content: Text(content),
+      content: Text(
+        content,
+        textAlign: TextAlign.center,
+        style: const TextStyle(fontSize: 18, color: Colors.white),
+      ),
     ),
   );
 }

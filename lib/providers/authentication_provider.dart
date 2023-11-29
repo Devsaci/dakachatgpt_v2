@@ -53,15 +53,4 @@ class AuthenticationProvider extends ChangeNotifier {
       showSnackBar(context: context, content: e.toString());
     }
   }
-
-  // void showSnackBar({
-  //   required BuildContext context,
-  //   required String content,
-  // }) {
-  //   ScaffoldMessenger.of(context).showSnackBar(
-  //     SnackBar(
-  //       content: Text(content),
-  //     ),
-  //   );
-  // }
 }
