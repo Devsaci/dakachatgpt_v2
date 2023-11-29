@@ -131,6 +131,10 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                         String phoneNumber = phoneController.text.trim();
                         String fullPhoneNumber =
                             '+${selectedCountry.phoneCode}$phoneNumber';
+                        authRepo.signInWithPhone(
+                            context: context,
+                            phoneNumber: fullPhoneNumber,
+                            btnController: btnController);
                       },
                       successIcon: Icons.check,
                       errorColor: Colors.red,
