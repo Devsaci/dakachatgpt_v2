@@ -128,7 +128,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                           context,
                           listen: false,
                         );
-                        phoneController.text.trim();
+                        String phoneNumber = phoneController.text.trim();
                       },
                       successIcon: Icons.check,
                       errorColor: Colors.red,
