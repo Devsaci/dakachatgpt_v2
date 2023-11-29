@@ -7,6 +7,10 @@ class AuthenticationProvider extends ChangeNotifier {
   set isLoading(bool value) => this._isLoading = value;
 
   bool _isSuccessful = false;
+  bool get isSuccessful => this._isSuccessful;
+
+  set isSuccessful(bool value) => this._isSuccessful = value;
+
   bool _isSignedIn = false;
   String? _uid;
 }
