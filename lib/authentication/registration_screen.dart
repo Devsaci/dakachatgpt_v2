@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:rounded_loading_button/rounded_loading_button.dart';
 
+import '../providers/authentication_provider.dart';
 import '../service/image_cache_manager.dart';
 
 class RegistrationScreen extends StatefulWidget {
@@ -123,13 +124,8 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                     child: RoundedLoadingButton(
                       controller: btnController,
                       onPressed: () {
-                        // Navigator.push(
-                        //     context,
-                        //     MaterialPageRoute(
-                        //       builder: (context) => const OTPScreen(),
-                        //     ));
-
-                        Provider.of(context, listen: false);
+                        Provider.of<AuthenticationProvider>(context,
+                            listen: false);
                       },
                       successIcon: Icons.check,
                       errorColor: Colors.red,
