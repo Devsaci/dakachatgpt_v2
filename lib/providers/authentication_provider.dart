@@ -39,14 +39,19 @@ class AuthenticationProvider extends ChangeNotifier {
   final FirebaseStorage firebaseStorage = FirebaseStorage.instance;
 
 // sign in user with phone
-  void signInWithPhone({
+  Future<void> signInWithPhone({
     required BuildContext context,
     required String phoneNumber,
     required RoundedLoadingButtonController btnController,
-  }) {
+  }) async {
     try {
-      // sign in user with phone
-      // ignore: unused_catch_clause
+      await FirebaseAuth.instance.verifyPhoneNumber(
+        phoneNumber: '+44 7123 123 456',
+        verificationCompleted: (PhoneAuthCredential credential) {},
+        verificationFailed: (FirebaseAuthException e) {},
+        codeSent: (String verificationId, int? resendToken) {},
+        codeAutoRetrievalTimeout: (String verificationId) {},
+      );
     } on FirebaseException catch (e) {
       // show error message to user
       btnController.reset();
