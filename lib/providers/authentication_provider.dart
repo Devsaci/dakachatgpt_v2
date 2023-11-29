@@ -48,11 +48,15 @@ class AuthenticationProvider extends ChangeNotifier {
     } on FirebaseException catch (e) {
       // show error message to user
       btnController.reset();
-      ScaffoldMessenger.of(context).showSnackBar(
-        const SnackBar(
-          content: Text("data"),
-        ),
-      );
+      showSnackBar(context);
     }
+  }
+
+  void showSnackBar(BuildContext context) {
+    ScaffoldMessenger.of(context).showSnackBar(
+      const SnackBar(
+        content: Text("data"),
+      ),
+    );
   }
 }
