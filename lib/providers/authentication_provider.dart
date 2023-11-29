@@ -30,5 +30,6 @@ class AuthenticationProvider extends ChangeNotifier {
 
   void signInWithPhone({
     required BuildContext context,
+    required String phoneNumber,
   }) {}
 }
