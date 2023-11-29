@@ -157,10 +157,10 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
     String fullPhoneNumber = '+${selectedCountry.phoneCode}$phoneNumber';
     print("phoneNumber  :  $phoneNumber");
     print("fullPhoneNumber  :  $fullPhoneNumber");
-    authRepo.signInWithPhone(
-      context: context,
-      phoneNumber: fullPhoneNumber,
-      btnController: btnController,
-    );
+    // authRepo.signInWithPhone(
+    //   context: context,
+    //   phoneNumber: fullPhoneNumber,
+    //   btnController: btnController,
+    // );
   }
 }
