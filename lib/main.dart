@@ -3,11 +3,11 @@ import 'package:dakachatgpt_v2/themes/my_theme.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-
-//import 'authentication/registration_screen.dart';
+import 'authentication/registration_screen.dart';
 import 'authentication/user_information_screen.dart';
+import 'constants/constants.dart';
 import 'firebase_options.dart';
-//import 'main_screens/home_screen.dart';
+import 'main_screens/home_screen.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -53,9 +53,14 @@ class _MyAppState extends State<MyApp> {
           title: 'Flutter ChatGpt',
           theme:
               MyTheme.themeData(isDarkTheme: value.themeType, context: context),
-          // home: const RegistrationScreen(),
-          home: const UserInformationScreen(),
-          // home: const HomeScreen(),
+          initialRoute: Constants.registrationScreen,
+          routes: {
+            Constants.registrationScreen: (context) =>
+                const RegistrationScreen(),
+            Constants.homeScreen: (context) => const HomeScreen(),
+            Constants.userInformationScreen: (context) =>
+                const UserInformationScreen(),
+          },
         );
       },
     );
