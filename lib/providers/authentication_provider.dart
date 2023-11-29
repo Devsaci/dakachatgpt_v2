@@ -38,5 +38,7 @@ class AuthenticationProvider extends ChangeNotifier {
     required BuildContext context,
     required String phoneNumber,
     required RoundedLoadingButtonController btnController,
-  }) {}
+  }) {
+    try {} catch (e) {}
+  }
 }
