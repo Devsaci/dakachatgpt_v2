@@ -54,7 +54,9 @@ class AuthenticationProvider extends ChangeNotifier {
         verificationFailed: (FirebaseAuthException e) {
           throw Exception(e.toString());
         },
-        codeSent: (String verificationId, int? resendToken) {},
+        codeSent: (String verificationId, int? resendToken) {
+          _phoneNumber = phoneNumber;
+        },
         codeAutoRetrievalTimeout: (String verificationId) {},
       );
     } on FirebaseException catch (e) {
