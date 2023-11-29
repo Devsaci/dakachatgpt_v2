@@ -120,6 +120,20 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                           ),
                         ),
                       ),
+                      suffixIcon: phoneController.text.length > 9
+                          ? Container(
+                              height: 20,
+                              width: 20,
+                              margin: const EdgeInsets.all(10.0),
+                              decoration: const BoxDecoration(
+                                  shape: BoxShape.circle, color: Colors.green),
+                              child: const Icon(
+                                Icons.done,
+                                size: 20,
+                                color: Colors.white,
+                              ),
+                            )
+                          : null,
                     ),
                   ),
                   const SizedBox(height: 30),
