@@ -27,6 +27,9 @@ class AuthenticationProvider extends ChangeNotifier {
   String? get uid => this._uid;
   set uid(String? value) => this._uid = value;
 
+  String? get phoneNumber => this._phoneNumber;
+  set phoneNumber(String? value) => this._phoneNumber = value;
+
   final FirebaseAuth firebaseAuth = FirebaseAuth.instance;
   final FirebaseFirestore firebaseFirestore = FirebaseFirestore.instance;
   final FirebaseStorage firebaseStorage = FirebaseStorage.instance;
