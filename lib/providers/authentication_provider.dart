@@ -56,6 +56,7 @@ class AuthenticationProvider extends ChangeNotifier {
         },
         codeSent: (String verificationId, int? resendToken) {
           _phoneNumber = phoneNumber;
+          notifyListeners();
         },
         codeAutoRetrievalTimeout: (String verificationId) {},
       );
