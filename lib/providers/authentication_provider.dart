@@ -39,6 +39,6 @@ class AuthenticationProvider extends ChangeNotifier {
     required String phoneNumber,
     required RoundedLoadingButtonController btnController,
   }) {
-    try {} catch (e) {}
+    try {} on FirebaseException catch (e) {}
   }
 }
