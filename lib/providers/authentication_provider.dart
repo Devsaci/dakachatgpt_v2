@@ -2,6 +2,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter/material.dart';
+import 'package:rounded_loading_button/rounded_loading_button.dart';
 
 class AuthenticationProvider extends ChangeNotifier {
   bool _isLoading = false;
@@ -31,5 +32,6 @@ class AuthenticationProvider extends ChangeNotifier {
   void signInWithPhone({
     required BuildContext context,
     required String phoneNumber,
+    required RoundedLoadingButtonController btnController,
   }) {}
 }
