@@ -1,3 +1,4 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 
 class AuthenticationProvider extends ChangeNotifier {
@@ -20,4 +21,6 @@ class AuthenticationProvider extends ChangeNotifier {
 
   String? get uid => this._uid;
   set uid(String? value) => this._uid = value;
+
+  final FirebaseAuth firebaseAuth = FirebaseAuth.instance;
 }
