@@ -80,6 +80,11 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                     maxLength: 10,
                     textInputAction: TextInputAction.done,
                     keyboardType: TextInputType.number,
+                    onChanged: (value) {
+                      setState(() {
+                        phoneController.text = value;
+                      });
+                    },
                     decoration: InputDecoration(
                       hintText: 'Enter phone number',
                       hintStyle: const TextStyle(fontSize: 18),
