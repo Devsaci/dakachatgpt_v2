@@ -34,11 +34,17 @@ class AuthenticationProvider extends ChangeNotifier {
   final FirebaseFirestore firebaseFirestore = FirebaseFirestore.instance;
   final FirebaseStorage firebaseStorage = FirebaseStorage.instance;
 
+// sign in user with phone
   void signInWithPhone({
     required BuildContext context,
     required String phoneNumber,
     required RoundedLoadingButtonController btnController,
   }) {
-    try {} on FirebaseException catch (e) {}
+    try {
+      // sign in user with phone
+    } on FirebaseException catch (e) {
+      // show error message to user
+      btnController.reset();
+    }
   }
 }
