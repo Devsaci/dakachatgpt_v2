@@ -124,17 +124,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                     child: RoundedLoadingButton(
                       controller: btnController,
                       onPressed: () {
-                        final authRepo = Provider.of<AuthenticationProvider>(
-                          context,
-                          listen: false,
-                        );
-                        String phoneNumber = phoneController.text.trim();
-                        String fullPhoneNumber =
-                            '+${selectedCountry.phoneCode}$phoneNumber';
-                        authRepo.signInWithPhone(
-                            context: context,
-                            phoneNumber: fullPhoneNumber,
-                            btnController: btnController);
+                        sendPhoneNumber();
                       },
                       successIcon: Icons.check,
                       errorColor: Colors.red,
@@ -155,6 +145,20 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
           ),
         ),
       ),
+    );
+  }
+
+  void sendPhoneNumber() {
+    final authRepo = Provider.of<AuthenticationProvider>(
+      context,
+      listen: false,
+    );
+    String phoneNumber = phoneController.text.trim();
+    String fullPhoneNumber = '+${selectedCountry.phoneCode}$phoneNumber';
+    authRepo.signInWithPhone(
+      context: context,
+      phoneNumber: fullPhoneNumber,
+      btnController: btnController,
     );
   }
 }
