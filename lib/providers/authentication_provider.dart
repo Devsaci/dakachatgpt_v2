@@ -1,3 +1,5 @@
+// ignore_for_file: unnecessary_this
+
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_storage/firebase_storage.dart';
@@ -42,9 +44,15 @@ class AuthenticationProvider extends ChangeNotifier {
   }) {
     try {
       // sign in user with phone
+      // ignore: unused_catch_clause
     } on FirebaseException catch (e) {
       // show error message to user
       btnController.reset();
+      ScaffoldMessenger.of(context).showSnackBar(
+        const SnackBar(
+          content: Text("data"),
+        ),
+      );
     }
   }
 }
