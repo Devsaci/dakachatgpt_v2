@@ -13,6 +13,8 @@ class AuthenticationProvider extends ChangeNotifier {
 
   String? _uid;
 
+  String? _phoneNumber;
+
   bool get isLoading => this._isLoading;
   set isLoading(bool value) => this._isLoading = value;
 
