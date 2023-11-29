@@ -124,8 +124,11 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                     child: RoundedLoadingButton(
                       controller: btnController,
                       onPressed: () {
-                        Provider.of<AuthenticationProvider>(context,
-                            listen: false);
+                        final authRepo = Provider.of<AuthenticationProvider>(
+                          context,
+                          listen: false,
+                        );
+                        phoneController.text.trim();
                       },
                       successIcon: Icons.check,
                       errorColor: Colors.red,
