@@ -58,6 +58,7 @@ class AuthenticationProvider extends ChangeNotifier {
           _phoneNumber = phoneNumber;
           notifyListeners();
           btnController.success();
+          Future.delayed(const Duration());
         },
         codeAutoRetrievalTimeout: (String verificationId) {},
       );
