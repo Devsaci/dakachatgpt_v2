@@ -63,7 +63,7 @@ class AuthenticationProvider extends ChangeNotifier {
             Navigator.pop(
               context,
               MaterialPageRoute(
-                builder: (context) => OTPScreen(),
+                builder: (context) => const OTPScreen(),
               ),
             );
           });
