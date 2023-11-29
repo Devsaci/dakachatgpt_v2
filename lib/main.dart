@@ -8,6 +8,7 @@ import 'authentication/user_information_screen.dart';
 import 'constants/constants.dart';
 import 'firebase_options.dart';
 import 'main_screens/home_screen.dart';
+import 'providers/authentication_provider.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -17,9 +18,8 @@ Future<void> main() async {
   runApp(
     MultiProvider(
       providers: [
-        ChangeNotifierProvider(
-          create: (_) => MyThemeProvider(),
-        )
+        ChangeNotifierProvider(create: (_) => MyThemeProvider()),
+        ChangeNotifierProvider(create: (_) => AuthenticationProvider()),
       ],
       child: const MyApp(),
     ),
