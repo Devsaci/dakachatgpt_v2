@@ -46,7 +46,7 @@ class AuthenticationProvider extends ChangeNotifier {
   }) async {
     try {
       await FirebaseAuth.instance.verifyPhoneNumber(
-        phoneNumber: '+44 7123 123 456',
+        phoneNumber: phoneNumber,
         verificationCompleted: (PhoneAuthCredential credential) {},
         verificationFailed: (FirebaseAuthException e) {},
         codeSent: (String verificationId, int? resendToken) {},
