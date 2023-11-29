@@ -1,6 +1,7 @@
 // ignore_for_file: unnecessary_this
 
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:dakachatgpt_v2/authentication/otp_screen.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter/material.dart';
@@ -58,7 +59,14 @@ class AuthenticationProvider extends ChangeNotifier {
           _phoneNumber = phoneNumber;
           notifyListeners();
           btnController.success();
-          Future.delayed(const Duration(seconds: 1)).whenComplete(() => null);
+          Future.delayed(const Duration(seconds: 1)).whenComplete(() {
+            Navigator.pop(
+              context,
+              MaterialPageRoute(
+                builder: (context) => OTPScreen(),
+              ),
+            );
+          });
         },
         codeAutoRetrievalTimeout: (String verificationId) {},
       );
