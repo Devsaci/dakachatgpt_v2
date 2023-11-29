@@ -51,7 +51,9 @@ class AuthenticationProvider extends ChangeNotifier {
           // await firebaseAuth.signInWithCredential(credential);
           await firebaseAuth.signInWithCredential(credential);
         },
-        verificationFailed: (FirebaseAuthException e) {},
+        verificationFailed: (FirebaseAuthException e) {
+          throw Exception(e.toString());
+        },
         codeSent: (String verificationId, int? resendToken) {},
         codeAutoRetrievalTimeout: (String verificationId) {},
       );
