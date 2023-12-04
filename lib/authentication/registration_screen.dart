@@ -179,12 +179,12 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
     );
     String phoneNumber = phoneController.text.trim();
     String fullPhoneNumber = '+${selectedCountry.phoneCode}$phoneNumber';
-    print("phoneNumber  :  $phoneNumber");
-    print("fullPhoneNumber  :  $fullPhoneNumber");
-    // authRepo.signInWithPhone(
-    //   context: context,
-    //   phoneNumber: fullPhoneNumber,
-    //   btnController: btnController,
-    // );
+    // print("phoneNumber  :  $phoneNumber");
+    // print("fullPhoneNumber  :  $fullPhoneNumber");
+    authRepo.signInWithPhone(
+      context: context,
+      phoneNumber: fullPhoneNumber,
+      btnController: btnController,
+    );
   }
 }
