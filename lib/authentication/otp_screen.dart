@@ -1,3 +1,4 @@
+import 'package:dakachatgpt_v2/authentication/user_information_screen.dart';
 import 'package:dakachatgpt_v2/service/image_cache_manager.dart';
 // import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
@@ -98,7 +99,13 @@ class _OTPScreenState extends State<OTPScreen> {
       context: context,
       verificationId: widget.verificationId,
       smsCode: smsCode,
-      onSuccess: () {},
+      onSuccess: () {
+        Navigator.push(
+            context,
+            MaterialPageRoute(
+              builder: (context) => const UserInformationScreen(),
+            ));
+      },
     );
   }
 }
