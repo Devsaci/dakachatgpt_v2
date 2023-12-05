@@ -63,8 +63,8 @@ class AuthenticationProvider extends ChangeNotifier {
             Navigator.push(
               context,
               MaterialPageRoute(
-                builder: (context) => const OTPScreen(
-                  verificationId: '',
+                builder: (context) => OTPScreen(
+                  verificationId: verificationId,
                 ),
               ),
             );
