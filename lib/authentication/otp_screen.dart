@@ -19,6 +19,7 @@ class _OTPScreenState extends State<OTPScreen> {
   String? smsCode;
   @override
   Widget build(BuildContext context) {
+    final authRepo = Provider.of<AuthenticationProvider>(context);
     return Scaffold(
       body: SafeArea(
           child: SingleChildScrollView(
@@ -94,9 +95,9 @@ class _OTPScreenState extends State<OTPScreen> {
   }
 
   void verifyOTP({required String smsCode}) {
-    final authProvider =
+    final authRepo =
         Provider.of<AuthenticationProvider>(context, listen: false);
-    authProvider.verifyOTP(
+    authRepo.verifyOTP(
       context: context,
       verificationId: widget.verificationId,
       smsCode: smsCode,
