@@ -1,5 +1,5 @@
 import 'package:dakachatgpt_v2/service/image_cache_manager.dart';
-import 'package:flutter/foundation.dart';
+// import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:pinput/pinput.dart';
 import 'package:provider/provider.dart';
@@ -94,6 +94,7 @@ class _OTPScreenState extends State<OTPScreen> {
   void verifyOTP({required String smsCode}) {
     Provider.of<AuthenticationProvider>(
       context,
+      listen: false,
     );
   }
 }
