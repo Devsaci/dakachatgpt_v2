@@ -76,6 +76,12 @@ class _OTPScreenState extends State<OTPScreen> {
               },
             ),
             const SizedBox(height: 25),
+            authRepo.isLoading
+                ? const CircularProgressIndicator(
+                    color: Colors.orangeAccent,
+                  )
+                : const SizedBox.shrink(),
+            const SizedBox(height: 25),
             const Text(
               'Didn\'t receive any code?',
               style: TextStyle(fontSize: 14, fontWeight: FontWeight.bold),
