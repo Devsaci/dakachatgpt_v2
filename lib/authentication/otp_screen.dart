@@ -63,7 +63,9 @@ class _OTPScreenState extends State<OTPScreen> {
                     const TextStyle(fontSize: 20, fontWeight: FontWeight.w600),
               ),
               onCompleted: (value) {
-                setState(() {});
+                setState(() {
+                  smsCode = value;
+                });
               },
             ),
             const SizedBox(height: 25),
