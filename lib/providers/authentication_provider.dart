@@ -98,6 +98,10 @@ class AuthenticationProvider extends ChangeNotifier {
         notifyListeners();
         onSuccess();
       }
+
+      _isLoading = false;
+      _isSuccessful = true;
+      notifyListeners();
     } on FirebaseException catch (e) {
       _isLoading = false;
       notifyListeners();
