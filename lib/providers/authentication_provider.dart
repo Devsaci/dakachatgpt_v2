@@ -93,6 +93,11 @@ class AuthenticationProvider extends ChangeNotifier {
       );
       User? user =
           (await firebaseAuth.signInWithCredential(phoneAuthCredential)).user;
+      if (user != null) {
+        _uid = user.uid;
+        notifyListeners();
+        onSuccess();
+      }
     } on FirebaseException catch (e) {
       _isLoading = false;
       notifyListeners();
