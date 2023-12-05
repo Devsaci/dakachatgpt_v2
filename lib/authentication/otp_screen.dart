@@ -4,7 +4,8 @@ import 'package:flutter/material.dart';
 import 'package:pinput/pinput.dart';
 
 class OTPScreen extends StatefulWidget {
-  const OTPScreen({super.key});
+  final String verificationId;
+  const OTPScreen({super.key, required this.verificationId});
 
   @override
   State<OTPScreen> createState() => _OTPScreenState();
