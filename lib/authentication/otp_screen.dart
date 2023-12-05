@@ -12,6 +12,7 @@ class OTPScreen extends StatefulWidget {
 }
 
 class _OTPScreenState extends State<OTPScreen> {
+  String? smsCode;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
