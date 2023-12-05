@@ -87,7 +87,8 @@ class AuthenticationProvider extends ChangeNotifier {
   }) {
     _isLoading = true;
     try {
-      //
+      PhoneAuthProvider.credential(
+          verificationId: verificationId, smsCode: smsCode);
     } on FirebaseException catch (e) {
       _isLoading = false;
       notifyListeners();
