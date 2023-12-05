@@ -86,6 +86,10 @@ class AuthenticationProvider extends ChangeNotifier {
     required Function onSuccess,
   }) {
     _isLoading = true;
-    try {} catch (e) {}
+    try {
+      //
+    } on FirebaseException catch (e) {
+//
+    }
   }
 }
