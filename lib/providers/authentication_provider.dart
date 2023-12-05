@@ -91,6 +91,7 @@ class AuthenticationProvider extends ChangeNotifier {
     } on FirebaseException catch (e) {
       _isLoading = false;
       notifyListeners();
+      showSnackBar(context: context, content: e.toString());
     }
   }
 }
