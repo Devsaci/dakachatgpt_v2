@@ -66,6 +66,7 @@ class _OTPScreenState extends State<OTPScreen> {
                 setState(() {
                   smsCode = value;
                 });
+                // verify OTP
               },
             ),
             const SizedBox(height: 25),
@@ -86,4 +87,6 @@ class _OTPScreenState extends State<OTPScreen> {
       )),
     );
   }
+
+  void verifyOTP() {}
 }
