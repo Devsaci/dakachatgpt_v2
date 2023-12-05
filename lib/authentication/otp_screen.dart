@@ -19,7 +19,7 @@ class _OTPScreenState extends State<OTPScreen> {
   String? smsCode;
   @override
   Widget build(BuildContext context) {
-    final authRepo = Provider.of<AuthenticationProvider>(context);
+    final authRepo = Provider.of<AuthenticationProvider>(context, listen: true);
     return Scaffold(
       body: SafeArea(
           child: SingleChildScrollView(
