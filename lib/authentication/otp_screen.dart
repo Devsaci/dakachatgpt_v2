@@ -92,7 +92,7 @@ class _OTPScreenState extends State<OTPScreen> {
   }
 
   void verifyOTP({required String smsCode}) {
-    Provider.of<AuthenticationProvider>(
+    final authProvider = Provider.of<AuthenticationProvider>(
       context,
       listen: false,
     );
