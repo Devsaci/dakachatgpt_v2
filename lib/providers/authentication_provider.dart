@@ -60,7 +60,7 @@ class AuthenticationProvider extends ChangeNotifier {
           notifyListeners();
           btnController.success();
           Future.delayed(const Duration(seconds: 1)).whenComplete(() {
-            Navigator.pop(
+            Navigator.push(
               context,
               MaterialPageRoute(
                 builder: (context) => const OTPScreen(),
