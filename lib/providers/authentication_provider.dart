@@ -84,5 +84,7 @@ class AuthenticationProvider extends ChangeNotifier {
     required String verificationId,
     required String smsCode,
     required Function onSuccess,
-  }) {}
+  }) {
+    _isLoading = true;
+  }
 }
