@@ -79,5 +79,10 @@ class AuthenticationProvider extends ChangeNotifier {
     }
   }
 
-  void verifyOTP() {}
+  void verifyOTP({
+    required BuildContext context,
+    required String verificationId,
+    required String smsCode,
+    required Function onSuccess,
+  }) {}
 }
