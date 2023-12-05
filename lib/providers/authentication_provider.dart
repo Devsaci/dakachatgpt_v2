@@ -90,6 +90,7 @@ class AuthenticationProvider extends ChangeNotifier {
       //
     } on FirebaseException catch (e) {
       _isLoading = false;
+      notifyListeners();
     }
   }
 }
