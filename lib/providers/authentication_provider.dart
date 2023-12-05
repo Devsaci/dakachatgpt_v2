@@ -79,18 +79,20 @@ class AuthenticationProvider extends ChangeNotifier {
     }
   }
 
-  void verifyOTP({
+  Future<void> verifyOTP({
     required BuildContext context,
     required String verificationId,
     required String smsCode,
     required Function onSuccess,
-  }) {
+  }) async {
     _isLoading = true;
     try {
       PhoneAuthCredential phoneAuthCredential = PhoneAuthProvider.credential(
         verificationId: verificationId,
         smsCode: smsCode,
       );
+      User? user =
+          (await firebaseAuth.signInWithCredential(phoneAuthCredential)).user;
     } on FirebaseException catch (e) {
       _isLoading = false;
       notifyListeners();
