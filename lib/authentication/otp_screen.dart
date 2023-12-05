@@ -63,9 +63,7 @@ class _OTPScreenState extends State<OTPScreen> {
                     const TextStyle(fontSize: 20, fontWeight: FontWeight.w600),
               ),
               onCompleted: (value) {
-                if (kDebugMode) {
-                  print("value");
-                }
+                setState(() {});
               },
             ),
             const SizedBox(height: 25),
