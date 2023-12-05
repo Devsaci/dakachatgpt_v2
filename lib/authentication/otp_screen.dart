@@ -88,5 +88,5 @@ class _OTPScreenState extends State<OTPScreen> {
     );
   }
 
-  void verifyOTP() {}
+  void verifyOTP({required String smsCode}) {}
 }
