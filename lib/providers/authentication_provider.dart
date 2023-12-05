@@ -78,4 +78,6 @@ class AuthenticationProvider extends ChangeNotifier {
       showSnackBar(context: context, content: e.toString());
     }
   }
+
+  void verifyOTP() {}
 }
