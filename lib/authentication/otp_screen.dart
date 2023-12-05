@@ -71,6 +71,7 @@ class _OTPScreenState extends State<OTPScreen> {
                   smsCode = value;
                 });
                 // verify OTP
+                verifyOTP(smsCode: smsCode!);
               },
             ),
             const SizedBox(height: 25),
