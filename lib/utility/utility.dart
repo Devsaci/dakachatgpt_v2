@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 
 void showSnackBar({
@@ -15,7 +17,10 @@ void showSnackBar({
   );
 }
 
-pickImage({
+Future<File?> pickImage({
   required BuildContext context,
   required bool fromCamera,
-}) {}
+}) async {
+  File? fileImage;
+  return fileImage;
+}
