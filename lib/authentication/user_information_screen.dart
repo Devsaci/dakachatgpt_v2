@@ -68,6 +68,28 @@ class _UserInformationScreenState extends State<UserInformationScreen> {
       builder: (context) {
         return const AlertDialog(
           title: Text("Please choose an option"),
+          content: Column(
+            children: [
+              Row(
+                children: [
+                  Icon(
+                    Icons.camera_alt,
+                    color: Colors.purple,
+                  ),
+                  Text("Camera"),
+                ],
+              ),
+              Row(
+                children: [
+                  Icon(
+                    Icons.image_outlined,
+                    color: Colors.purple,
+                  ),
+                  Text("Gallery"),
+                ],
+              ),
+            ],
+          ),
         );
       },
     );
@@ -109,7 +131,8 @@ class _UserInformationScreenState extends State<UserInformationScreen> {
                                     borderRadius: BorderRadius.circular(16),
                                     child: IconButton(
                                         onPressed: () {
-                                          selectImage(false);
+                                          //selectImage(false);
+                                          showImagePickerDialog();
                                         },
                                         icon: const Icon(
                                           Icons.camera_alt,
@@ -148,7 +171,8 @@ class _UserInformationScreenState extends State<UserInformationScreen> {
                                         color: Colors.white,
                                       ),
                                       onPressed: () {
-                                        selectImage(false);
+                                        //selectImage(false);
+                                        showImagePickerDialog();
                                       },
                                     ),
                                   ),
