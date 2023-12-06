@@ -42,6 +42,8 @@ class _UserInformationScreenState extends State<UserInformationScreen> {
     finalImageFile = await pickImage(context: context, fromCamera: fromCamera);
   }
 
+  void cropImage() {}
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
