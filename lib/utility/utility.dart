@@ -14,3 +14,5 @@ void showSnackBar({
     ),
   );
 }
+
+pickImage() {}
