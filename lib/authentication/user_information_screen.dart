@@ -57,7 +57,7 @@ class _UserInformationScreenState extends State<UserInformationScreen> {
     );
     if (croppedFile != null) {
       setState(() {
-        File(croppedFile.path);
+        finalImageFile = File(croppedFile.path);
       });
     }
   }
