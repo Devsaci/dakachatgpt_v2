@@ -1,6 +1,9 @@
 import 'package:dakachatgpt_v2/service/image_cache_manager.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 import 'package:rounded_loading_button/rounded_loading_button.dart';
+
+import '../providers/authentication_provider.dart';
 
 class UserInformationScreen extends StatefulWidget {
   const UserInformationScreen({super.key});
@@ -25,7 +28,7 @@ class _UserInformationScreenState extends State<UserInformationScreen> {
 
   @override
   void initState() {
-    // TODO: implement initState
+    Provider.of<AuthenticationProvider>(context, listen: false);
     super.initState();
   }
 
