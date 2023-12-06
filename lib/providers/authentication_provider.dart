@@ -11,28 +11,21 @@ import '../utility/utility.dart';
 
 class AuthenticationProvider extends ChangeNotifier {
   bool _isLoading = false;
-
   bool _isSuccessful = false;
-
-  bool _isSignedIn = false;
-
+  //bool _isSignedIn = false;
   String? _uid;
-
   String? _phoneNumber;
 
-  bool get isLoading => this._isLoading;
-  set isLoading(bool value) => this._isLoading = value;
-
-  bool get isSuccessful => this._isSuccessful;
-  set isSuccessful(bool value) => this._isSuccessful = value;
-
-  bool get isSignedIn => this._isSignedIn;
-  set isSignedIn(bool value) => this._isSignedIn = value;
-
   String? get uid => this._uid;
-  set uid(String? value) => this._uid = value;
-
   String? get phoneNumber => this._phoneNumber;
+  bool get isSuccessful => this._isSuccessful;
+  bool get isLoading => this._isLoading;
+
+  set isLoading(bool value) => this._isLoading = value;
+  set isSuccessful(bool value) => this._isSuccessful = value;
+  // bool get isSignedIn => this._isSignedIn;
+  // set isSignedIn(bool value) => this._isSignedIn = value;
+  set uid(String? value) => this._uid = value;
   set phoneNumber(String? value) => this._phoneNumber = value;
 
   final FirebaseAuth firebaseAuth = FirebaseAuth.instance;

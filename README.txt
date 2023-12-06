@@ -29,3 +29,4 @@
 ## Section 3 : Building the OTP and user information screen.
 16. OPT screen part 1
 17. OPT screen part 2
+18. User information screen part 1
