@@ -55,6 +55,7 @@ class _UserInformationScreenState extends State<UserInformationScreen> {
       maxHeight: 800,
       maxWidth: 800,
     );
+    if (croppedFile != null) {}
   }
 
   @override
