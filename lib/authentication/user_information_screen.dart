@@ -30,7 +30,7 @@ class _UserInformationScreenState extends State<UserInformationScreen> {
   void initState() {
     final authProvider =
         Provider.of<AuthenticationProvider>(context, listen: false);
-    authProvider.phoneNumber;
+    phoneController.text = authProvider.phoneNumber;
     super.initState();
   }
 

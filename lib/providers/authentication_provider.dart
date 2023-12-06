@@ -17,7 +17,7 @@ class AuthenticationProvider extends ChangeNotifier {
   String? _phoneNumber;
 
   String? get uid => this._uid;
-  String? get phoneNumber => this._phoneNumber;
+  String get phoneNumber => this._phoneNumber!;
   bool get isSuccessful => this._isSuccessful;
   bool get isLoading => this._isLoading;
 
