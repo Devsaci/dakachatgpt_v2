@@ -2,6 +2,7 @@ import 'dart:io';
 
 import 'package:dakachatgpt_v2/service/image_cache_manager.dart';
 import 'package:flutter/material.dart';
+import 'package:image_cropper/image_cropper.dart';
 import 'package:provider/provider.dart';
 import 'package:rounded_loading_button/rounded_loading_button.dart';
 
@@ -40,6 +41,17 @@ class _UserInformationScreenState extends State<UserInformationScreen> {
 
   Future<void> selectImage(bool fromCamera) async {
     finalImageFile = await pickImage(context: context, fromCamera: fromCamera);
+    var filePath;
+    CroppedFile? croppedFile = await ImageCropper().cropImage(
+      sourcePath: filePath,
+      maxHeight: 800,
+      maxWidth: 800,
+    );
+    popThePickImageDialog();
+  }
+
+  void popThePickImageDialog() {
+    Navigator.pop(context);
   }
 
   void cropImage() {}
