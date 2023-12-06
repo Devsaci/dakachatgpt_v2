@@ -28,7 +28,8 @@ class _UserInformationScreenState extends State<UserInformationScreen> {
 
   @override
   void initState() {
-    Provider.of<AuthenticationProvider>(context, listen: false);
+    final authProvider =
+        Provider.of<AuthenticationProvider>(context, listen: false);
     super.initState();
   }
 
