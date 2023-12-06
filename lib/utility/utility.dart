@@ -24,6 +24,9 @@ Future<File?> pickImage({
   File? fileImage;
 
   if (fromCamera) {
+    try {} catch (e) {
+      showSnackBar(context: context, content: e.toString());
+    }
   } else {}
   return fileImage;
 }
