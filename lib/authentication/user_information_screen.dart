@@ -41,12 +41,7 @@ class _UserInformationScreenState extends State<UserInformationScreen> {
 
   Future<void> selectImage(bool fromCamera) async {
     finalImageFile = await pickImage(context: context, fromCamera: fromCamera);
-    var filePath;
-    CroppedFile? croppedFile = await ImageCropper().cropImage(
-      sourcePath: filePath,
-      maxHeight: 800,
-      maxWidth: 800,
-    );
+
     popThePickImageDialog();
   }
 
@@ -54,7 +49,13 @@ class _UserInformationScreenState extends State<UserInformationScreen> {
     Navigator.pop(context);
   }
 
-  void cropImage() {}
+  Future<void> cropImage(filePath) async {
+    CroppedFile? croppedFile = await ImageCropper().cropImage(
+      sourcePath: filePath,
+      maxHeight: 800,
+      maxWidth: 800,
+    );
+  }
 
   @override
   Widget build(BuildContext context) {
