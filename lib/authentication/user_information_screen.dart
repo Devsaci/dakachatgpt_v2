@@ -98,7 +98,7 @@ class _UserInformationScreenState extends State<UserInformationScreen> {
                                     borderRadius: BorderRadius.circular(16),
                                     child: IconButton(
                                         onPressed: () {
-                                          selectImage(true);
+                                          selectImage(false);
                                         },
                                         icon: const Icon(
                                           Icons.camera_alt,
@@ -137,7 +137,7 @@ class _UserInformationScreenState extends State<UserInformationScreen> {
                                         color: Colors.white,
                                       ),
                                       onPressed: () {
-                                        selectImage(true);
+                                        selectImage(false);
                                       },
                                     ),
                                   ),
