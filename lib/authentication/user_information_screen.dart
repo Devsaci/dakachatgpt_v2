@@ -19,9 +19,6 @@ class _UserInformationScreenState extends State<UserInformationScreen> {
   final TextEditingController phoneController = TextEditingController();
   File? finalImageFile;
 
-  final RoundedLoadingButtonController btnController =
-      RoundedLoadingButtonController();
-
   @override
   void dispose() {
     nameController.dispose();
@@ -37,6 +34,10 @@ class _UserInformationScreenState extends State<UserInformationScreen> {
     super.initState();
   }
 
+  final RoundedLoadingButtonController btnController =
+      RoundedLoadingButtonController();
+
+  void selectImage() {}
   @override
   Widget build(BuildContext context) {
     return Scaffold(
