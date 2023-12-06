@@ -15,4 +15,7 @@ void showSnackBar({
   );
 }
 
-pickImage() {}
+pickImage({
+  required BuildContext context,
+  required bool fromCamera,
+}) {}
