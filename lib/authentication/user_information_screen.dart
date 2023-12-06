@@ -39,7 +39,7 @@ class _UserInformationScreenState extends State<UserInformationScreen> {
       RoundedLoadingButtonController();
 
   Future<void> selectImage(bool fromCamera) async {
-    await pickImage(context: context, fromCamera: fromCamera);
+    finalImageFile = await pickImage(context: context, fromCamera: fromCamera);
   }
 
   @override
