@@ -54,7 +54,7 @@ class _UserInformationScreenState extends State<UserInformationScreen> {
       maxHeight: 800,
       maxWidth: 800,
     );
-    //popThePickImageDialog();
+    popThePickImageDialog();
     if (croppedFile != null) {
       setState(() {
         finalImageFile = File(croppedFile.path);
