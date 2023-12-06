@@ -1,6 +1,7 @@
 import 'dart:io';
 
 import 'package:flutter/material.dart';
+import 'package:image_picker/image_picker.dart';
 
 void showSnackBar({
   required BuildContext context,
@@ -24,7 +25,9 @@ Future<File?> pickImage({
   File? fileImage;
 
   if (fromCamera) {
-    try {} catch (e) {
+    try {
+      await ImagePicker().pickImage(source: ImageSource.camera);
+    } catch (e) {
       showSnackBar(context: context, content: e.toString());
     }
   } else {}
