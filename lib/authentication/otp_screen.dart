@@ -82,21 +82,21 @@ class _OTPScreenState extends State<OTPScreen> {
                     color: Colors.orangeAccent,
                   )
                 : const SizedBox.shrink(),
-            // authRepo.isSuccessful
-            //     ? Container(
-            //         height: 40,
-            //         width: 40,
-            //         decoration: const BoxDecoration(
-            //           shape: BoxShape.circle,
-            //           color: Colors.green,
-            //         ),
-            //         child: const Icon(
-            //           Icons.done,
-            //           color: Colors.white,
-            //           size: 30,
-            //         ),
-            //       )
-            //     : const SizedBox.shrink(),
+            authRepo.isSuccessful
+                ? Container(
+                    height: 40,
+                    width: 40,
+                    decoration: const BoxDecoration(
+                      shape: BoxShape.circle,
+                      color: Colors.green,
+                    ),
+                    child: const Icon(
+                      Icons.done,
+                      color: Colors.white,
+                      size: 30,
+                    ),
+                  )
+                : const SizedBox.shrink(),
             const SizedBox(height: 25),
             const Text(
               'Didn\'t receive any code?',
