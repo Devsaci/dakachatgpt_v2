@@ -34,6 +34,10 @@ Future<File?> pickImage({
     } catch (e) {
       showSnackBar(context: context, content: e.toString());
     }
-  } else {}
+  } else {
+    try {} catch (e) {
+      showSnackBar(context: context, content: e.toString());
+    }
+  }
   return fileImage;
 }
