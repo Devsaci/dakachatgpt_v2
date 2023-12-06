@@ -22,5 +22,8 @@ Future<File?> pickImage({
   required bool fromCamera,
 }) async {
   File? fileImage;
+
+  if (fromCamera) {
+  } else {}
   return fileImage;
 }
