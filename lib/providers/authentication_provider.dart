@@ -12,7 +12,7 @@ import '../utility/utility.dart';
 class AuthenticationProvider extends ChangeNotifier {
   bool _isLoading = false;
 
-  bool _isSuccessful = true;
+  bool _isSuccessful = false;
 
   bool _isSignedIn = false;
 
