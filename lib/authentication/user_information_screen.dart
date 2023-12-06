@@ -37,7 +37,7 @@ class _UserInformationScreenState extends State<UserInformationScreen> {
   final RoundedLoadingButtonController btnController =
       RoundedLoadingButtonController();
 
-  void selectImage() {}
+  void selectImage(bool fromCamera) {}
   @override
   Widget build(BuildContext context) {
     return Scaffold(
