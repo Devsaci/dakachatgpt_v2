@@ -97,7 +97,9 @@ class _UserInformationScreenState extends State<UserInformationScreen> {
                                   child: ClipRRect(
                                     borderRadius: BorderRadius.circular(16),
                                     child: IconButton(
-                                        onPressed: () {},
+                                        onPressed: () {
+                                          selectImage(true);
+                                        },
                                         icon: const Icon(
                                           Icons.camera_alt,
                                           color: Colors.white,
@@ -134,7 +136,9 @@ class _UserInformationScreenState extends State<UserInformationScreen> {
                                         Icons.camera_alt,
                                         color: Colors.white,
                                       ),
-                                      onPressed: () {},
+                                      onPressed: () {
+                                        selectImage(true);
+                                      },
                                     ),
                                   ),
                                 ),
