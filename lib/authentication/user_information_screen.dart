@@ -66,7 +66,9 @@ class _UserInformationScreenState extends State<UserInformationScreen> {
     showDialog(
       context: context,
       builder: (context) {
-        return const AlertDialog();
+        return const AlertDialog(
+          title: Text("Please choose an option"),
+        );
       },
     );
   }
