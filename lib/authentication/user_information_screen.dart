@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:dakachatgpt_v2/service/image_cache_manager.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -15,6 +17,7 @@ class UserInformationScreen extends StatefulWidget {
 class _UserInformationScreenState extends State<UserInformationScreen> {
   final TextEditingController nameController = TextEditingController();
   final TextEditingController phoneController = TextEditingController();
+  File? finalImageFile;
 
   final RoundedLoadingButtonController btnController =
       RoundedLoadingButtonController();
