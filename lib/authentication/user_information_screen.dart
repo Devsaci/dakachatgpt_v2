@@ -6,6 +6,7 @@ import 'package:provider/provider.dart';
 import 'package:rounded_loading_button/rounded_loading_button.dart';
 
 import '../providers/authentication_provider.dart';
+import '../utility/utility.dart';
 
 class UserInformationScreen extends StatefulWidget {
   const UserInformationScreen({super.key});
@@ -37,7 +38,10 @@ class _UserInformationScreenState extends State<UserInformationScreen> {
   final RoundedLoadingButtonController btnController =
       RoundedLoadingButtonController();
 
-  void selectImage(bool fromCamera) {}
+  Future<void> selectImage(bool fromCamera) async {
+    await pickImage(context: context, fromCamera: fromCamera);
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
