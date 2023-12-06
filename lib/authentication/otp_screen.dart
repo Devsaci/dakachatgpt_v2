@@ -78,6 +78,7 @@ class _OTPScreenState extends State<OTPScreen> {
             const SizedBox(height: 25),
             authRepo.isLoading
                 ? const CircularProgressIndicator(
+                    backgroundColor: Colors.black,
                     color: Colors.orangeAccent,
                   )
                 : const SizedBox.shrink(),

@@ -10,7 +10,7 @@ import 'package:rounded_loading_button/rounded_loading_button.dart';
 import '../utility/utility.dart';
 
 class AuthenticationProvider extends ChangeNotifier {
-  bool _isLoading = false;
+  bool _isLoading = true;
 
   bool _isSuccessful = false;
 
