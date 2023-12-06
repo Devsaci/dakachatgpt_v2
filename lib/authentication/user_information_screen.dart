@@ -85,14 +85,17 @@ class _UserInformationScreenState extends State<UserInformationScreen> {
                   ],
                 ),
               ),
-              Row(
-                children: [
-                  Padding(
-                    padding: EdgeInsets.all(8.0),
-                    child: Icon(Icons.image_outlined, color: Colors.purple),
-                  ),
-                  Text("Gallery"),
-                ],
+              InkWell(
+                onTap: () => selectImage(false),
+                child: const Row(
+                  children: [
+                    Padding(
+                      padding: EdgeInsets.all(8.0),
+                      child: Icon(Icons.image_outlined, color: Colors.purple),
+                    ),
+                    Text("Gallery"),
+                  ],
+                ),
               ),
             ],
           ),
