@@ -38,6 +38,9 @@ Future<File?> pickImage({
     try {
       final pickedImage =
           await ImagePicker().pickImage(source: ImageSource.gallery);
+      if (pickedImage != null) {
+        fileImage = File(pickedImage.path);
+      }
     } catch (e) {
       showSnackBar(context: context, content: e.toString());
     }
