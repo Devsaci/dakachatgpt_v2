@@ -69,6 +69,7 @@ class _UserInformationScreenState extends State<UserInformationScreen> {
         return const AlertDialog(
           title: Text("Please choose an option"),
           content: Column(
+            mainAxisSize: MainAxisSize.min,
             children: [
               Row(
                 children: [
