@@ -62,6 +62,7 @@ class _UserInformationScreenState extends State<UserInformationScreen> {
     }
   }
 
+  showImagePickerDialog() {}
   @override
   Widget build(BuildContext context) {
     return Scaffold(
