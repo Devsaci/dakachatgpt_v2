@@ -30,3 +30,4 @@
 16. OPT screen part 1
 17. OPT screen part 2
 18. User information screen part 1
+19. User information screen part 2
