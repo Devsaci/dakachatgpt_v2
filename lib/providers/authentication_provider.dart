@@ -86,6 +86,7 @@ class AuthenticationProvider extends ChangeNotifier {
     required Function onSuccess,
   }) async {
     _isLoading = true;
+    notifyListeners();
     try {
       PhoneAuthCredential phoneAuthCredential = PhoneAuthProvider.credential(
         verificationId: verificationId,
