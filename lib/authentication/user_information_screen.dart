@@ -41,8 +41,7 @@ class _UserInformationScreenState extends State<UserInformationScreen> {
 
   Future<void> selectImage(bool fromCamera) async {
     finalImageFile = await pickImage(context: context, fromCamera: fromCamera);
-
-    popThePickImageDialog();
+    cropImage(finalImageFile!.path);
   }
 
   void popThePickImageDialog() {
@@ -55,6 +54,7 @@ class _UserInformationScreenState extends State<UserInformationScreen> {
       maxHeight: 800,
       maxWidth: 800,
     );
+    popThePickImageDialog();
     if (croppedFile != null) {
       setState(() {
         finalImageFile = File(croppedFile.path);
