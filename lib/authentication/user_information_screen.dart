@@ -66,25 +66,30 @@ class _UserInformationScreenState extends State<UserInformationScreen> {
     showDialog(
       context: context,
       builder: (context) {
-        return const AlertDialog(
-          title: Text("Please choose an option"),
+        return AlertDialog(
+          alignment: Alignment.center,
+          title: const Text("Please choose an option",
+              style: TextStyle(fontSize: 15)),
           content: Column(
             mainAxisSize: MainAxisSize.min,
             children: [
-              Row(
-                children: [
-                  Icon(
-                    Icons.camera_alt,
-                    color: Colors.purple,
-                  ),
-                  Text("Camera"),
-                ],
+              InkWell(
+                onTap: () => selectImage(true),
+                child: const Row(
+                  children: [
+                    Padding(
+                      padding: EdgeInsets.all(8.0),
+                      child: Icon(Icons.camera_alt, color: Colors.purple),
+                    ),
+                    Text("Camera"),
+                  ],
+                ),
               ),
               Row(
                 children: [
-                  Icon(
-                    Icons.image_outlined,
-                    color: Colors.purple,
+                  Padding(
+                    padding: EdgeInsets.all(8.0),
+                    child: Icon(Icons.image_outlined, color: Colors.purple),
                   ),
                   Text("Gallery"),
                 ],
