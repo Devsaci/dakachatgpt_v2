@@ -14,5 +14,6 @@ class Constants {
   static const dateJoined = 'dateJoined';
   static const isOnline = 'isOnline';
 
+  static const users = 'users';
   static const userImages = 'userImages';
 }
