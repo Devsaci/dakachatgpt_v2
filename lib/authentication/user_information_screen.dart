@@ -289,4 +289,7 @@ class _UserInformationScreenState extends State<UserInformationScreen> {
       ),
     );
   }
+
+  // store user data to fireStore
+  void saveUserDataToFireStore() {}
 }
