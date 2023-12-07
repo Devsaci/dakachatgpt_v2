@@ -115,6 +115,7 @@ class AuthenticationProvider extends ChangeNotifier {
   }) {
     _isLoading = true;
     notifyListeners();
+    try {} on FirebaseException catch (e) {}
   }
 
   // store image to firestore and get download URL
