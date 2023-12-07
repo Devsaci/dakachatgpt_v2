@@ -32,4 +32,17 @@ class UserModel {
       Constants.isOnline: isOnline,
     };
   }
+
+  factory UserModel.fromMap(Map<String, dynamic> data) {
+    return UserModel(
+      uid: data[Constants.uid] ?? '',
+      name: data[Constants.name] ?? '',
+      profilePic: data[Constants.profilePic] ?? '',
+      phone: data[Constants.phone] ?? '',
+      aboutMe: data[Constants.aboutMe] ?? '',
+      lastSeen: data[Constants.lastSeen] ?? '',
+      dateJoined: data[Constants.dateJoined] ?? '',
+      isOnline: data[Constants.isOnline] ?? false,
+    );
+  }
 }
