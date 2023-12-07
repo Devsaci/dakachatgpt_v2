@@ -225,7 +225,9 @@ class _UserInformationScreenState extends State<UserInformationScreen> {
                           height: 50,
                           child: RoundedLoadingButton(
                             controller: btnController,
-                            onPressed: () {},
+                            onPressed: () {
+                              saveUserDataToFireStore();
+                            },
                             successIcon: Icons.check,
                             successColor: Colors.green,
                             errorColor: Colors.red,
