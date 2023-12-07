@@ -114,6 +114,7 @@ class AuthenticationProvider extends ChangeNotifier {
     required Function onSuccess,
   }) {
     _isLoading = true;
+    notifyListeners();
   }
 
   // store image to firestore and get download URL
