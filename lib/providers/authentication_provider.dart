@@ -22,12 +22,12 @@ class AuthenticationProvider extends ChangeNotifier {
   String? _phoneNumber;
 
   UserModel? _userModel;
-  get userModel => this._userModel;
 
   String? get uid => this._uid;
   String get phoneNumber => this._phoneNumber!;
   bool get isSuccessful => this._isSuccessful;
   bool get isLoading => this._isLoading;
+  UserModel? get userModel => this._userModel;
 
   set isLoading(bool value) => this._isLoading = value;
   set isSuccessful(bool value) => this._isSuccessful = value;
