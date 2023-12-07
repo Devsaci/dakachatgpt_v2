@@ -305,6 +305,9 @@ class _UserInformationScreenState extends State<UserInformationScreen> {
       dateJoined: '',
       isOnline: true,
     );
-    if (finalImageFile != null) {}
+    if (finalImageFile != null) {
+    } else {
+      btnController.reset();
+    }
   }
 }
