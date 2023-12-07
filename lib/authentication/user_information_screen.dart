@@ -306,6 +306,7 @@ class _UserInformationScreenState extends State<UserInformationScreen> {
       isOnline: true,
     );
     if (finalImageFile != null) {
+      if (nameController.text.length >= 3) {}
     } else {
       btnController.reset();
       showSnackBar(
