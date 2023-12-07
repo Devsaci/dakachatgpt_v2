@@ -128,6 +128,8 @@ class AuthenticationProvider extends ChangeNotifier {
       userModel.profilePic = imageUrl;
       userModel.lastSeen = DateTime.now().microsecondsSinceEpoch.toString();
       userModel.dateJoined = DateTime.now().microsecondsSinceEpoch.toString();
+
+      _userModel = userModel;
     } on FirebaseException catch (e) {
       _isLoading = false;
       notifyListeners();
