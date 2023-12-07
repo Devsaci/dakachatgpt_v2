@@ -10,6 +10,7 @@ import 'package:flutter/material.dart';
 import 'package:rounded_loading_button/rounded_loading_button.dart';
 
 import '../constants/constants.dart';
+
 import '../model/user_model.dart';
 import '../utility/utility.dart';
 
@@ -19,6 +20,8 @@ class AuthenticationProvider extends ChangeNotifier {
   //bool _isSignedIn = false;
   String? _uid;
   String? _phoneNumber;
+
+  UserModel? _userModel;
 
   String? get uid => this._uid;
   String get phoneNumber => this._phoneNumber!;
