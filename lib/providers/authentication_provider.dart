@@ -102,4 +102,7 @@ class AuthenticationProvider extends ChangeNotifier {
       showSnackBar(context: context, content: e.toString());
     }
   }
+
+  // store image to firestore and get download URL
+  storeFileImageToStorage() {}
 }
