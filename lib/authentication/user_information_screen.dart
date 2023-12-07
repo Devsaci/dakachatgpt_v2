@@ -291,5 +291,8 @@ class _UserInformationScreenState extends State<UserInformationScreen> {
   }
 
   // store user data to fireStore
-  void saveUserDataToFireStore() {}
+  void saveUserDataToFireStore() {
+    //final authProvider = Provider.of<AuthenticationProvider>(context, listen: false);
+    final authProvider = context.read<AuthenticationProvider>();
+  }
 }
