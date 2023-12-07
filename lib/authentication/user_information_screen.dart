@@ -305,5 +305,6 @@ class _UserInformationScreenState extends State<UserInformationScreen> {
       dateJoined: '',
       isOnline: true,
     );
+    if (finalImageFile != null) {}
   }
 }
