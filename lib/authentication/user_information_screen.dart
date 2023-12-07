@@ -6,6 +6,7 @@ import 'package:image_cropper/image_cropper.dart';
 import 'package:provider/provider.dart';
 import 'package:rounded_loading_button/rounded_loading_button.dart';
 
+import '../model/user_model.dart';
 import '../providers/authentication_provider.dart';
 import '../utility/utility.dart';
 
@@ -294,5 +295,15 @@ class _UserInformationScreenState extends State<UserInformationScreen> {
   void saveUserDataToFireStore() {
     //final authProvider = Provider.of<AuthenticationProvider>(context, listen: false);
     final authProvider = context.read<AuthenticationProvider>();
+    UserModel userModel = UserModel(
+      uid: authProvider.uid!,
+      name: nameController.text.trim(),
+      profilePic: '',
+      phone: phoneController.text,
+      aboutMe: '',
+      lastSeen: '',
+      dateJoined: '',
+      isOnline: true,
+    );
   }
 }
