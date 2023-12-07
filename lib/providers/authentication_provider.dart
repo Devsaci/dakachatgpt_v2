@@ -132,13 +132,13 @@ class AuthenticationProvider extends ChangeNotifier {
       _userModel = userModel;
 
       // save data to fireStore
-      firebaseFirestore
+      await firebaseFirestore
           .collection(Constants.users)
-          .doc(uid)
+          .doc(_uid)
           .set(userModel.toMap())
           .then((value) {
-        onSuccess;
-        isLoading = false;
+        onSuccess();
+        _isLoading = false;
         notifyListeners();
       });
     } on FirebaseException catch (e) {
