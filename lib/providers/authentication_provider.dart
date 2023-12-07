@@ -118,7 +118,7 @@ class AuthenticationProvider extends ChangeNotifier {
     notifyListeners();
     try {
       // upload image to storage
-      await storeFileImageToStorage(
+      String imageUrl = await storeFileImageToStorage(
           '${Constants.userImages}/$uid.jpg', fileImage);
     } on FirebaseException catch (e) {
       _isLoading = false;
