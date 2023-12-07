@@ -308,6 +308,8 @@ class _UserInformationScreenState extends State<UserInformationScreen> {
     if (finalImageFile != null) {
     } else {
       btnController.reset();
+      showSnackBar(
+          context: context, content: 'Name must be atleast 3 characters');
     }
   }
 }
