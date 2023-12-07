@@ -109,5 +109,6 @@ class AuthenticationProvider extends ChangeNotifier {
   storeFileImageToStorage(String ref, File file) async {
     UploadTask uploadTask = firebaseStorage.ref().child(ref).putFile(file);
     TaskSnapshot taskSnapshot = await uploadTask;
+    await taskSnapshot.ref.getDownloadURL();
   }
 }
