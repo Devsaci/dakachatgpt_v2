@@ -1,5 +1,6 @@
 import 'dart:io';
 
+import 'package:dakachatgpt_v2/main_screens/home_screen.dart';
 import 'package:dakachatgpt_v2/service/image_cache_manager.dart';
 import 'package:flutter/material.dart';
 import 'package:image_cropper/image_cropper.dart';
@@ -311,7 +312,12 @@ class _UserInformationScreenState extends State<UserInformationScreen> {
           context: context,
           userModel: userModel,
           fileImage: finalImageFile!,
-          onSuccess: () {},
+          onSuccess: () {
+            Navigator.pushAndRemoveUntil(
+                context,
+                MaterialPageRoute(builder: (context) => const HomeScreen()),
+                (route) => false);
+          },
         );
       } else {
         btnController.reset();
