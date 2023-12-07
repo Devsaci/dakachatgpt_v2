@@ -306,11 +306,21 @@ class _UserInformationScreenState extends State<UserInformationScreen> {
       isOnline: true,
     );
     if (finalImageFile != null) {
-      if (nameController.text.length >= 3) {}
+      if (nameController.text.length >= 3) {
+        authProvider.saveUserDataToFireStore(
+          context: context,
+          userModel: userModel,
+          fileImage: finalImageFile!,
+          onSuccess: () {},
+        );
+      } else {
+        btnController.reset();
+        showSnackBar(
+            context: context, content: 'Name must be atleast 3 characters');
+      }
     } else {
       btnController.reset();
-      showSnackBar(
-          context: context, content: 'Name must be atleast 3 characters');
+      showSnackBar(context: context, content: 'Please select an image');
     }
   }
 }
