@@ -112,7 +112,9 @@ class AuthenticationProvider extends ChangeNotifier {
     required UserModel userModel,
     required File fileImage,
     required Function onSuccess,
-  }) {}
+  }) {
+    _isLoading = true;
+  }
 
   // store image to firestore and get download URL
   Future<String> storeFileImageToStorage(String ref, File file) async {
