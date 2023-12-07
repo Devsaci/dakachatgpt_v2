@@ -130,6 +130,8 @@ class AuthenticationProvider extends ChangeNotifier {
       userModel.dateJoined = DateTime.now().microsecondsSinceEpoch.toString();
 
       _userModel = userModel;
+
+      // save data to fireStore
     } on FirebaseException catch (e) {
       _isLoading = false;
       notifyListeners();
