@@ -18,4 +18,7 @@ class UserModel {
     required this.isOnline,
   });
   //
+  Map<String, dynamic> toMap() {
+    return {};
+  }
 }
