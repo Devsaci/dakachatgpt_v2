@@ -13,4 +13,6 @@ class Constants {
   static const lastSeen = 'lastSeen';
   static const dateJoined = 'dateJoined';
   static const isOnline = 'isOnline';
+
+  static const userImages = 'userImages';
 }

@@ -9,6 +9,7 @@ import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter/material.dart';
 import 'package:rounded_loading_button/rounded_loading_button.dart';
 
+import '../constants/constants.dart';
 import '../model/user_model.dart';
 import '../utility/utility.dart';
 
@@ -107,16 +108,18 @@ class AuthenticationProvider extends ChangeNotifier {
   }
 
   // save user data to fireStore database
-  void saveUserDataToFireStore({
+  Future<void> saveUserDataToFireStore({
     required BuildContext context,
     required UserModel userModel,
     required File fileImage,
     required Function onSuccess,
-  }) {
+  }) async {
     _isLoading = true;
     notifyListeners();
     try {
       // upload image to storage
+      await storeFileImageToStorage(
+          '${Constants.userImages}/$uid.jpg', fileImage);
     } on FirebaseException catch (e) {
       _isLoading = false;
       notifyListeners();
