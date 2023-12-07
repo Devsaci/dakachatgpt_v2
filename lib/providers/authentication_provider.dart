@@ -9,6 +9,7 @@ import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter/material.dart';
 import 'package:rounded_loading_button/rounded_loading_button.dart';
 
+import '../model/user_model.dart';
 import '../utility/utility.dart';
 
 class AuthenticationProvider extends ChangeNotifier {
@@ -104,6 +105,14 @@ class AuthenticationProvider extends ChangeNotifier {
       showSnackBar(context: context, content: e.toString());
     }
   }
+
+  // save user data to fireStore database
+  void saveUserDataToFireStore({
+    required BuildContext context,
+    required UserModel userModel,
+    required File fileImage,
+    required Function onSuccess,
+  }) {}
 
   // store image to firestore and get download URL
   Future<String> storeFileImageToStorage(String ref, File file) async {
