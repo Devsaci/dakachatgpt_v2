@@ -33,3 +33,5 @@
 19. User information screen part 2
 20. User information screen part 3
 21. User model class
+## Section 4 : User Authentication and data Management
+22. Setting up Firebase Authentication and Firestore for user data
