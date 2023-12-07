@@ -138,6 +138,7 @@ class AuthenticationProvider extends ChangeNotifier {
           .set(userModel.toMap())
           .then((value) {
         onSuccess;
+        isLoading = false;
       });
     } on FirebaseException catch (e) {
       _isLoading = false;
