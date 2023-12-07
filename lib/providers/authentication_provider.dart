@@ -115,7 +115,9 @@ class AuthenticationProvider extends ChangeNotifier {
   }) {
     _isLoading = true;
     notifyListeners();
-    try {} on FirebaseException catch (e) {
+    try {
+      // upload image to storage
+    } on FirebaseException catch (e) {
       _isLoading = false;
       notifyListeners();
       showSnackBar(context: context, content: e.toString());
