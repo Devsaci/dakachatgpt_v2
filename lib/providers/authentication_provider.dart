@@ -106,7 +106,7 @@ class AuthenticationProvider extends ChangeNotifier {
   }
 
   // store image to firestore and get download URL
-  storeFileImageToStorage(String ref, File file) {
-    firebaseStorage.ref().child(ref).putFile(file);
+  storeFileImageToStorage(String ref, File file) async {
+    UploadTask uploadTask = firebaseStorage.ref().child(ref).putFile(file);
   }
 }
