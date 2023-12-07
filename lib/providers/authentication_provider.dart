@@ -1,5 +1,7 @@
 // ignore_for_file: unnecessary_this
 
+import 'dart:io';
+
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:dakachatgpt_v2/authentication/otp_screen.dart';
 import 'package:firebase_auth/firebase_auth.dart';
@@ -104,5 +106,5 @@ class AuthenticationProvider extends ChangeNotifier {
   }
 
   // store image to firestore and get download URL
-  storeFileImageToStorage() {}
+  storeFileImageToStorage(String ref, File file) {}
 }
