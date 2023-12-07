@@ -35,3 +35,4 @@
 21. User model class
 ## Section 4 : User Authentication and data Management
 22. Setting up Firebase Authentication and Firestore for user data
+23. Creating user model and updating user data
