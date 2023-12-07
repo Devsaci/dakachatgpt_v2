@@ -22,6 +22,7 @@ class AuthenticationProvider extends ChangeNotifier {
   String? _phoneNumber;
 
   UserModel? _userModel;
+  get userModel => this._userModel;
 
   String? get uid => this._uid;
   String get phoneNumber => this._phoneNumber!;
@@ -34,6 +35,7 @@ class AuthenticationProvider extends ChangeNotifier {
   // set isSignedIn(bool value) => this._isSignedIn = value;
   set uid(String? value) => this._uid = value;
   set phoneNumber(String? value) => this._phoneNumber = value;
+  set userModel(value) => this._userModel = value;
 
   final FirebaseAuth firebaseAuth = FirebaseAuth.instance;
   final FirebaseFirestore firebaseFirestore = FirebaseFirestore.instance;
