@@ -1,3 +1,5 @@
+import '../constants/constants.dart';
+
 class UserModel {
   String uid;
   String name;
@@ -19,6 +21,15 @@ class UserModel {
   });
   //
   Map<String, dynamic> toMap() {
-    return {};
+    return {
+      Constants.uid: uid,
+      Constants.name: name,
+      Constants.profilePic: profilePic,
+      Constants.phone: phone,
+      Constants.aboutMe: aboutMe,
+      Constants.lastSeen: lastSeen,
+      Constants.dateJoined: dateJoined,
+      Constants.isOnline: isOnline,
+    };
   }
 }
