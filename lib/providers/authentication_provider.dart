@@ -173,7 +173,19 @@ class AuthenticationProvider extends ChangeNotifier {
         .collection(Constants.users)
         .doc(_uid)
         .get()
-        .then((documentSnapshot) => null);
+        .then((documentSnapshot) {
+      _userModel = UserModel(
+        uid: documentSnapshot[Constants.uid],
+        name: documentSnapshot[Constants.name],
+        profilePic: documentSnapshot[Constants.profilePic],
+        phone: documentSnapshot[Constants.phone],
+        aboutMe: documentSnapshot[Constants.aboutMe],
+        lastSeen: documentSnapshot[Constants.lastSeen],
+        dateJoined: documentSnapshot[Constants.dateJoined],
+        isOnline: documentSnapshot[Constants.isOnline],
+      );
+      ;
+    });
   }
 
 // signOutUser method
