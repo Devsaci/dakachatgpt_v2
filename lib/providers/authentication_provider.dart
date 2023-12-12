@@ -202,6 +202,7 @@ class AuthenticationProvider extends ChangeNotifier {
   Future getUserDataFromSharedPref() async {
     SharedPreferences sharedPreferences = await SharedPreferences.getInstance();
     String data = sharedPreferences.getString(Constants.userModel) ?? '';
+    UserModel.fromMap(jsonDecode(data));
   }
 
 // signOutUser method
