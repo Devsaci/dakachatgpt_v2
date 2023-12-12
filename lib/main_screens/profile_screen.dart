@@ -1,4 +1,3 @@
-import 'package:dakachatgpt_v2/constants/constants.dart';
 import 'package:dakachatgpt_v2/providers/authentication_provider.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
@@ -68,9 +67,9 @@ class ProfileScreen extends StatelessWidget {
     );
   }
 
-  void navigateToRegisterScreen(context) {
+  void navigateToRegisterScreen(c) {
     Navigator.pushAndRemoveUntil(
-        context,
+        c,
         MaterialPageRoute(builder: (_) => const RegistrationScreen()),
         (route) => false);
   }
