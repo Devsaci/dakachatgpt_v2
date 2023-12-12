@@ -193,7 +193,7 @@ class AuthenticationProvider extends ChangeNotifier {
 
   // store user data to shared preference
   saveUserDataToSharedPref() async {
-    await SharedPreferences.getInstance();
+    SharedPreferences sharedPreferences = await SharedPreferences.getInstance();
   }
 
 // signOutUser method
