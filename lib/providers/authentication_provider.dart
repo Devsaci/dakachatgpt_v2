@@ -173,7 +173,7 @@ class AuthenticationProvider extends ChangeNotifier {
         .collection(Constants.users)
         .doc(_uid)
         .get()
-        .then((value) => null);
+        .then((documentSnapshot) => null);
   }
 
 // signOutUser method
