@@ -71,7 +71,7 @@ class ProfileScreen extends StatelessWidget {
   void navigateToRegisterScreen(context) {
     Navigator.pushAndRemoveUntil(
         context,
-        MaterialPageRoute(builder: (c) => const RegistrationScreen()),
+        MaterialPageRoute(builder: (_) => const RegistrationScreen()),
         (route) => false);
   }
 }
