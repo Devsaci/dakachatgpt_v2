@@ -171,7 +171,7 @@ class AuthenticationProvider extends ChangeNotifier {
   Future getUserDataFromFireStore() async {
     firebaseFirestore
         .collection(Constants.users)
-        .doc(_uid)
+        .doc(firebaseAuth.currentUser!.uid)
         .get()
         .then((documentSnapshot) {
       _userModel = UserModel(
@@ -184,7 +184,6 @@ class AuthenticationProvider extends ChangeNotifier {
         dateJoined: documentSnapshot[Constants.dateJoined],
         isOnline: documentSnapshot[Constants.isOnline],
       );
-      ;
     });
   }
 
