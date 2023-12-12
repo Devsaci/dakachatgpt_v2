@@ -1,4 +1,3 @@
-import 'package:dakachatgpt_v2/main_screens/profile_screen.dart';
 import 'package:dakachatgpt_v2/providers/my_theme_provider.dart';
 import 'package:dakachatgpt_v2/themes/my_theme.dart';
 import 'package:firebase_core/firebase_core.dart';
