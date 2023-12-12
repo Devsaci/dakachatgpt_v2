@@ -1,8 +1,10 @@
+import 'package:dakachatgpt_v2/constants/constants.dart';
 import 'package:dakachatgpt_v2/providers/authentication_provider.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
+import '../authentication/registration_screen.dart';
 import '../providers/my_theme_provider.dart';
 
 class ProfileScreen extends StatelessWidget {
@@ -43,6 +45,7 @@ class ProfileScreen extends StatelessWidget {
           IconButton(
             onPressed: () async {
               await context.read<AuthenticationProvider>().signOutUser();
+              navigateToRegisterScreen(context);
             },
             icon: const Icon(Icons.logout_outlined),
             color: color,
@@ -63,5 +66,12 @@ class ProfileScreen extends StatelessWidget {
         ),
       ),
     );
+  }
+
+  void navigateToRegisterScreen(context) {
+    Navigator.pushAndRemoveUntil(
+        context,
+        MaterialPageRoute(builder: (c) => const RegistrationScreen()),
+        (route) => false);
   }
 }
