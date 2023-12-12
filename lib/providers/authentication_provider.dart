@@ -189,6 +189,8 @@ class AuthenticationProvider extends ChangeNotifier {
     });
   }
 
+  // store user data to shared preference
+
 // signOutUser method
   Future<void> signOutUser() async {
     await firebaseAuth.signOut();
