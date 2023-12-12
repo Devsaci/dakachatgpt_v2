@@ -157,11 +157,12 @@ class AuthenticationProvider extends ChangeNotifier {
   }
 
   // check if user exits
-  checkUserExist() {
-    firebaseFirestore.collection(Constants.users).doc(_uid).get();
+  checkUserExist() async {
+    await firebaseFirestore.collection(Constants.users).doc(_uid).get();
   }
 
-  Future<void> signOutUser() async {
+  Future<bool> signOutUser() async {
     await firebaseAuth.signOut();
+    return true;
   }
 }
