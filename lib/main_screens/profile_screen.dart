@@ -1,3 +1,4 @@
+import 'package:dakachatgpt_v2/providers/authentication_provider.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -40,7 +41,9 @@ class ProfileScreen extends StatelessWidget {
             ),
           ),
           IconButton(
-            onPressed: () {},
+            onPressed: () async {
+              await context.read<AuthenticationProvider>().signOutUser();
+            },
             icon: const Icon(Icons.logout_outlined),
             color: color,
           ),
