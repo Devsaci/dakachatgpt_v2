@@ -38,4 +38,5 @@
 23. Creating user model and updating user data
 24. Handling user authentication and sign-up errors
 25. Implementing sign-out functionality
+26. Updating user data in Firestore upon profile changes
 
