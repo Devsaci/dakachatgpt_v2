@@ -167,6 +167,9 @@ class AuthenticationProvider extends ChangeNotifier {
     }
   }
 
+// get user data from fireStore
+  getUserDataFromFireStore() {}
+
   Future<void> signOutUser() async {
     await firebaseAuth.signOut();
   }
