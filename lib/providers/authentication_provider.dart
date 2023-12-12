@@ -1,5 +1,6 @@
 // ignore_for_file: unnecessary_this
 
+import 'dart:convert';
 import 'dart:io';
 
 import 'package:cloud_firestore/cloud_firestore.dart';
@@ -8,6 +9,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter/material.dart';
 import 'package:rounded_loading_button/rounded_loading_button.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 import '../constants/constants.dart';
 
@@ -190,6 +192,7 @@ class AuthenticationProvider extends ChangeNotifier {
   }
 
   // store user data to shared preference
+  saveUserDataToSharedPref() {}
 
 // signOutUser method
   Future<void> signOutUser() async {
