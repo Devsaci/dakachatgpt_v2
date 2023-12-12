@@ -185,6 +185,7 @@ class AuthenticationProvider extends ChangeNotifier {
         isOnline: documentSnapshot[Constants.isOnline],
       );
       _uid = _userModel!.uid;
+      notifyListeners();
     });
   }
 
