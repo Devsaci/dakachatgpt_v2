@@ -184,6 +184,7 @@ class AuthenticationProvider extends ChangeNotifier {
         dateJoined: documentSnapshot[Constants.dateJoined],
         isOnline: documentSnapshot[Constants.isOnline],
       );
+      _uid = _userModel!.uid;
     });
   }
 
