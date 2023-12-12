@@ -41,9 +41,7 @@ class ProfileScreen extends StatelessWidget {
           ),
           IconButton(
             onPressed: () {},
-            icon: Icon(themeStatus.themeType
-                ? Icons.logout_outlined
-                : Icons.logout_outlined),
+            icon: const Icon(Icons.logout_outlined),
             color: color,
           ),
         ],

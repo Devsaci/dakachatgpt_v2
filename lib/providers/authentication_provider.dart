@@ -156,5 +156,7 @@ class AuthenticationProvider extends ChangeNotifier {
     return downloadUrl;
   }
 
-  void signOutUser() {}
+  Future<void> signOutUser() async {
+    await firebaseAuth.signOut();
+  }
 }
