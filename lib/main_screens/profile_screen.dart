@@ -46,6 +46,7 @@ class ProfileScreen extends StatelessWidget {
           IconButton(
             onPressed: () async {
               await context.read<AuthenticationProvider>().signOutUser();
+              // ignore: use_build_context_synchronously
               if (!context.mounted) return;
               navigateToRegisterScreen();
             },
