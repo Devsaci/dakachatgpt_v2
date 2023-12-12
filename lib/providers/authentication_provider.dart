@@ -155,4 +155,6 @@ class AuthenticationProvider extends ChangeNotifier {
     String downloadUrl = await taskSnapshot.ref.getDownloadURL();
     return downloadUrl;
   }
+
+  void signOutUser() {}
 }
