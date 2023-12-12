@@ -1,3 +1,4 @@
+import 'package:dakachatgpt_v2/main_screens/profile_screen.dart';
 import 'package:dakachatgpt_v2/providers/my_theme_provider.dart';
 import 'package:dakachatgpt_v2/themes/my_theme.dart';
 import 'package:firebase_core/firebase_core.dart';
@@ -53,7 +54,7 @@ class _MyAppState extends State<MyApp> {
           title: 'Flutter ChatGpt',
           theme:
               MyTheme.themeData(isDarkTheme: value.themeType, context: context),
-          initialRoute: Constants.registrationScreen,
+          initialRoute: Constants.homeScreen,
           routes: {
             Constants.registrationScreen: (context) =>
                 const RegistrationScreen(),
