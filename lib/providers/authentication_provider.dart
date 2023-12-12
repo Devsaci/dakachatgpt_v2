@@ -157,9 +157,14 @@ class AuthenticationProvider extends ChangeNotifier {
   }
 
   // check if user exits
-  checkUserExist() async {
+  Future<bool> checkUserExist() async {
     DocumentSnapshot documentSnapshot =
         await firebaseFirestore.collection(Constants.users).doc(_uid).get();
+    if (documentSnapshot.exists) {
+      return true;
+    } else {
+      return false;
+    }
   }
 
   Future<void> signOutUser() async {
