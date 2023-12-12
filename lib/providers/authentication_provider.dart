@@ -169,7 +169,7 @@ class AuthenticationProvider extends ChangeNotifier {
 
 // get user data from fireStore
   Future getUserDataFromFireStore() async {
-    firebaseFirestore
+    await firebaseFirestore
         .collection(Constants.users)
         .doc(firebaseAuth.currentUser!.uid)
         .get()
