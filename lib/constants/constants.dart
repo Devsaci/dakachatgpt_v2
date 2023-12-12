@@ -16,5 +16,5 @@ class Constants {
 
   static const users = 'users';
   static const userImages = 'userImages';
-  static const userModels = 'userModel';
+  static const userModel = 'userModel';
 }

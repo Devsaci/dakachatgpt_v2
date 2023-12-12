@@ -191,11 +191,17 @@ class AuthenticationProvider extends ChangeNotifier {
     });
   }
 
-  // store user data to shared preference
+  // store user data to shared preference saveUserDataToSharedPref
   Future saveUserDataToSharedPref() async {
     SharedPreferences sharedPreferences = await SharedPreferences.getInstance();
     await sharedPreferences.setString(
-        Constants.userModels, jsonEncode(userModel!.toMap()));
+        Constants.userModel, jsonEncode(userModel!.toMap()));
+  }
+
+  // store user data to shared preference getUserDataFromSharedPref
+  Future getUserDataFromSharedPref() async {
+    SharedPreferences sharedPreferences = await SharedPreferences.getInstance();
+    sharedPreferences.getString("key");
   }
 
 // signOutUser method
