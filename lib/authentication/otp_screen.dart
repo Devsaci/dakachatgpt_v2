@@ -127,7 +127,10 @@ class _OTPScreenState extends State<OTPScreen> {
         // 1. check database if the current user exist
         bool userExits = await authProvider.checkUserExist();
 
-        if (userExits) {}
+        if (userExits) {
+        } else {
+          // navigate to user information screen
+        }
         Navigator.push(
             context,
             MaterialPageRoute(
