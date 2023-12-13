@@ -217,6 +217,7 @@ class AuthenticationProvider extends ChangeNotifier {
     sharedPreferences.setBool(Constants.isSignedIn, true);
 
     _isSignedIn = true;
+    notifyListeners();
   }
 
 // signOutUser method
