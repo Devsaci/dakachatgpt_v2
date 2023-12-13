@@ -117,9 +117,9 @@ class _OTPScreenState extends State<OTPScreen> {
   }
 
   void verifyOTP({required String smsCode}) {
-    final authRepo =
+    final authProvider =
         Provider.of<AuthenticationProvider>(context, listen: false);
-    authRepo.verifyOTP(
+    authProvider.verifyOTP(
       context: context,
       verificationId: widget.verificationId,
       smsCode: smsCode,
