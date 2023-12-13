@@ -130,12 +130,12 @@ class _OTPScreenState extends State<OTPScreen> {
         if (userExits) {
         } else {
           // navigate to user information screen
+          Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => const UserInformationScreen(),
+              ));
         }
-        Navigator.push(
-            context,
-            MaterialPageRoute(
-              builder: (context) => const UserInformationScreen(),
-            ));
       },
     );
   }
