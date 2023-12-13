@@ -25,6 +25,9 @@ class AuthenticationProvider extends ChangeNotifier {
 
   UserModel? _userModel;
 
+  // ignore: unused_field
+  bool _isSignedIn = false;
+
   String? get uid => this._uid;
   String get phoneNumber => this._phoneNumber!;
   bool get isSuccessful => this._isSuccessful;
@@ -213,6 +216,8 @@ class AuthenticationProvider extends ChangeNotifier {
   setSignedIn() async {
     SharedPreferences sharedPreferences = await SharedPreferences.getInstance();
     sharedPreferences.setBool(Constants.isSignedIn, true);
+
+    _isSignedIn = true;
   }
 
 // signOutUser method
