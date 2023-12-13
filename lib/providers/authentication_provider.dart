@@ -220,6 +220,9 @@ class AuthenticationProvider extends ChangeNotifier {
     notifyListeners();
   }
 
+// checkSignedIn Method
+  checkSignedIn() {}
+
 // signOutUser method
   Future<void> signOutUser() async {
     await firebaseAuth.signOut();
