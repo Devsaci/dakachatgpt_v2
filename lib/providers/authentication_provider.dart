@@ -212,7 +212,7 @@ class AuthenticationProvider extends ChangeNotifier {
   }
 
 // setSignedIn method
-  setSignedIn() async {
+  Future setSignedIn() async {
     SharedPreferences sharedPreferences = await SharedPreferences.getInstance();
     sharedPreferences.setBool(Constants.isSignedIn, true);
 
