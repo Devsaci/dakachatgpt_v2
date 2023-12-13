@@ -206,6 +206,9 @@ class AuthenticationProvider extends ChangeNotifier {
     _uid = _userModel!.uid;
   }
 
+// setSignedIn method
+  setSignedIn() {}
+
 // signOutUser method
   Future<void> signOutUser() async {
     await firebaseAuth.signOut();
