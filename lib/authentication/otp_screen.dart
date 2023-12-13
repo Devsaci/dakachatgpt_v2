@@ -128,6 +128,7 @@ class _OTPScreenState extends State<OTPScreen> {
         bool userExits = await authProvider.checkUserExist();
         // 2. get user data from database
         authProvider.getUserDataFromFireStore();
+        // 3. save user data to shared preferences
 
         if (userExits) {
         } else {
