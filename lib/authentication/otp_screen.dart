@@ -123,9 +123,9 @@ class _OTPScreenState extends State<OTPScreen> {
       context: context,
       verificationId: widget.verificationId,
       smsCode: smsCode,
-      onSuccess: () {
+      onSuccess: () async {
         // 1. check database if the current user exist
-        authProvider.checkUserExist();
+        await authProvider.checkUserExist();
         Navigator.push(
             context,
             MaterialPageRoute(
