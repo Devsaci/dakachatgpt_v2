@@ -19,13 +19,11 @@ import '../utility/utility.dart';
 class AuthenticationProvider extends ChangeNotifier {
   bool _isLoading = false;
   bool _isSuccessful = false;
-  //bool _isSignedIn = false;
   String? _uid;
   String? _phoneNumber;
 
   UserModel? _userModel;
 
-  // ignore: unused_field
   bool _isSignedIn = false;
 
   String? get uid => this._uid;
@@ -33,11 +31,12 @@ class AuthenticationProvider extends ChangeNotifier {
   bool get isSuccessful => this._isSuccessful;
   bool get isLoading => this._isLoading;
   UserModel? get userModel => this._userModel;
+  bool get isSignedIn => this._isSignedIn;
 
   set isLoading(bool value) => this._isLoading = value;
   set isSuccessful(bool value) => this._isSuccessful = value;
-  // bool get isSignedIn => this._isSignedIn;
-  // set isSignedIn(bool value) => this._isSignedIn = value;
+
+  set isSignedIn(bool value) => this._isSignedIn = value;
   set uid(String? value) => this._uid = value;
   set phoneNumber(String? value) => this._phoneNumber = value;
   set userModel(value) => this._userModel = value;
