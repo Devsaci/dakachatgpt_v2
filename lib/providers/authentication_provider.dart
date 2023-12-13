@@ -207,8 +207,8 @@ class AuthenticationProvider extends ChangeNotifier {
   }
 
 // setSignedIn method
-  setSignedIn() {
-    SharedPreferences.getInstance();
+  setSignedIn() async {
+    await SharedPreferences.getInstance();
   }
 
 // signOutUser method
