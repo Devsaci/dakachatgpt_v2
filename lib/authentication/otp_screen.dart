@@ -130,6 +130,7 @@ class _OTPScreenState extends State<OTPScreen> {
         await authProvider.getUserDataFromFireStore();
         // 3. save user data to shared preferences
         await authProvider.saveUserDataToSharedPref();
+        // 4. save this user as signed in
 
         if (userExits) {
         } else {
