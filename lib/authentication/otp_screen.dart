@@ -125,6 +125,7 @@ class _OTPScreenState extends State<OTPScreen> {
       smsCode: smsCode,
       onSuccess: () {
         // 1. check database if the current user exist
+
         Navigator.push(
             context,
             MaterialPageRoute(

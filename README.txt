@@ -39,4 +39,5 @@
 24. Handling user authentication and sign-up errors
 25. Implementing sign-out functionality
 26. Updating user data in Firestore upon profile changes
+27. Retrieving user data from Firestore
 
