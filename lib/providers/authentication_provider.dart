@@ -223,7 +223,8 @@ class AuthenticationProvider extends ChangeNotifier {
 // checkSignedIn Method
   checkSignedIn() async {
     SharedPreferences sharedPreferences = await SharedPreferences.getInstance();
-    sharedPreferences.getBool(Constants.isSignedIn) ?? false;
+    _isSignedIn = sharedPreferences.getBool(Constants.isSignedIn) ?? false;
+    notifyListeners();
   }
 
 // signOutUser method
