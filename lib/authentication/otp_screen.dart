@@ -133,10 +133,7 @@ class _OTPScreenState extends State<OTPScreen> {
         await authProvider.saveUserDataToSharedPref();
         // 4. save this user as signed in
         navigate(isSingedIn: true);
-        Navigator.pushAndRemoveUntil(
-            context,
-            MaterialPageRoute(builder: (context) => HomeScreen()),
-            (route) => false);
+
         if (userExits) {
         } else {
           // navigate to user information screen
@@ -155,6 +152,11 @@ class _OTPScreenState extends State<OTPScreen> {
   }
 
   void navigate({required bool isSingedIn}) {
-    if (isSingedIn) {}
+    if (isSingedIn) {
+      Navigator.pushAndRemoveUntil(
+          context,
+          MaterialPageRoute(builder: (context) => const HomeScreen()),
+          (route) => false);
+    }
   }
 }
