@@ -1,4 +1,5 @@
 import 'package:dakachatgpt_v2/authentication/user_information_screen.dart';
+import 'package:dakachatgpt_v2/main_screens/home_screen.dart';
 import 'package:dakachatgpt_v2/service/image_cache_manager.dart';
 // import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
@@ -132,6 +133,10 @@ class _OTPScreenState extends State<OTPScreen> {
         await authProvider.saveUserDataToSharedPref();
         // 4. save this user as signed in
 
+        Navigator.pushAndRemoveUntil(
+            context,
+            MaterialPageRoute(builder: (context) => HomeScreen()),
+            (route) => false);
         if (userExits) {
         } else {
           // navigate to user information screen
