@@ -154,5 +154,7 @@ class _OTPScreenState extends State<OTPScreen> {
         ));
   }
 
-  void navigate({required bool isSingedIn}) {}
+  void navigate({required bool isSingedIn}) {
+    if (isSingedIn) {}
+  }
 }
