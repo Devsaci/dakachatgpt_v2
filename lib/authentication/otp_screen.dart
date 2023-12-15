@@ -137,13 +137,11 @@ class _OTPScreenState extends State<OTPScreen> {
         if (userExits) {
         } else {
           // navigate to user information screen
-          navigateToUserIfoScreen();
+          navigate(isSingedIn: false);
         }
       },
     );
   }
-
-  void navigateToUserIfoScreen() {}
 
   void navigate({required bool isSingedIn}) {
     if (isSingedIn) {
