@@ -143,13 +143,7 @@ class _OTPScreenState extends State<OTPScreen> {
     );
   }
 
-  void navigateToUserIfoScreen() {
-    Navigator.push(
-        context,
-        MaterialPageRoute(
-          builder: (context) => const UserInformationScreen(),
-        ));
-  }
+  void navigateToUserIfoScreen() {}
 
   void navigate({required bool isSingedIn}) {
     if (isSingedIn) {
@@ -157,6 +151,12 @@ class _OTPScreenState extends State<OTPScreen> {
           context,
           MaterialPageRoute(builder: (context) => const HomeScreen()),
           (route) => false);
+    } else {
+      Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (context) => const UserInformationScreen(),
+          ));
     }
   }
 }
