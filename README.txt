@@ -40,5 +40,7 @@
 25. Implementing sign-out functionality
 26. Updating user data in Firestore upon profile changes
 27. Retrieving user data from Firestore
+
+## Section 5 : Chat Scrimplementationeen 
 28. Designing and implementing the landing screen UI
 
