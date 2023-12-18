@@ -230,6 +230,7 @@ class AuthenticationProvider extends ChangeNotifier {
 
 // signOutUser method
   Future<void> signOutUser() async {
+    await SharedPreferences.getInstance();
     await firebaseAuth.signOut();
   }
 }
