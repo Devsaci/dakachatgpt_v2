@@ -19,7 +19,10 @@ class _LandingScreenState extends State<LandingScreen> {
   Future<void> checkAuthentication() async {
     final authProvider =
         Provider.of<AuthenticationProvider>(context, listen: false);
-    if (await authProvider.checkSignedIn()) {}
+    if (await authProvider.checkSignedIn()) {
+      // get user data from fireStore
+      await authProvider.getUserDataFromFireStore();
+    }
   }
 
   @override
