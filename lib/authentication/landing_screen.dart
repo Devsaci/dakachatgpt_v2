@@ -24,6 +24,8 @@ class _LandingScreenState extends State<LandingScreen> {
       await authProvider.getUserDataFromFireStore();
       // get data from shared preferences
       await authProvider.getUserDataFromSharedPref();
+      // navigate to home
+      navigate(isSingedIn: true);
     }
   }
 
@@ -35,4 +37,6 @@ class _LandingScreenState extends State<LandingScreen> {
       ),
     );
   }
+
+  void navigate({required bool isSingedIn}) {}
 }
