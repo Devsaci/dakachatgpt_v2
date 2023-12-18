@@ -319,7 +319,7 @@ class _UserInformationScreenState extends State<UserInformationScreen> {
             await authProvider.saveUserDataToSharedPref();
             // set signed in
             await authProvider.setSignedIn();
-
+            // go to home screen
             navigateToHomeScreen();
           },
         );
