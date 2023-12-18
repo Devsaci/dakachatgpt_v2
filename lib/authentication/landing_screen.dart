@@ -38,8 +38,10 @@ class _LandingScreenState extends State<LandingScreen> {
   @override
   Widget build(BuildContext context) {
     return const Scaffold(
-      body: CircularProgressIndicator(
-        color: Colors.orangeAccent,
+      body: Center(
+        child: CircularProgressIndicator(
+          color: Colors.orangeAccent,
+        ),
       ),
     );
   }
