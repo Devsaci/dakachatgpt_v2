@@ -22,6 +22,8 @@ class _LandingScreenState extends State<LandingScreen> {
     if (await authProvider.checkSignedIn()) {
       // get user data from fireStore
       await authProvider.getUserDataFromFireStore();
+      // get data from shared preferences
+      await authProvider.getUserDataFromSharedPref();
     }
   }
 
