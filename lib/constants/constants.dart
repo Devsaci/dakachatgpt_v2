@@ -4,6 +4,7 @@ class Constants {
   static const registrationScreen = '/registrationScreen';
   static const homeScreen = '/homeScreen';
   static const userInformationScreen = '/userInformationScreen';
+  static const landingScreen = '/landingScreen';
 
   static const uid = 'uid';
   static const name = 'name';
