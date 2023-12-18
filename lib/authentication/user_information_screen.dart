@@ -315,6 +315,7 @@ class _UserInformationScreenState extends State<UserInformationScreen> {
           userModel: userModel,
           fileImage: finalImageFile!,
           onSuccess: () {
+            // save user data locally
             Navigator.pushAndRemoveUntil(
                 context,
                 MaterialPageRoute(builder: (context) => const HomeScreen()),
