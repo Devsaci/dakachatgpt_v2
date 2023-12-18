@@ -9,6 +9,12 @@ class LandingScreen extends StatefulWidget {
 
 class _LandingScreenState extends State<LandingScreen> {
   @override
+  void initState() {
+    checkAuthentication();
+    super.initState();
+  }
+
+  @override
   Widget build(BuildContext context) {
     return const Scaffold(
       body: CircularProgressIndicator(
@@ -16,4 +22,6 @@ class _LandingScreenState extends State<LandingScreen> {
       ),
     );
   }
+
+  void checkAuthentication() {}
 }
