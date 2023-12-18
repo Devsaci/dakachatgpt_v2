@@ -135,6 +135,8 @@ class _OTPScreenState extends State<OTPScreen> {
           await authProvider.saveUserDataToSharedPref();
           // 4. save this user as signed in
           await authProvider.setSignedIn();
+          // 5. navigate to Home
+          navigate(isSingedIn: true);
         } else {
           // navigate to user information screen
           navigate(isSingedIn: false);
