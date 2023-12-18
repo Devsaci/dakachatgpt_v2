@@ -16,8 +16,10 @@ class _LandingScreenState extends State<LandingScreen> {
     super.initState();
   }
 
-  void checkAuthentication() {
-    Provider.of<AuthenticationProvider>(context, listen: false);
+  Future<void> checkAuthentication() async {
+    final authProvider =
+        Provider.of<AuthenticationProvider>(context, listen: false);
+    if (await authProvider.checkSignedIn()) {}
   }
 
   @override
