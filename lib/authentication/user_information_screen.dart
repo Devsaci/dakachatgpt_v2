@@ -314,8 +314,9 @@ class _UserInformationScreenState extends State<UserInformationScreen> {
           context: context,
           userModel: userModel,
           fileImage: finalImageFile!,
-          onSuccess: () {
+          onSuccess: () async {
             // save user data locally
+            await authProvider.saveUserDataToSharedPref();
             Navigator.pushAndRemoveUntil(
                 context,
                 MaterialPageRoute(builder: (context) => const HomeScreen()),
