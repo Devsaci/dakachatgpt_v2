@@ -1,6 +1,9 @@
+import 'package:dakachatgpt_v2/authentication/registration_screen.dart';
 import 'package:dakachatgpt_v2/providers/authentication_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+
+import '../main_screens/home_screen.dart';
 
 class LandingScreen extends StatefulWidget {
   const LandingScreen({super.key});
@@ -38,5 +41,17 @@ class _LandingScreenState extends State<LandingScreen> {
     );
   }
 
-  void navigate({required bool isSingedIn}) {}
+  void navigate({required bool isSingedIn}) {
+    if (isSingedIn) {
+      Navigator.pushAndRemoveUntil(
+          context,
+          MaterialPageRoute(builder: (context) => const HomeScreen()),
+          (route) => false);
+    } else {
+      Navigator.pushAndRemoveUntil(
+          context,
+          MaterialPageRoute(builder: (context) => const RegistrationScreen()),
+          (route) => false);
+    }
+  }
 }
