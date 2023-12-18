@@ -127,14 +127,14 @@ class _OTPScreenState extends State<OTPScreen> {
       onSuccess: () async {
         // 1. check database if the current user exist
         bool userExits = await authProvider.checkUserExist();
-        // 2. get user data from database
-        await authProvider.getUserDataFromFireStore();
-        // 3. save user data to shared preferences
-        await authProvider.saveUserDataToSharedPref();
-        // 4. save this user as signed in
-        navigate(isSingedIn: true);
 
         if (userExits) {
+          // 2. get user data from database
+          await authProvider.getUserDataFromFireStore();
+          // 3. save user data to shared preferences
+          await authProvider.saveUserDataToSharedPref();
+          // 4. save this user as signed in
+          await authProvider.setSignedIn();
         } else {
           // navigate to user information screen
           navigate(isSingedIn: false);
