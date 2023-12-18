@@ -319,6 +319,9 @@ class _UserInformationScreenState extends State<UserInformationScreen> {
             await authProvider.saveUserDataToSharedPref();
             // set signed in
             await authProvider.setSignedIn();
+
+            navigateToHomeScreen();
+
             Navigator.pushAndRemoveUntil(
                 context,
                 MaterialPageRoute(builder: (context) => const HomeScreen()),
@@ -335,4 +338,6 @@ class _UserInformationScreenState extends State<UserInformationScreen> {
       showSnackBar(context: context, content: 'Please select an image');
     }
   }
+
+  void navigateToHomeScreen() {}
 }
