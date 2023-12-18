@@ -321,11 +321,6 @@ class _UserInformationScreenState extends State<UserInformationScreen> {
             await authProvider.setSignedIn();
 
             navigateToHomeScreen();
-
-            Navigator.pushAndRemoveUntil(
-                context,
-                MaterialPageRoute(builder: (context) => const HomeScreen()),
-                (route) => false);
           },
         );
       } else {
@@ -339,5 +334,10 @@ class _UserInformationScreenState extends State<UserInformationScreen> {
     }
   }
 
-  void navigateToHomeScreen() {}
+  void navigateToHomeScreen() {
+    Navigator.pushAndRemoveUntil(
+        context,
+        MaterialPageRoute(builder: (context) => const HomeScreen()),
+        (route) => false);
+  }
 }
