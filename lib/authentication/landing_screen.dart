@@ -29,6 +29,9 @@ class _LandingScreenState extends State<LandingScreen> {
       await authProvider.getUserDataFromSharedPref();
       // navigate to home
       navigate(isSingedIn: true);
+    } else {
+      // navigate to register screen
+      navigate(isSingedIn: false);
     }
   }
 
