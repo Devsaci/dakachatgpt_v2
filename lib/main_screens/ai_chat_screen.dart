@@ -1,20 +1,24 @@
 import 'package:flutter/material.dart';
 
-class AIChatScreen extends StatelessWidget {
+class AIChatScreen extends StatefulWidget {
   const AIChatScreen({super.key});
 
   @override
+  State<AIChatScreen> createState() => _AIChatScreenState();
+}
+
+class _AIChatScreenState extends State<AIChatScreen> {
+  @override
   Widget build(BuildContext context) {
-    return Center(
-      child: Container(
-        height: 200,
-        width: 200,
-        decoration: const BoxDecoration(
-          color: Color.fromARGB(255, 180, 79, 129),
-          shape: BoxShape.circle,
+    return Scaffold(
+      appBar: AppBar(
+        elevation: 0,
+        title: const Text(
+          "ChatGPT",
+          style: TextStyle(),
         ),
-        child: const Center(child: Text("AIChatScreen")),
       ),
+      body: const Column(),
     );
   }
 }
