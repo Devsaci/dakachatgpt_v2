@@ -38,6 +38,8 @@ class _BottomChatFieldState extends State<BottomChatField> {
             child: TextField(
               controller: textEditingController,
               style: TextStyle(color: color),
+              decoration: const InputDecoration.collapsed(
+                  hintText: 'How can i help you?'),
             ),
           ),
         ],
