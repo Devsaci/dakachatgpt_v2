@@ -40,6 +40,7 @@ class _ChatListState extends State<ChatList> {
 
         final messageSnapshot = snapshot.data!.docs;
         return ListView.builder(
+          itemCount: messageSnapshot.length,
           itemBuilder: (context, index) {},
         );
         //  ListView(
