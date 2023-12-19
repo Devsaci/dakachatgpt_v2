@@ -37,6 +37,7 @@ class _BottomChatFieldState extends State<BottomChatField> {
           Expanded(
             child: TextField(
               controller: textEditingController,
+              style: TextStyle(color: color),
             ),
           ),
         ],
