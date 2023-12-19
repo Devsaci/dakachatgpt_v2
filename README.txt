@@ -45,4 +45,5 @@
 28. Designing and implementing the landing screen UI
 29. Implementing chat screen UI with StreamBuilder and handling input messages
 30. Implementing chat input field with the send button
+31. Implementing a chat provider for sending and receiving messages
 

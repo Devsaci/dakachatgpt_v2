@@ -35,12 +35,15 @@ class _BottomChatFieldState extends State<BottomChatField> {
       child: Row(
         children: [
           Expanded(
-            child: TextField(
-              controller: textEditingController,
-              style: TextStyle(color: color),
-              decoration: InputDecoration.collapsed(
-                hintText: 'How can i help you?',
-                hintStyle: TextStyle(color: color),
+            child: Padding(
+              padding: const EdgeInsets.all(10.0),
+              child: TextField(
+                controller: textEditingController,
+                style: TextStyle(color: color),
+                decoration: InputDecoration.collapsed(
+                  hintText: 'How can i help you?',
+                  hintStyle: TextStyle(color: color),
+                ),
               ),
             ),
           ),
