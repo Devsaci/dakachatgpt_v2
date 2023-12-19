@@ -41,18 +41,13 @@ class _ChatListState extends State<ChatList> {
         final messageSnapshot = snapshot.data!.docs;
         return ListView.builder(
           itemCount: messageSnapshot.length,
-          itemBuilder: (context, index) {},
+          itemBuilder: (context, index) {
+            return ListTile(
+              title: Text(messageSnapshot[index]['name']),
+              subtitle: Text(messageSnapshot[index]['phone']),
+            );
+          },
         );
-        //  ListView(
-        //   children: snapshot.data!.docs.map((DocumentSnapshot document) {
-        //     Map<String, dynamic> data =
-        //         document.data()! as Map<String, dynamic>;
-        //     return ListTile(
-        //       title: Text(data['name']),
-        //       subtitle: Text(data['phone']),
-        //     );
-        //   }).toList(),
-        // );
       },
     );
   }
