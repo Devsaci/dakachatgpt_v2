@@ -37,6 +37,8 @@ class _ChatListState extends State<ChatList> {
                 fontSize: 24, fontWeight: FontWeight.bold, letterSpacing: 1.5),
           ));
         }
+
+        final messageSnapshot = snapshot.data!.docs;
         return ListView.builder(
           itemBuilder: (context, index) {},
         );
