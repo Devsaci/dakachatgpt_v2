@@ -43,4 +43,5 @@
 
 ## Section 5 : Chat Scrimplementationeen 
 28. Designing and implementing the landing screen UI
+29. Implementing chat screen UI with StreamBuilder and handling input messages
 
