@@ -29,7 +29,13 @@ class _ChatListState extends State<ChatList> {
         }
 
         if (snapshot.data!.docs.isEmpty) {
-          return const Center(child: Text("Chat is Empty"));
+          return const Center(
+              child: Text(
+            "Chat is Empty",
+            textAlign: TextAlign.center,
+            style: TextStyle(
+                fontSize: 24, fontWeight: FontWeight.bold, letterSpacing: 1.5),
+          ));
         }
 
         return ListView(
