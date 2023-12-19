@@ -16,6 +16,6 @@ class _BottomChatFieldState extends State<BottomChatField> {
     final isDarkTheme = Provider.of<MyThemeProvider>(context).themeType;
     Color color = isDarkTheme ? Colors.white : Colors.black;
 
-    return const Placeholder();
+    return Material();
   }
 }
