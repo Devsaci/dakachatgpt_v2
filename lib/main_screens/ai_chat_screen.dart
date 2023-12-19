@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+
+import '../providers/my_theme_provider.dart';
 
 class AIChatScreen extends StatefulWidget {
   const AIChatScreen({super.key});
@@ -10,6 +13,8 @@ class AIChatScreen extends StatefulWidget {
 class _AIChatScreenState extends State<AIChatScreen> {
   @override
   Widget build(BuildContext context) {
+    final themeStatus = Provider.of<MyThemeProvider>(context);
+
     return Scaffold(
       appBar: AppBar(
         elevation: 0,
