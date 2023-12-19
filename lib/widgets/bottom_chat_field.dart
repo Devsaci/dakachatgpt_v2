@@ -44,6 +44,7 @@ class _BottomChatFieldState extends State<BottomChatField> {
               ),
             ),
           ),
+          IconButton(onPressed: () {}, icon: Icon(Icons.send, color: color)),
         ],
       ),
     );
