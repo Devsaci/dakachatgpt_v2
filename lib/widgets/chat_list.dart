@@ -24,13 +24,13 @@ class _ChatListState extends State<ChatList> {
 
         if (snapshot.connectionState == ConnectionState.waiting) {
           return const Center(
-            child: CircularProgressIndicator(
-              color: Colors.orangeAccent,
-            ),
+            child: CircularProgressIndicator(color: Colors.orangeAccent),
           );
         }
 
-        if (snapshot.data!.docs.isEmpty) {}
+        if (snapshot.data!.docs.isEmpty) {
+          return const Center(child: Text("Chat is Empty"));
+        }
 
         return ListView(
           children: snapshot.data!.docs.map((DocumentSnapshot document) {
