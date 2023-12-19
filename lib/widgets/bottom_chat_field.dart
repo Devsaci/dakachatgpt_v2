@@ -12,6 +12,19 @@ class BottomChatField extends StatefulWidget {
 }
 
 class _BottomChatFieldState extends State<BottomChatField> {
+  late TextEditingController textEditingController;
+  @override
+  void initState() {
+    textEditingController = TextEditingController();
+    super.initState();
+  }
+
+  @override
+  void dispose() {
+    textEditingController.dispose();
+    super.dispose();
+  }
+
   @override
   Widget build(BuildContext context) {
     final isDarkTheme = Provider.of<MyThemeProvider>(context).themeType;
@@ -19,7 +32,15 @@ class _BottomChatFieldState extends State<BottomChatField> {
 
     return Material(
       color: isDarkTheme ? Constants.chatGPTDarkCardColor : Colors.white70,
-      child: Row(children: [Expanded(child: TextField())]),
+      child: Row(
+        children: [
+          Expanded(
+            child: TextField(
+              controller: textEditingController,
+            ),
+          ),
+        ],
+      ),
     );
   }
 }
