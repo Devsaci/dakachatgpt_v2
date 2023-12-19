@@ -1,3 +1,5 @@
+import 'package:flutter/material.dart';
+
 class Constants {
   static const themeStatus = 'themeStatus';
 
@@ -20,4 +22,6 @@ class Constants {
   static const userModel = 'userModel';
 
   static const isSignedIn = 'isSignedIn';
+
+  static const Color chatGPTDarkCardColor = Color(0xFF444654);
 }
