@@ -30,6 +30,8 @@ class _ChatListState extends State<ChatList> {
           );
         }
 
+        if (snapshot.data!.docs.isEmpty) {}
+
         return ListView(
           children: snapshot.data!.docs.map((DocumentSnapshot document) {
             Map<String, dynamic> data =
