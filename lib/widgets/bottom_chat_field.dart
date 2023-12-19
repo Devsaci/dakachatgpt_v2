@@ -19,6 +19,7 @@ class _BottomChatFieldState extends State<BottomChatField> {
 
     return Material(
       color: isDarkTheme ? Constants.chatGPTDarkCardColor : Colors.white70,
+      child: Row(children: [Expanded(child: TextField())]),
     );
   }
 }
