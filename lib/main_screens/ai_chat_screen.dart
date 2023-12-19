@@ -14,6 +14,7 @@ class _AIChatScreenState extends State<AIChatScreen> {
   @override
   Widget build(BuildContext context) {
     final themeStatus = Provider.of<MyThemeProvider>(context);
+    Color color = themeStatus.themeType ? Colors.white : Colors.black;
 
     return Scaffold(
       appBar: AppBar(
