@@ -1,3 +1,4 @@
+import 'package:dakachatgpt_v2/widgets/chat_list.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -19,12 +20,11 @@ class _AIChatScreenState extends State<AIChatScreen> {
     return Scaffold(
       appBar: AppBar(
         elevation: 0,
-        title: const Text(
-          "ChatGPT",
-          style: TextStyle(),
-        ),
+        title: Text("ChatGPT", style: TextStyle(color: color)),
       ),
-      body: const Column(),
+      body: const Column(
+        children: [Expanded(child: ChatList())],
+      ),
     );
   }
 }
