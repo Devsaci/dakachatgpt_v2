@@ -23,7 +23,11 @@ class _ChatListState extends State<ChatList> {
         }
 
         if (snapshot.connectionState == ConnectionState.waiting) {
-          return const Text("Loading");
+          return const Center(
+            child: CircularProgressIndicator(
+              color: Colors.orangeAccent,
+            ),
+          );
         }
 
         return ListView(
