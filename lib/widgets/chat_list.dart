@@ -19,11 +19,11 @@ class _ChatListState extends State<ChatList> {
       stream: _usersStream,
       builder: (BuildContext context, AsyncSnapshot<QuerySnapshot> snapshot) {
         if (snapshot.hasError) {
-          return Text('Something went wrong');
+          return const Text('Something went wrong');
         }
 
         if (snapshot.connectionState == ConnectionState.waiting) {
-          return Text("Loading");
+          return const Text("Loading");
         }
 
         return ListView(
@@ -31,8 +31,8 @@ class _ChatListState extends State<ChatList> {
             Map<String, dynamic> data =
                 document.data()! as Map<String, dynamic>;
             return ListTile(
-              title: Text(data['full_name']),
-              subtitle: Text(data['company']),
+              title: Text(data['name']),
+              subtitle: Text(data['phone']),
             );
           }).toList(),
         );
