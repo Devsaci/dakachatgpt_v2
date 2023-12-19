@@ -24,4 +24,5 @@ class Constants {
   static const isSignedIn = 'isSignedIn';
 
   static const Color chatGPTDarkCardColor = Color(0xFF444654);
+  static const Color chatGPTDarkScaffoldColor = Color(0xFF343541);
 }
