@@ -11,7 +11,7 @@ class ChatList extends StatefulWidget {
 // https://firebase.flutter.dev/docs/firestore/usage#realtime-changes
 class _ChatListState extends State<ChatList> {
   final Stream<QuerySnapshot> _usersStream =
-      FirebaseFirestore.instance.collection('chat').snapshots();
+      FirebaseFirestore.instance.collection('users').snapshots();
 
   @override
   Widget build(BuildContext context) {
