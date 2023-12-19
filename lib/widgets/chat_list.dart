@@ -37,17 +37,19 @@ class _ChatListState extends State<ChatList> {
                 fontSize: 24, fontWeight: FontWeight.bold, letterSpacing: 1.5),
           ));
         }
-
-        return ListView(
-          children: snapshot.data!.docs.map((DocumentSnapshot document) {
-            Map<String, dynamic> data =
-                document.data()! as Map<String, dynamic>;
-            return ListTile(
-              title: Text(data['name']),
-              subtitle: Text(data['phone']),
-            );
-          }).toList(),
+        return ListView.builder(
+          itemBuilder: (context, index) {},
         );
+        //  ListView(
+        //   children: snapshot.data!.docs.map((DocumentSnapshot document) {
+        //     Map<String, dynamic> data =
+        //         document.data()! as Map<String, dynamic>;
+        //     return ListTile(
+        //       title: Text(data['name']),
+        //       subtitle: Text(data['phone']),
+        //     );
+        //   }).toList(),
+        // );
       },
     );
   }
