@@ -23,7 +23,11 @@ class _AIChatScreenState extends State<AIChatScreen> {
         title: Text("ChatGPT", style: TextStyle(color: color)),
       ),
       body: const Column(
-        children: [Expanded(child: ChatList())],
+        children: [
+          Expanded(
+            child: ChatList(),
+          ),
+        ],
       ),
     );
   }
