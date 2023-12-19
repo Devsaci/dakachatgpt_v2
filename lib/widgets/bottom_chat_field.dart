@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
+import '../constants/constants.dart';
 import '../providers/my_theme_provider.dart';
 
 class BottomChatField extends StatefulWidget {
@@ -16,6 +17,8 @@ class _BottomChatFieldState extends State<BottomChatField> {
     final isDarkTheme = Provider.of<MyThemeProvider>(context).themeType;
     Color color = isDarkTheme ? Colors.white : Colors.black;
 
-    return Material();
+    return Material(
+      color: isDarkTheme ? Constants.chatGPTDarkCardColor : Colors.white70,
+    );
   }
 }
