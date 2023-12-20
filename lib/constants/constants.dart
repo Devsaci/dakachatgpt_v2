@@ -23,6 +23,8 @@ class Constants {
 
   static const isSignedIn = 'isSignedIn';
 
+  static const chats = 'chats';
+  static const chatGPTChats = 'chatGPTChats';
   static const senderId = 'senderId';
   static const chatId = 'chatId';
   static const message = 'message';

@@ -30,7 +30,7 @@ class ChatProvider extends ChangeNotifier {
       _isTyping = true;
       notifyListeners();
       // send user message to fireStore
-      sendMessageToFireStore(uid: '', message: '');
+      sendMessageToFireStore(uid: uid, message: message);
       // send the same message to chatGPT and get answer
       _isTyping = false;
       onSuccess();
@@ -51,9 +51,9 @@ class ChatProvider extends ChangeNotifier {
   }) async {
     String chatId = const Uuid().v4();
     await firebaseFirestore
-        .collection("chats")
+        .collection(Constants.chats)
         .doc(uid)
-        .collection("chatGPTChats")
+        .collection(Constants.chatGPTChats)
         .doc(chatId)
         .set({
       Constants.senderId: uid,
