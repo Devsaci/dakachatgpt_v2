@@ -57,6 +57,7 @@ class ChatProvider extends ChangeNotifier {
         .doc(chatId)
         .set({
       Constants.senderId: uid,
+      Constants.chatId: chatId,
     });
   }
 }
