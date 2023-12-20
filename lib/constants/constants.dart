@@ -26,6 +26,7 @@ class Constants {
   static const senderId = 'senderId';
   static const chatId = 'chatId';
   static const message = 'message';
+  static const messageTime = 'messageTime';
 
   static const Color chatGPTDarkCardColor = Color(0xFF444654);
   static const Color chatGPTDarkScaffoldColor = Color(0xFF343541);
