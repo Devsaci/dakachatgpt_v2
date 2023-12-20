@@ -20,5 +20,7 @@ class ChatProvider extends ChangeNotifier {
     required String modelId,
     required Function onSuccess,
     required Function onCompleted,
-  }) async {}
+  }) async {
+    try {} catch (e) {}
+  }
 }
