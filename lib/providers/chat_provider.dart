@@ -25,6 +25,7 @@ class ChatProvider extends ChangeNotifier {
     try {
       _isTyping = true;
       notifyListeners();
+      // send user message to fireStore
     } catch (error) {
       if (kDebugMode) {
         print(error);
