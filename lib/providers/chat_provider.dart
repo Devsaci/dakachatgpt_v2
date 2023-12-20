@@ -48,6 +48,6 @@ class ChatProvider extends ChangeNotifier {
     required String message,
   }) async {
     String messageId = const Uuid().v4();
-    await firebaseFirestore.collection("collectionPath");
+    await firebaseFirestore.collection("chats");
   }
 }
