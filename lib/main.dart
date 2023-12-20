@@ -1,4 +1,5 @@
 import 'package:dakachatgpt_v2/authentication/landing_screen.dart';
+import 'package:dakachatgpt_v2/providers/chat_provider.dart';
 import 'package:dakachatgpt_v2/providers/my_theme_provider.dart';
 import 'package:dakachatgpt_v2/themes/my_theme.dart';
 import 'package:firebase_core/firebase_core.dart';
@@ -21,6 +22,7 @@ Future<void> main() async {
       providers: [
         ChangeNotifierProvider(create: (_) => MyThemeProvider()),
         ChangeNotifierProvider(create: (_) => AuthenticationProvider()),
+        ChangeNotifierProvider(create: (_) => ChatProvider()),
       ],
       child: const MyApp(),
     ),
