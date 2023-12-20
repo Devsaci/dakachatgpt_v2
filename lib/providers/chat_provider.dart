@@ -16,5 +16,6 @@ class ChatProvider extends ChangeNotifier {
 
   sendMessage({
     required String uid,
+    required String message,
   }) {}
 }
