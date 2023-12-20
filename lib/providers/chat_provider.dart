@@ -41,5 +41,5 @@ class ChatProvider extends ChangeNotifier {
     }
   }
 
-  void sendMessageToFireStore() {}
+  Future<void> sendMessageToFireStore() async {}
 }
