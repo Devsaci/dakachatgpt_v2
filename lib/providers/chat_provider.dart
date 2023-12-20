@@ -29,6 +29,6 @@ class ChatProvider extends ChangeNotifier {
       if (kDebugMode) {
         print(error);
       }
-    }
+    } finally {}
   }
 }
