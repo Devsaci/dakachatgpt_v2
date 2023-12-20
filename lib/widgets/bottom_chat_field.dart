@@ -50,6 +50,7 @@ class _BottomChatFieldState extends State<BottomChatField> {
           IconButton(
             onPressed: () {
               // first lets check if user has entered something
+              if (textEditingController.text.isEmpty) {}
             },
             icon: Icon(Icons.send, color: color),
           ),
