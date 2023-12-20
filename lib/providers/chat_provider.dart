@@ -14,11 +14,11 @@ class ChatProvider extends ChangeNotifier {
 
   final FirebaseFirestore firebaseFirestore = FirebaseFirestore.instance;
 
-  sendMessage({
+  Future<void> sendMessage({
     required String uid,
     required String message,
     required String modelId,
     required Function onSuccess,
     required Function onCompleted,
-  }) {}
+  }) async {}
 }
