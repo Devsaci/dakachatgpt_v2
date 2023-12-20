@@ -47,7 +47,12 @@ class _BottomChatFieldState extends State<BottomChatField> {
               ),
             ),
           ),
-          IconButton(onPressed: () {}, icon: Icon(Icons.send, color: color)),
+          IconButton(
+            onPressed: () {
+              // first lets check if user has entered something
+            },
+            icon: Icon(Icons.send, color: color),
+          ),
         ],
       ),
     );
