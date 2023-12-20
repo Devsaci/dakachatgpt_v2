@@ -2,6 +2,8 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/foundation.dart';
 import 'package:uuid/uuid.dart';
 
+import '../constants/constants.dart';
+
 class ChatProvider extends ChangeNotifier {
   bool _isTyping = false;
   // ignore: unnecessary_getters_setters
@@ -52,6 +54,9 @@ class ChatProvider extends ChangeNotifier {
         .collection("chats")
         .doc(uid)
         .collection("chatGPTChats")
-        .doc(chatId);
+        .doc(chatId)
+        .set({
+      Constants.senderId: uid,
+    });
   }
 }
