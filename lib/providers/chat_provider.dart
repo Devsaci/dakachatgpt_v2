@@ -31,6 +31,7 @@ class ChatProvider extends ChangeNotifier {
       }
     } finally {
       _isTyping = false;
+      notifyListeners();
     }
   }
 }
