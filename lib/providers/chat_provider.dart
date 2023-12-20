@@ -60,6 +60,7 @@ class ChatProvider extends ChangeNotifier {
       Constants.chatId: chatId,
       Constants.message: message,
       Constants.messageTime: FieldValue.serverTimestamp(),
+      Constants.isText: isText,
     });
   }
 }
