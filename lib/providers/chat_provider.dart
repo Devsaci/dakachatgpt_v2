@@ -13,4 +13,6 @@ class ChatProvider extends ChangeNotifier {
   set isText(bool value) => _isText = value;
 
   final FirebaseFirestore firebaseFirestore = FirebaseFirestore.instance;
+
+  sendMessage() {}
 }
