@@ -1,13 +1,16 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 
 class ChatProvider extends ChangeNotifier {
   bool _isTyping = false;
-  bool get isTyping => this._isTyping;
+  bool get isTyping => _isTyping;
 
-  set isTyping(bool value) => this._isTyping = value;
+  set isTyping(bool value) => _isTyping = value;
 
   bool _isText = true;
-  bool get isText => this._isText;
+  bool get isText => _isText;
 
-  set isText(bool value) => this._isText = value;
+  set isText(bool value) => _isText = value;
+
+  final FirebaseFirestore firebaseFirestore = FirebaseFirestore.instance;
 }
