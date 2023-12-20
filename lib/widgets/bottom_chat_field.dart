@@ -3,6 +3,7 @@ import 'package:provider/provider.dart';
 
 import '../constants/constants.dart';
 import '../providers/my_theme_provider.dart';
+import '../utility/utility.dart';
 
 class BottomChatField extends StatefulWidget {
   const BottomChatField({super.key});
@@ -50,7 +51,11 @@ class _BottomChatFieldState extends State<BottomChatField> {
           IconButton(
             onPressed: () {
               // first lets check if user has entered something
-              if (textEditingController.text.isEmpty) {}
+              if (textEditingController.text.isEmpty) {
+                showSnackBar(
+                    context: context, content: 'Please type a message');
+                return;
+              }
             },
             icon: Icon(Icons.send, color: color),
           ),
