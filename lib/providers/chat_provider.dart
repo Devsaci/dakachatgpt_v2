@@ -26,7 +26,7 @@ class ChatProvider extends ChangeNotifier {
       _isTyping = true;
       notifyListeners();
       // send user message to fireStore
-      sendMessageToFireStore();
+      sendMessageToFireStore(uid: '');
       // send the same message to chatGPT and get answer
       _isTyping = false;
       onSuccess();
@@ -41,5 +41,7 @@ class ChatProvider extends ChangeNotifier {
     }
   }
 
-  Future<void> sendMessageToFireStore() async {}
+  Future<void> sendMessageToFireStore({
+    required String uid,
+  }) async {}
 }
