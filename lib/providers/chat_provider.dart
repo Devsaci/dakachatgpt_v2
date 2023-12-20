@@ -1,4 +1,5 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
 class ChatProvider extends ChangeNotifier {
@@ -21,6 +22,10 @@ class ChatProvider extends ChangeNotifier {
     required Function onSuccess,
     required Function onCompleted,
   }) async {
-    try {} catch (e) {}
+    try {} catch (error) {
+      if (kDebugMode) {
+        print(error);
+      }
+    }
   }
 }
