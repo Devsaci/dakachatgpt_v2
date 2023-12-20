@@ -1,5 +1,6 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/foundation.dart';
+import 'package:uuid/uuid.dart';
 
 class ChatProvider extends ChangeNotifier {
   bool _isTyping = false;
@@ -45,5 +46,7 @@ class ChatProvider extends ChangeNotifier {
   Future<void> sendMessageToFireStore({
     required String uid,
     required String message,
-  }) async {}
+  }) async {
+    String messageId = const Uuid().v4();
+  }
 }
