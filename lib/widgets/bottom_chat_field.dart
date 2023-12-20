@@ -1,7 +1,9 @@
+import 'package:dakachatgpt_v2/providers/authentication_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
 import '../constants/constants.dart';
+import '../providers/chat_provider.dart';
 import '../providers/my_theme_provider.dart';
 import '../utility/utility.dart';
 
@@ -56,6 +58,17 @@ class _BottomChatFieldState extends State<BottomChatField> {
                     context: context, content: 'Please type a message');
                 return;
               }
+              context.read<ChatProvider>().sendMessage(
+                    uid: context.read<AuthenticationProvider>().userModel!.uid,
+                    message: textEditingController.text,
+                    modelId: '',
+                    onSuccess: () {
+                      print("Succses");
+                    },
+                    onCompleted: () {
+                      print("Completed");
+                    },
+                  );
             },
             icon: Icon(Icons.send, color: color),
           ),
