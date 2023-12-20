@@ -14,5 +14,7 @@ class ChatProvider extends ChangeNotifier {
 
   final FirebaseFirestore firebaseFirestore = FirebaseFirestore.instance;
 
-  sendMessage() {}
+  sendMessage({
+    required String uid,
+  }) {}
 }
