@@ -24,6 +24,7 @@ class ChatProvider extends ChangeNotifier {
   }) async {
     try {
       _isTyping = true;
+      notifyListeners();
     } catch (error) {
       if (kDebugMode) {
         print(error);
