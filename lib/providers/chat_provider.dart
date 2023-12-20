@@ -1,14 +1,15 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/foundation.dart';
-import 'package:flutter/material.dart';
 
 class ChatProvider extends ChangeNotifier {
   bool _isTyping = false;
+  // ignore: unnecessary_getters_setters
   bool get isTyping => _isTyping;
 
   set isTyping(bool value) => _isTyping = value;
 
   bool _isText = true;
+  // ignore: unnecessary_getters_setters
   bool get isText => _isText;
 
   set isText(bool value) => _isText = value;
@@ -26,7 +27,7 @@ class ChatProvider extends ChangeNotifier {
       _isTyping = true;
       notifyListeners();
       // send user message to fireStore
-      sendMessageToFireStore(uid: '');
+      sendMessageToFireStore(uid: '', message: '');
       // send the same message to chatGPT and get answer
       _isTyping = false;
       onSuccess();
@@ -43,5 +44,6 @@ class ChatProvider extends ChangeNotifier {
 
   Future<void> sendMessageToFireStore({
     required String uid,
+    required String message,
   }) async {}
 }
