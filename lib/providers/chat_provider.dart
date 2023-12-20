@@ -26,6 +26,7 @@ class ChatProvider extends ChangeNotifier {
       _isTyping = true;
       notifyListeners();
       // send user message to fireStore
+      // send the same message to chatGPT and get answer
     } catch (error) {
       if (kDebugMode) {
         print(error);
