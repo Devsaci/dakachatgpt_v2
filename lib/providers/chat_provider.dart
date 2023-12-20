@@ -18,5 +18,6 @@ class ChatProvider extends ChangeNotifier {
     required String uid,
     required String message,
     required String modelId,
+    required Function onSuccess,
   }) {}
 }
