@@ -51,6 +51,7 @@ class ChatProvider extends ChangeNotifier {
     await firebaseFirestore
         .collection("chats")
         .doc(uid)
-        .collection("chatGPTChats");
+        .collection("chatGPTChats")
+        .doc(messageId);
   }
 }
