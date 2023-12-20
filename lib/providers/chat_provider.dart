@@ -22,7 +22,9 @@ class ChatProvider extends ChangeNotifier {
     required Function onSuccess,
     required Function onCompleted,
   }) async {
-    try {} catch (error) {
+    try {
+      _isTyping = true;
+    } catch (error) {
       if (kDebugMode) {
         print(error);
       }
