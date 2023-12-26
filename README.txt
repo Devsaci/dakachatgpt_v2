@@ -48,4 +48,5 @@
 31. Implementing a chat provider for sending and receiving messages
 32. Implementing a chat stream to listen for incoming messages
 33. Setting up API service for image generation with DALL-E
+https://platform.openai.com/docs/api-reference/models/list 
 
