@@ -1,4 +1,5 @@
 import 'package:dakachatgpt_v2/providers/authentication_provider.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -63,10 +64,14 @@ class _BottomChatFieldState extends State<BottomChatField> {
                     message: textEditingController.text,
                     modelId: '',
                     onSuccess: () {
-                      print("Succses");
+                      if (kDebugMode) {
+                        print("Succses");
+                      }
                     },
                     onCompleted: () {
-                      print("Completed");
+                      if (kDebugMode) {
+                        print("Completed");
+                      }
                     },
                   );
             },
