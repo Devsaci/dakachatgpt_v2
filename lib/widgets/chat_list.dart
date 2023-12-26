@@ -47,8 +47,8 @@ class _ChatListState extends State<ChatList> {
           itemCount: messageSnapshot.length,
           itemBuilder: (context, index) {
             return ListTile(
-              title: Text(messageSnapshot[index]['name']),
-              subtitle: Text(messageSnapshot[index]['phone']),
+              title: Text(messageSnapshot[index]['message']),
+              //subtitle: Text(messageSnapshot[index]['phone']),
             );
           },
         );
