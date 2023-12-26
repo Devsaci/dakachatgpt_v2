@@ -18,6 +18,8 @@ class ChatProvider extends ChangeNotifier {
   set isText(bool value) => _isText = value;
 
   final FirebaseFirestore firebaseFirestore = FirebaseFirestore.instance;
+// chat stream
+  getChatStream() {}
 
   Future<void> sendMessage({
     required String uid,
