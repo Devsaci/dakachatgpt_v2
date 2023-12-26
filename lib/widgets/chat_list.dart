@@ -1,4 +1,6 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:dakachatgpt_v2/providers/authentication_provider.dart';
+import 'package:dakachatgpt_v2/providers/chat_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -16,8 +18,9 @@ class _ChatListState extends State<ChatList> {
 
   @override
   Widget build(BuildContext context) {
+    final uid = context.read<AuthenticationProvider>().userModel!.uid;
     return StreamBuilder<QuerySnapshot>(
-      stream: context.read(),
+      stream: context.read<ChatProvider>().getChatStream(uid: uid),
       builder: (BuildContext context, AsyncSnapshot<QuerySnapshot> snapshot) {
         if (snapshot.hasError) {
           return const Text('Something went wrong');
