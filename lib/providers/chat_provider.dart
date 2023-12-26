@@ -19,7 +19,15 @@ class ChatProvider extends ChangeNotifier {
 
   final FirebaseFirestore firebaseFirestore = FirebaseFirestore.instance;
 // chat stream
-  getChatStream() {}
+  Stream<QuerySnapshot<Object?>> getChatStream({required String uid}) {
+    final Stream<QuerySnapshot> chatStream = firebaseFirestore
+        .collection(Constants.chats)
+        .doc(uid)
+        .collection(Constants.chatGPTChats)
+        .orderBy(Constants.messageTime)
+        .snapshots();
+    return chatStream;
+  }
 
   Future<void> sendMessage({
     required String uid,
