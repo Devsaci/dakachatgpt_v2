@@ -1,2 +1,2 @@
 String baseUrl = 'https://api.openai.com/v1';
-String chatGPTApiKey = '';
+String chatGPTApiKey = 'API KEY';
