@@ -1,3 +1,9 @@
+import 'dart:convert';
+
+import 'package:http/http.dart' as http;
+
+import '../constants/api-key/api_constants.dart';
+
 class ApiService {
   // send message and get answers
   static Future<String> sendMessageToChatGPT({
@@ -8,6 +14,17 @@ class ApiService {
     if (isText) {
       // generate a text response
       try {
+        await http.post(Uri.parse('$baseUrl/chat/completions'),
+            headers: {
+              "Content-Type": "application/json",
+              "Authorization": "Bearer $chatGPTApiKey"
+            },
+            body: jsonEncode({
+              "model": modelId,
+              "messages": [
+                {"role": "user", "content": message}
+              ]
+            }));
         String answer = '';
         return answer;
       } catch (e) {
