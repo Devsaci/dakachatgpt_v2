@@ -37,7 +37,8 @@ class ApiService {
           answer = jsonResponse['choices'][0]['message']['content'];
         }
         return answer;
-      } catch (e) {
+      } catch (error) {
+        print(error);
         rethrow;
       }
     } else {
