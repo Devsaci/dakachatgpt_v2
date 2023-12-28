@@ -31,7 +31,6 @@ migrate_working_dir/
 .pub-cache/
 .pub/
 /build/
-lib\constants\api_constants.dart
 # Symbolication related
 app.*.symbols
 
@@ -43,3 +42,4 @@ app.*.map.json
 /android/app/profile
 /android/app/release
 
+lib/constants/api_constants.dart
