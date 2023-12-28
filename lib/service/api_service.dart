@@ -14,7 +14,7 @@ class ApiService {
     if (isText) {
       // generate a text response
       try {
-        await http.post(Uri.parse('$baseUrl/chat/completions'),
+        var response = await http.post(Uri.parse('$baseUrl/chat/completions'),
             headers: {
               "Content-Type": "application/json",
               "Authorization": "Bearer $chatGPTApiKey"
@@ -25,6 +25,8 @@ class ApiService {
                 {"role": "user", "content": message}
               ]
             }));
+
+        jsonDecode(response.body);
         String answer = '';
         return answer;
       } catch (e) {
