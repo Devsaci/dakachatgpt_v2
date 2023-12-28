@@ -1,4 +1,6 @@
 class ApiService {
   // send message and get answers
-  sendMessageToChatGPT() {}
+  sendMessageToChatGPT({
+    required String message,
+  }) {}
 }
