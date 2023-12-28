@@ -44,12 +44,13 @@ class ApiService {
     } else {
       // generate an image response
       try {
-        await http.post(Uri.parse('$baseUrl/images/generations'),
+        var response = await http.post(Uri.parse('$baseUrl/images/generations'),
             headers: {
               "Content-Type": "application/json",
               "Authorization": "Bearer $chatGPTApiKey"
             },
             body: jsonEncode({"prompt": message, "n": 2, "size": "1024x1024"}));
+        jsonDecode(response.body);
         String imageUrl = '';
         return imageUrl;
       } catch (e) {
