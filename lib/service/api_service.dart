@@ -55,7 +55,10 @@ class ApiService {
           throw HttpException(jsonResponse['error']['message']);
         }
         String imageUrl = '';
-        if (jsonResponse['data'].length > 0) {}
+        if (jsonResponse['data'].length > 0) {
+          print('ANSWER : ${jsonResponse['data'][0]['url']}');
+          imageUrl = jsonResponse['data'][0]['url'];
+        }
         return imageUrl;
       } catch (e) {
         rethrow;
