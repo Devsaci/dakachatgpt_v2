@@ -51,7 +51,9 @@ class ApiService {
             },
             body: jsonEncode({"prompt": message, "n": 2, "size": "1024x1024"}));
         Map jsonResponse = jsonDecode(response.body);
-        if (jsonResponse['error'] != null) {}
+        if (jsonResponse['error'] != null) {
+          throw HttpException(jsonResponse['error']['message']);
+        }
         String imageUrl = '';
         return imageUrl;
       } catch (e) {
