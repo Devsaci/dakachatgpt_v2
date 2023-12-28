@@ -4,6 +4,8 @@ import 'package:dakachatgpt_v2/providers/chat_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
+import '../constants/constants.dart';
+
 class ChatList extends StatefulWidget {
   const ChatList({super.key});
 
@@ -47,7 +49,7 @@ class _ChatListState extends State<ChatList> {
           itemCount: messageSnapshot.length,
           itemBuilder: (context, index) {
             return ListTile(
-              title: Text(messageSnapshot[index]['message']),
+              title: Text(messageSnapshot[index][Constants.message]),
               //subtitle: Text(messageSnapshot[index]['phone']),
             );
           },
