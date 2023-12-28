@@ -26,7 +26,8 @@ class ApiService {
               ]
             }));
 
-        jsonDecode(response.body);
+        Map jsonResponse = jsonDecode(response.body);
+        if (jsonResponse['error'] != null) {}
         String answer = '';
         return answer;
       } catch (e) {
