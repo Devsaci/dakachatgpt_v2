@@ -3,5 +3,6 @@ class ApiService {
   sendMessageToChatGPT({
     required String message,
     required String modelId,
+    required bool isText,
   }) {}
 }
