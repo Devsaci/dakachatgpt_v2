@@ -1,4 +1,5 @@
 import 'dart:convert';
+import 'dart:io';
 
 import 'package:http/http.dart' as http;
 
@@ -27,7 +28,9 @@ class ApiService {
             }));
 
         Map jsonResponse = jsonDecode(response.body);
-        if (jsonResponse['error'] != null) {}
+        if (jsonResponse['error'] != null) {
+          throw HttpException(jsonResponse['error']['message']);
+        }
         String answer = '';
         return answer;
       } catch (e) {
