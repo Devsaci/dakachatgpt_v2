@@ -32,6 +32,7 @@ class ApiService {
           throw HttpException(jsonResponse['error']['message']);
         }
         String answer = '';
+        if (jsonResponse['choices'].length > 0) {}
         return answer;
       } catch (e) {
         rethrow;
