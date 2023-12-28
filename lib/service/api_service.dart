@@ -50,7 +50,8 @@ class ApiService {
               "Authorization": "Bearer $chatGPTApiKey"
             },
             body: jsonEncode({"prompt": message, "n": 2, "size": "1024x1024"}));
-        jsonDecode(response.body);
+        Map jsonResponse = jsonDecode(response.body);
+        if (jsonResponse['error'] != null) {}
         String imageUrl = '';
         return imageUrl;
       } catch (e) {
