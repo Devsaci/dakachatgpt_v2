@@ -43,6 +43,8 @@ class ChatProvider extends ChangeNotifier {
       // send user message to fireStore
       sendMessageToFireStore(uid: uid, message: message);
       // send the same message to chatGPT and get answer
+      await sendMessageToChatGPT(
+          uid: uid, message: message, isText: isText, modelId: modelId);
       _isTyping = false;
       onSuccess();
     } catch (error) {
