@@ -79,5 +79,7 @@ class ChatProvider extends ChangeNotifier {
     required String message,
     required bool isText,
     required String modelId,
-  }) async {}
+  }) async {
+    const Uuid().v4();
+  }
 }
