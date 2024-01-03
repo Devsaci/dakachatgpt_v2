@@ -73,4 +73,6 @@ class ChatProvider extends ChangeNotifier {
       Constants.isText: isText,
     });
   }
+
+  sendMessageToChatGPT() {}
 }
