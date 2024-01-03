@@ -3,6 +3,7 @@ import 'package:flutter/foundation.dart';
 import 'package:uuid/uuid.dart';
 
 import '../constants/constants.dart';
+import '../service/api_service.dart';
 
 class ChatProvider extends ChangeNotifier {
   bool _isTyping = false;
@@ -81,5 +82,7 @@ class ChatProvider extends ChangeNotifier {
     required String modelId,
   }) async {
     String chatId = const Uuid().v4();
+    ApiService.sendMessageToChatGPT(
+        message: message, modelId: modelId, isText: isText);
   }
 }
