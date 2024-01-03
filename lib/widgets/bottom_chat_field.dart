@@ -17,6 +17,7 @@ class BottomChatField extends StatefulWidget {
 
 class _BottomChatFieldState extends State<BottomChatField> {
   late TextEditingController textEditingController;
+  String chatGPTModel = 'gpt-3.5-turbo';
   @override
   void initState() {
     textEditingController = TextEditingController();
@@ -62,7 +63,7 @@ class _BottomChatFieldState extends State<BottomChatField> {
               context.read<ChatProvider>().sendMessage(
                     uid: context.read<AuthenticationProvider>().userModel!.uid,
                     message: textEditingController.text,
-                    modelId: '/////////////////',
+                    modelId: chatGPTModel,
                     onSuccess: () {
                       if (kDebugMode) {
                         print("Succses");
