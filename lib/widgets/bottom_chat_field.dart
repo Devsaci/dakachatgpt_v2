@@ -62,7 +62,7 @@ class _BottomChatFieldState extends State<BottomChatField> {
               context.read<ChatProvider>().sendMessage(
                     uid: context.read<AuthenticationProvider>().userModel!.uid,
                     message: textEditingController.text,
-                    modelId: '',
+                    modelId: '/////////////////',
                     onSuccess: () {
                       if (kDebugMode) {
                         print("Succses");
