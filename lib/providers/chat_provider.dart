@@ -74,5 +74,10 @@ class ChatProvider extends ChangeNotifier {
     });
   }
 
-  sendMessageToChatGPT() {}
+  sendMessageToChatGPT({
+    required String uid,
+    required String message,
+    required bool isText,
+    required String modelId,
+  }) {}
 }
