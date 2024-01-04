@@ -62,3 +62,5 @@ Cost :  on 04/01/2024 -> 0.04$
 REQUEST : Artificial intelligence in the cosmos
 ANSWER : https://oaidalleapiprodscus.blob.core.windows.net/private/org-lLU7JmBZlLpE3ybnPDT5BBIM/user-rLHNf9jUzTrIsplvxxHqLC5B/img-jPWmx2XCKWEQKwlIhxU5zlPL.png?st=2024-01-04T11%3A07%3A55Z&se=2024-01-04T13%3A07%3A55Z&sp=r&sv=2021-08-06&sr=b&rscd=inline&rsct=image/png&skoid=6aaadede-4fb3-4698-a8f6-684d7786b067&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2024-01-03T21%3A12%3A30Z&ske=2024-01-04T21%3A12%3A30Z&sks=b&skv=2021-08-06&sig=2V2W4qvlvQLrriLhBwp/TNA759dIae2w1x10%2BAIQx2o%3D
 Cost :  on 04/01/2024 -> 0.04$ 
+
+36. Saving ChatGPT response to Firestore
