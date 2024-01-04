@@ -12,7 +12,7 @@ class ChatProvider extends ChangeNotifier {
 
   set isTyping(bool value) => _isTyping = value;
 
-  bool _isText = true;
+  bool _isText = false;
   // ignore: unnecessary_getters_setters
   bool get isText => _isText;
 
