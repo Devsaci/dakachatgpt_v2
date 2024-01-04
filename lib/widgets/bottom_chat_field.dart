@@ -65,6 +65,7 @@ class _BottomChatFieldState extends State<BottomChatField> {
                     message: textEditingController.text,
                     modelId: chatGPTModel,
                     onSuccess: () {
+                      textEditingController.text = '';
                       if (kDebugMode) {
                         print("Succses");
                       }
