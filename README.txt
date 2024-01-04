@@ -64,3 +64,6 @@ ANSWER : https://oaidalleapiprodscus.blob.core.windows.net/private/org-lLU7JmBZl
 Cost :  on 04/01/2024 -> 0.04$ 
 
 36. Saving ChatGPT response to Firestore
+REQUEST : who are you
+ANSWER : I am an AI language model created by OpenAI. I am designed to assist with answering questions and engaging in conversations.
+Cost :  on 04/01/2024 -> 0.01$ 
