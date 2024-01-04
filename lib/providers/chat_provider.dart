@@ -25,6 +25,7 @@ class ChatProvider extends ChangeNotifier {
         .collection(Constants.chats)
         .doc(uid)
         .collection(Constants.chatGPTChats)
+        // .orderBy(Constants.messageTime)
         .orderBy(Constants.messageTime)
         .snapshots();
     return chatStream;
