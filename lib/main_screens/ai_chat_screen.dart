@@ -1,3 +1,4 @@
+import 'package:dakachatgpt_v2/providers/chat_provider.dart';
 import 'package:dakachatgpt_v2/widgets/bottom_chat_field.dart';
 import 'package:dakachatgpt_v2/widgets/chat_list.dart';
 import 'package:flutter/material.dart';
@@ -23,13 +24,16 @@ class _AIChatScreenState extends State<AIChatScreen> {
         elevation: 0,
         title: Text("ChatGPT", style: TextStyle(color: color)),
       ),
-      body: const Column(
+      body: Column(
         children: [
-          Expanded(
+          const Expanded(
             child: ChatList(),
           ),
-          SizedBox(height: 15.0),
-          BottomChatField(),
+          //
+          if (context.watch<ChatProvider>().isTyping) ...[],
+
+          const SizedBox(height: 15.0),
+          const BottomChatField(),
         ],
       ),
     );
