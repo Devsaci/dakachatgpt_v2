@@ -86,5 +86,17 @@ class ChatProvider extends ChangeNotifier {
     String chatId = const Uuid().v4();
     String answer = await ApiService.sendMessageToChatGPT(
         message: message, modelId: modelId, isText: isText);
+    await firebaseFirestore
+        .collection(Constants.chats)
+        .doc(uid)
+        .collection(Constants.chatGPTChats)
+        .doc(chatId)
+        .set({
+      Constants.senderId: uid,
+      Constants.chatId: chatId,
+      Constants.message: answer,
+      Constants.messageTime: FieldValue.serverTimestamp(),
+      Constants.isText: isText,
+    });
   }
 }
