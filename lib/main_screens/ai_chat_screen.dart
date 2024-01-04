@@ -32,7 +32,10 @@ class _AIChatScreenState extends State<AIChatScreen> {
           ),
           //
           if (context.watch<ChatProvider>().isTyping) ...[
-            SpinKitDoubleBounce()
+            SpinKitDoubleBounce(
+              color: color,
+              size: 25,
+            ),
           ],
 
           const SizedBox(height: 15.0),
