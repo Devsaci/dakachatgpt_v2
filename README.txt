@@ -55,3 +55,7 @@ https://platform.openai.com/docs/api-reference/models/list
 REQUEST : a tree in the desert
 ANSWER : https://oaidalleapiprodscus.blob.core.windows.net/private/org-lLU7JmBZlLpE3ybnPDT5BBIM/user-rLHNf9jUzTrIsplvxxHqLC5B/img-395q9bOS1rf278OqxhE42HwI.png?st=2024-01-04T10%3A48%3A26Z&se=2024-01-04T12%3A48%3A26Z&sp=r&sv=2021-08-06&sr=b&rscd=inline&rsct=image/png&skoid=6aaadede-4fb3-4698-a8f6-684d7786b067&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2024-01-03T15%3A20%3A34Z&ske=2024-01-04T15%3A20%3A34Z&sks=b&skv=2021-08-06&sig=rp5hi0MQyI/V%2BvslfBZN/6lw9a2xL6Hv9qCFZy8giS8%3D
 Cost :  on 04/01/2024 -> 0.04$
+
+REQUEST : Ai in the cosmos.
+ANSWER : https://oaidalleapiprodscus.blob.core.windows.net/private/org-lLU7JmBZlLpE3ybnPDT5BBIM/user-rLHNf9jUzTrIsplvxxHqLC5B/img-Kadi8dx9djI2AQuGppxjRQMb.png?st=2024-01-04T10%3A59%3A38Z&se=2024-01-04T12%3A59%3A38Z&sp=r&sv=2021-08-06&sr=b&rscd=inline&rsct=image/png&skoid=6aaadede-4fb3-4698-a8f6-684d7786b067&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2024-01-03T22%3A34%3A28Z&ske=2024-01-04T22%3A34%3A28Z&sks=b&skv=2021-08-06&sig=6oXeVUhw%2BYxXnrY8ouLVMjZvxs5kamzSGrbiBGz3H/Q%3D
+Cost :  on 04/01/2024 -> 0.04$ 
