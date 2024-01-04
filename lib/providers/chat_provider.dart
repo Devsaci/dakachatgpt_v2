@@ -84,7 +84,7 @@ class ChatProvider extends ChangeNotifier {
     required String modelId,
   }) async {
     String chatId = const Uuid().v4();
-    ApiService.sendMessageToChatGPT(
+    String answer = await ApiService.sendMessageToChatGPT(
         message: message, modelId: modelId, isText: isText);
   }
 }
