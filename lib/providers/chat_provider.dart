@@ -93,7 +93,7 @@ class ChatProvider extends ChangeNotifier {
         .collection(Constants.chatGPTChats)
         .doc(chatId)
         .set({
-      Constants.senderId: uid,
+      Constants.senderId: 'assistant',
       Constants.chatId: chatId,
       Constants.message: answer,
       Constants.messageTime: FieldValue.serverTimestamp(),
