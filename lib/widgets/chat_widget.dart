@@ -18,6 +18,7 @@ class ChatWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     final isDarkTheme = Provider.of<MyThemeProvider>(context).themeType;
     Color color = isDarkTheme ? Colors.white : Colors.black;
+    String uid = context.read<AuthenticationProvider>().userModel!.uid;
     return Column(
       children: [
         !isDarkTheme
@@ -26,6 +27,11 @@ class ChatWidget extends StatelessWidget {
                         context.read<AuthenticationProvider>().userModel!.uid
                     ? Colors.grey.shade300
                     : Colors.white,
+                child: Row(
+                  children: [
+                    senderId == uid ? CircleAvatar()
+                  ],
+                ),
               )
             : Material()
       ],
