@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+
+import '../providers/my_theme_provider.dart';
 
 class ChatWidget extends StatelessWidget {
   // const ChatWidget({super.key});
@@ -12,6 +15,7 @@ class ChatWidget extends StatelessWidget {
   final dynamic senderId;
   @override
   Widget build(BuildContext context) {
+    final isDarkTheme = Provider.of<MyThemeProvider>(context).themeType;
     return const Placeholder();
   }
 }
