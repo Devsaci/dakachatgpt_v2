@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
 import '../providers/my_theme_provider.dart';
+import '../service/image_cache_manager.dart';
 
 class ChatWidget extends StatelessWidget {
   // const ChatWidget({super.key});
@@ -18,7 +19,7 @@ class ChatWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     final isDarkTheme = Provider.of<MyThemeProvider>(context).themeType;
     Color color = isDarkTheme ? Colors.white : Colors.black;
-    String uid = context.read<AuthenticationProvider>().userModel!.uid;
+    var user = context.read<AuthenticationProvider>().userModel!;
     return Column(
       children: [
         !isDarkTheme
@@ -29,7 +30,17 @@ class ChatWidget extends StatelessWidget {
                     : Colors.white,
                 child: Row(
                   children: [
-                    senderId == uid ? CircleAvatar()
+                    senderId == user.uid
+                        ? CircleAvatar(
+                            radius: 15,
+                            backgroundImage: NetworkImage(
+                              user.profilePic,
+                            ))
+                        : Image.asset(
+                            AssetsManager.openAILogo,
+                            height: 30,
+                            width: 30,
+                          ),
                   ],
                 ),
               )
