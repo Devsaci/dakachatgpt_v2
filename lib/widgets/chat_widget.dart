@@ -1,3 +1,4 @@
+import 'package:dakachatgpt_v2/providers/authentication_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -18,7 +19,16 @@ class ChatWidget extends StatelessWidget {
     final isDarkTheme = Provider.of<MyThemeProvider>(context).themeType;
     Color color = isDarkTheme ? Colors.white : Colors.black;
     return Column(
-      children: [!isDarkTheme ? Material() : Material()],
+      children: [
+        !isDarkTheme
+            ? Material(
+                color: senderId ==
+                        context.read<AuthenticationProvider>().userModel!.uid
+                    ? Colors.grey.shade300
+                    : Colors.white,
+              )
+            : Material()
+      ],
     );
   }
 }
