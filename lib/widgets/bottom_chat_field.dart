@@ -60,7 +60,11 @@ class _BottomChatFieldState extends State<BottomChatField> {
                     context: context, content: 'Please type a message');
                 return;
               }
-              if(context.read<ChatProvider>().isTyping)
+              if (context.read<ChatProvider>().isTyping) {
+                showSnackBar(
+                    context: context, content: 'Please wait for a response');
+                return;
+              }
               context.read<ChatProvider>().sendMessage(
                     uid: context.read<AuthenticationProvider>().userModel!.uid,
                     message: textEditingController.text,
