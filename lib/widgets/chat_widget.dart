@@ -16,6 +16,7 @@ class ChatWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final isDarkTheme = Provider.of<MyThemeProvider>(context).themeType;
+    Color color = isDarkTheme ? Colors.white : Colors.black;
     return const Placeholder();
   }
 }
