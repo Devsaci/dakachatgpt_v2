@@ -60,6 +60,7 @@ class _BottomChatFieldState extends State<BottomChatField> {
                     context: context, content: 'Please type a message');
                 return;
               }
+              if(context.read<ChatProvider>().isTyping)
               context.read<ChatProvider>().sendMessage(
                     uid: context.read<AuthenticationProvider>().userModel!.uid,
                     message: textEditingController.text,
