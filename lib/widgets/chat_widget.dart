@@ -1,13 +1,10 @@
 import 'package:flutter/material.dart';
 
-class ChatWidget extends StatefulWidget {
-  const ChatWidget({super.key});
+class ChatWidget extends StatelessWidget {
+  // const ChatWidget({super.key});
+  const ChatWidget({Key? key, required this.messageData}) : super(key: key);
 
-  @override
-  State<ChatWidget> createState() => _ChatWidgetState();
-}
-
-class _ChatWidgetState extends State<ChatWidget> {
+  final dynamic messageData;
   @override
   Widget build(BuildContext context) {
     return const Placeholder();
