@@ -44,9 +44,15 @@ class ChatWidget extends StatelessWidget {
                           ),
                     const SizedBox(width: 8),
                     Expanded(
-                        child: SelectableText(
-                      Constants.message.trim(),
-                    ))
+                      child: SelectableText(
+                        Constants.message.trim(),
+                        style: TextStyle(
+                          color: color,
+                          fontWeight: FontWeight.w700,
+                          fontSize: 16,
+                        ),
+                      ),
+                    ),
                   ],
                 ),
               )
