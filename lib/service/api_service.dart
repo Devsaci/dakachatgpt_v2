@@ -1,6 +1,7 @@
 import 'dart:convert';
 import 'dart:io';
 
+import 'package:flutter/foundation.dart';
 import 'package:http/http.dart' as http;
 
 import '../constants/api-key/api_constants.dart';
@@ -33,12 +34,17 @@ class ApiService {
         }
         String answer = '';
         if (jsonResponse['choices'].length > 0) {
-          print('ANSWER : ${jsonResponse['choices'][0]['message']['content']}');
+          if (kDebugMode) {
+            print(
+                'ANSWER : ${jsonResponse['choices'][0]['message']['content']}');
+          }
           answer = jsonResponse['choices'][0]['message']['content'];
         }
         return answer;
       } catch (error) {
-        print(error);
+        if (kDebugMode) {
+          print(error);
+        }
         rethrow;
       }
     } else {
@@ -56,7 +62,9 @@ class ApiService {
         }
         String imageUrl = '';
         if (jsonResponse['data'].length > 0) {
-          print('ANSWER : ${jsonResponse['data'][0]['url']}');
+          if (kDebugMode) {
+            print('ANSWER : ${jsonResponse['data'][0]['url']}');
+          }
           imageUrl = jsonResponse['data'][0]['url'];
         }
         return imageUrl;

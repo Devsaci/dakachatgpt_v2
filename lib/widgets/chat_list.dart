@@ -21,7 +21,7 @@ class _ChatListState extends State<ChatList> {
 
   @override
   Widget build(BuildContext context) {
-    final uid = context.read<AuthenticationProvider>().userModel!.uid;
+    final uid = context.read<AuthenticationProvider>().userModel.uid;
     return StreamBuilder<QuerySnapshot>(
       stream: context.read<ChatProvider>().getChatStream(uid: uid),
       builder: (BuildContext context, AsyncSnapshot<QuerySnapshot> snapshot) {
@@ -53,12 +53,8 @@ class _ChatListState extends State<ChatList> {
             //   title: Text(messageSnapshot[index][Constants.message]),
             // );
             return ChatWidget(
-              messageData: Text(
-                messageSnapshot[index][Constants.message],
-              ),
-              senderId: Text(
-                messageSnapshot[index][Constants.senderId],
-              ),
+              message: messageSnapshot[index][Constants.message],
+              senderId: messageSnapshot[index][Constants.senderId],
             );
           },
         );

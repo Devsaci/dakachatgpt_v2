@@ -94,6 +94,7 @@ class ChatProvider extends ChangeNotifier {
         .doc(chatId)
         .set({
       Constants.senderId: 'assistant',
+      // Constants.senderId: uid,
       Constants.chatId: chatId,
       Constants.message: answer,
       Constants.messageTime: FieldValue.serverTimestamp(),

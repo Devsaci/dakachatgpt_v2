@@ -26,12 +26,12 @@ class AuthenticationProvider extends ChangeNotifier {
 
   bool _isSignedIn = false;
 
-  String? get uid => this._uid;
-  String get phoneNumber => this._phoneNumber!;
-  bool get isSuccessful => this._isSuccessful;
-  bool get isLoading => this._isLoading;
-  UserModel? get userModel => this._userModel;
-  bool get isSignedIn => this._isSignedIn;
+  String? get uid => _uid;
+  String get phoneNumber => _phoneNumber!;
+  bool get isSuccessful => _isSuccessful;
+  bool get isLoading => _isLoading;
+  UserModel get userModel => _userModel!;
+  bool get isSignedIn => _isSignedIn;
 
   set isLoading(bool value) => this._isLoading = value;
   set isSuccessful(bool value) => this._isSuccessful = value;
@@ -197,7 +197,7 @@ class AuthenticationProvider extends ChangeNotifier {
   Future saveUserDataToSharedPref() async {
     SharedPreferences sharedPreferences = await SharedPreferences.getInstance();
     await sharedPreferences.setString(
-        Constants.userModel, jsonEncode(userModel!.toMap()));
+        Constants.userModel, jsonEncode(userModel.toMap()));
   }
 
   // store user data to shared preference getUserDataFromSharedPref
