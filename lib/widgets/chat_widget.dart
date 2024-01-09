@@ -60,7 +60,7 @@ class ChatWidget extends StatelessWidget {
                 color: senderId ==
                         context.read<AuthenticationProvider>().userModel!.uid
                     ? Constants.chatGPTDarkScaffoldColor
-                    : Colors.white,
+                    : Constants.chatGPTDarkCardColor,
                 child: Row(
                   children: [
                     senderId == user.uid
