@@ -2,6 +2,7 @@ import 'package:dakachatgpt_v2/providers/authentication_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
+import '../constants/constants.dart';
 import '../providers/my_theme_provider.dart';
 import '../service/image_cache_manager.dart';
 
@@ -42,7 +43,7 @@ class ChatWidget extends StatelessWidget {
                             width: 30,
                           ),
                     const SizedBox(width: 8),
-                    Expanded(child: Text("data"))
+                    Expanded(child: SelectableText())
                   ],
                 ),
               )
