@@ -56,7 +56,38 @@ class ChatWidget extends StatelessWidget {
                   ],
                 ),
               )
-            : Material()
+            : Material(
+                color: senderId ==
+                        context.read<AuthenticationProvider>().userModel!.uid
+                    ? Constants.chatGPTDarkScaffoldColor
+                    : Colors.white,
+                child: Row(
+                  children: [
+                    senderId == user.uid
+                        ? CircleAvatar(
+                            radius: 15,
+                            backgroundImage: NetworkImage(
+                              user.profilePic,
+                            ))
+                        : Image.asset(
+                            AssetsManager.openAILogo,
+                            height: 30,
+                            width: 30,
+                          ),
+                    const SizedBox(width: 8),
+                    Expanded(
+                      child: SelectableText(
+                        Constants.message.trim(),
+                        style: TextStyle(
+                          color: color,
+                          fontWeight: FontWeight.w700,
+                          fontSize: 16,
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              )
       ],
     );
   }
