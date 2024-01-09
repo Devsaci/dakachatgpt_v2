@@ -1,6 +1,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:dakachatgpt_v2/providers/authentication_provider.dart';
 import 'package:dakachatgpt_v2/providers/chat_provider.dart';
+import 'package:dakachatgpt_v2/widgets/chat_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -48,8 +49,16 @@ class _ChatListState extends State<ChatList> {
         return ListView.builder(
           itemCount: messageSnapshot.length,
           itemBuilder: (context, index) {
-            return ListTile(
-              title: Text(messageSnapshot[index][Constants.message]),
+            // return ListTile(
+            //   title: Text(messageSnapshot[index][Constants.message]),
+            // );
+            return ChatWidget(
+              messageData: Text(
+                messageSnapshot[index][Constants.message],
+              ),
+              senderId: Text(
+                messageSnapshot[index][Constants.message],
+              ),
             );
           },
         );
