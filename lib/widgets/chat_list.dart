@@ -57,7 +57,7 @@ class _ChatListState extends State<ChatList> {
                 messageSnapshot[index][Constants.message],
               ),
               senderId: Text(
-                messageSnapshot[index][Constants.message],
+                messageSnapshot[index][Constants.senderId],
               ),
             );
           },
