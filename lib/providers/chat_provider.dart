@@ -25,7 +25,6 @@ class ChatProvider extends ChangeNotifier {
         .collection(Constants.chats)
         .doc(uid)
         .collection(Constants.chatGPTChats)
-        // .orderBy(Constants.messageTime)
         .orderBy(Constants.messageTime)
         .snapshots();
     return chatStream;
@@ -94,7 +93,6 @@ class ChatProvider extends ChangeNotifier {
         .doc(chatId)
         .set({
       Constants.senderId: 'assistant',
-      // Constants.senderId: uid,
       Constants.chatId: chatId,
       Constants.message: answer,
       Constants.messageTime: FieldValue.serverTimestamp(),

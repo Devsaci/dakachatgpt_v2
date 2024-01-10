@@ -36,7 +36,7 @@ class ApiService {
         if (jsonResponse['choices'].length > 0) {
           if (kDebugMode) {
             print(
-                'ANSWER : ${jsonResponse['choices'][0]['message']['content']}');
+                'ANSWER : ############### ${jsonResponse['choices'][0]['message']['content']} ############');
           }
           answer = jsonResponse['choices'][0]['message']['content'];
         }
@@ -63,7 +63,7 @@ class ApiService {
         String imageUrl = '';
         if (jsonResponse['data'].length > 0) {
           if (kDebugMode) {
-            print('ANSWER : ${jsonResponse['data'][0]['url']}');
+            print('ANSWER :  ${jsonResponse['data'][0]['url']}');
           }
           imageUrl = jsonResponse['data'][0]['url'];
         }

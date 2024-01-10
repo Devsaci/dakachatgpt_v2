@@ -72,12 +72,12 @@ class _BottomChatFieldState extends State<BottomChatField> {
                     onSuccess: () {
                       textEditingController.text = '';
                       if (kDebugMode) {
-                        print("Succses");
+                        print(" ############## Succses ##############");
                       }
                     },
                     onCompleted: () {
                       if (kDebugMode) {
-                        print("Completed");
+                        print("############## Completed ##############");
                       }
                     },
                   );
