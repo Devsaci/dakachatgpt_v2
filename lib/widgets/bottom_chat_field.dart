@@ -66,7 +66,7 @@ class _BottomChatFieldState extends State<BottomChatField> {
                 return;
               }
               context.read<ChatProvider>().sendMessage(
-                    uid: context.read<AuthenticationProvider>().userModel!.uid,
+                    uid: context.read<AuthenticationProvider>().userModel.uid,
                     message: textEditingController.text,
                     modelId: chatGPTModel,
                     onSuccess: () {

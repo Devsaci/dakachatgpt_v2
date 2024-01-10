@@ -16,9 +16,6 @@ class ChatList extends StatefulWidget {
 
 // https://firebase.flutter.dev/docs/firestore/usage#realtime-changes
 class _ChatListState extends State<ChatList> {
-  final Stream<QuerySnapshot> _usersStream =
-      FirebaseFirestore.instance.collection('users').snapshots();
-
   @override
   Widget build(BuildContext context) {
     final uid = context.read<AuthenticationProvider>().userModel.uid;
@@ -26,7 +23,7 @@ class _ChatListState extends State<ChatList> {
       stream: context.read<ChatProvider>().getChatStream(uid: uid),
       builder: (BuildContext context, AsyncSnapshot<QuerySnapshot> snapshot) {
         if (snapshot.hasError) {
-          return const Text('Something went wrong');
+          return const Center(child: Text('Something went wrong'));
         }
 
         if (snapshot.connectionState == ConnectionState.waiting) {
