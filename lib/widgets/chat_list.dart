@@ -46,13 +46,13 @@ class _ChatListState extends State<ChatList> {
         return ListView.builder(
           itemCount: messageSnapshot.length,
           itemBuilder: (context, index) {
-            return ListTile(
-              title: Text(messageSnapshot[index][Constants.message]),
-            );
-            // return ChatWidget(
-            //   message: messageSnapshot[index][Constants.message],
-            //   senderId: messageSnapshot[index][Constants.senderId],
+            // return ListTile(
+            //   title: Text(messageSnapshot[index][Constants.message]),
             // );
+            return ChatWidget(
+              message: messageSnapshot[index][Constants.message],
+              senderId: messageSnapshot[index][Constants.senderId],
+            );
           },
         );
       },
