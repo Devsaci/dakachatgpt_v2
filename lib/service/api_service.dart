@@ -68,7 +68,10 @@ class ApiService {
           imageUrl = jsonResponse['data'][0]['url'];
         }
         return imageUrl;
-      } catch (e) {
+      } catch (error) {
+        if (kDebugMode) {
+          print(error);
+        }
         rethrow;
       }
     }
